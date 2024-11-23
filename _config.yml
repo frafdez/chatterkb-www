@@ -33,6 +33,7 @@ url: "https://chatterkb.com" # the base hostname & protocol for your site, e.g. 
 company_name: "Beatspoken LLC."
 sign_in_url: "https://app.chatterkb.com"
 pricing_url: "https://app.chatterkb.com/checkout/plans"
+pricing_url_yearly: "https://app.chatterkb.com/checkout/yearly"
 
 # Build settings
 # theme: minima
@@ -42,9 +43,9 @@ plugins:
 sass:
     sass_dir: _sass
 
-header_pages:
-  - pager-1.markdown
-  - about.markdown
+# header_pages:
+#   - pager-1.markdown
+#   - about.markdown
 
     
 # Exclude from processing.
