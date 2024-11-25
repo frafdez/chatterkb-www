@@ -1,11 +1,15 @@
 <footer class="site-footer h-card">
+   <div class="container">
 
-    <div class="container">
+
+   </div>
+
+    <div class="container d-none">
        <!-- Footer 4 column -->
        <div class="row">
           <div class="col-lg-9 col-12">
              <div class="row" id="ft-links">
-                <div class="col-lg-4 col-12">
+                <div class="col-lg-12 col-12">
                    <div class="position-relative">
                       <div class="mb-3 pb-2 d-flex justify-content-between border-bottom border-bottom-lg-0">
                          <h4>Service</h4>
@@ -34,7 +38,7 @@
                       </div>
                    </div>
                 </div>
-                <div class="col-lg-4 col-12">
+                <div class="col-lg-4 col-12 d-none">
                    <div>
                       <div class="mb-3 pb-2 d-flex justify-content-between border-bottom border-bottom-lg-0 position-relative">
                          <h4>About us</h4>
@@ -63,7 +67,7 @@
                       </div>
                    </div>
                 </div>
-                <div class="col-lg-4 col-12">
+                <div class="col-lg-4 col-12 d-none">
                    <div class="mb-3 pb-2 d-flex justify-content-between border-bottom border-bottom-lg-0 position-relative">
                       <h4>Technology</h4>
                       <a class="d-block d-lg-none stretched-link text-body collapsed" data-bs-toggle="collapse" href="#collapseResources" role="button" aria-expanded="false" aria-controls="collapseResources">
@@ -105,21 +109,24 @@
           </div>
        </div>
     </div>
-    <div class="container mt-7 pt-lg-7 pb-4 mt-4">
-       <div class="row align-items-center">
+    <div class="container mt-2 pt-lg-7 pb-4 mt-4">
+       <hr/>
+       <div class="row jualign-items-center">
           <div class="col-md-3">
             <a class="navbar-brand d-flex align-items-center" href="{{ "/" | relative_url }}">
               <img src="{{ '/assets/images/chatterkb-logo-ex.png' | relative_url }}" alt="ChatterKB Logo" class="logo-image">
               <span class="logo-text">Chatter<span style="color: darkgray;">KB</span></span>
             </a>
           </div>
-          <div class="col-md-9 col-lg-6">
+          <div class="col-md-9 col-lg-6 ">
              <div class="small mb-3 mb-lg-0 text-lg-center">
                 Copyright © {{ site.time | date: '%Y' }} {{ site.company_name }}
              </div>
           </div>
           <div class="col-lg-3">
              <div class="text-lg-end d-flex align-items-center justify-content-lg-end">
+               <div class="me-3"><a href="{{ '/privacy' | relative_url }}" class="text-decoration-none text-reset small">Privacy Policy</a></div>
+               <div><a href="{{ '/terms' | relative_url }}" class="text-decoration-none text-reset small">Terms of Service</a></div>
              </div>
           </div>
        </div>
