@@ -25,8 +25,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   Effortlessly chat with your files, using AI, and create actionable dashboards.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://chatterkb.com" # the base hostname & protocol for your site, e.g. http://example.com
+
+google_analytics: G-SS1WEGKVQN
 # twitter_username: frank_fdez
 # github_username:  jekyll
+
 
 company_name: "Beatspoken LLC."
 sign_in_url: "https://app.chatterkb.com"
