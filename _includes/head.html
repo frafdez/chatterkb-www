@@ -24,4 +24,15 @@
       <script src="{{ file.path | relative_url }}"></script>
     {% endif %}
   {% endfor %}
+
+  <script>
+      scrollCue.init({
+        duration : 600,
+        interval : -100,
+        percentage : 0.75,
+        enable: true,
+        docSlider: false,
+        once: false
+      });
+  </script>
 </head>
