@@ -18,7 +18,7 @@
   {%- endif -%}
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
+
   {% for file in site.static_files %}
     {% if file.path contains '/js/' and file.extname == '.js' %}
       <script src="{{ file.path | relative_url }}"></script>
@@ -26,13 +26,9 @@
   {% endfor %}
 
   <script>
-      scrollCue.init({
-        duration : 600,
-        interval : -100,
-        percentage : 0.75,
-        enable: true,
-        docSlider: false,
-        once: false
-      });
+      scrollCue.init({interval:-400,duration:600,percentage:.8, threshold: 0.3});
+      setTimeout(() => {
+        scrollCue.update();
+      }, 1000);
   </script>
 </head>
