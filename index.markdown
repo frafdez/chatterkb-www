@@ -63,6 +63,7 @@ smbs:
       tab_title: Finance
       description: Imagine uploading your quarterly financial statements and, within seconds, generating a comparative analysis of your revenue growth.
       style: left
+      outline_class: border-warning border-opacity-50
       background_image: ./assets/images/landings/finance/tab-bg-1.svg
       foreground_image: ./assets/images/landings/finance/tab-g-1.png
       main_image: ./assets/images/landings/finance/tab.jpg
@@ -80,12 +81,14 @@ smbs:
       tab_title: Ecommerce
       description: Imagine uploading your sales data and inventory levels, and within seconds, pinpointing which products are flying off the shelves but are low in stock.
       style: right
+      outline_class: border-info border-opacity-50
       background_image: ./assets/images/landings/ecommerce/tab-bg-1.svg
       foreground_image: ./assets/images/landings/ecommerce/tab-g-1.png
       main_image: ./assets/images/landings/ecommerce/tab.jpg
       points:
         - icon: bi-chat-fill
           color_class: text-primary
+          outline_class: border-warning
           title: Chat with your data
           description: "Which products are low in stock but high in demand?"
         - icon: bi-currency-exchange
@@ -97,6 +100,7 @@ smbs:
       tab_title: Marketing
       description: Imagine uploading your latest campaign data and instantly generating a comprehensive ROI analysis.
       style: left
+      outline_class: border-success border-opacity-50
       background_image: ./assets/images/landings/marketing/tab-bg-1.svg
       foreground_image: ./assets/images/landings/marketing/tab-g-1.png
       main_image: ./assets/images/landings/marketing/tab.jpg
@@ -114,6 +118,7 @@ smbs:
       tab_title: Tech Startups
       description: Imagine uploading your project plans and timelines, and within seconds, gaining a clear overview of upcoming milestones and resource allocations.
       style: right
+      outline_class: border-secondary border-opacity-50
       background_image: ./assets/images/landings/tech/tab-bg-1.svg
     #   foreground_image: ./assets/images/landings/tech/tab-g-1.png
       main_image: ./assets/images/landings/tech/tab.jpg

@@ -24,11 +24,4 @@
       <script src="{{ file.path | relative_url }}"></script>
     {% endif %}
   {% endfor %}
-
-  <script>
-      scrollCue.init({interval:-400,duration:600,percentage:.8, threshold: 0.3});
-      setTimeout(() => {
-        scrollCue.update();
-      }, 1000);
-  </script>
 </head>

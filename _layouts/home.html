@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<section class="container py-lg-8 py-5" data-cue="fadeIn" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+<section class="container py-lg-8 py-5" data-cue="fadeIn">
   <div class="row justify-content-center">
      <div class="col-xl-8 col-lg-10 col-12" data-cues="zoomIn" data-group="page-title" data-delay="700" data-disabled="true">
-        <div class="text-center d-flex flex-column gap-5" data-cue="zoomIn" data-group="page-title" data-delay="700" data-show="true" style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 700ms; animation-direction: normal; animation-fill-mode: both;">
+        <div class="text-center d-flex flex-column gap-5" data-cue="zoomIn" data-group="page-title" data-delay="700" style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 700ms; animation-direction: normal; animation-fill-mode: both;">
            <div class="d-flex justify-content-center">
               <a href="{{ page.hero.offer.url }}" class="text-decoration-none">
                 <span class="bg-primary bg-opacity-10 text-primary border-primary border p-2 fs-6 rounded-pill lh-1 d-flex align-items-center">
@@ -34,22 +34,22 @@ layout: default
 <section class="container py-lg-8 py-5">
    <div class="row justify-content-center">
       <div class="col-md-10 col-12">
-         <div class="text-center position-relative" data-cue="zoomIn" data-show="true" style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-            <img src="./assets/images/landings/sass-v3/hero-app-screen.png" class="img-fluid bg-light p-3 rounded-3 border" alt="">
-            <div class="position-absolute translate-middle top-50 d-none d-lg-block ms-lg-n5 rounded-3 border border-5 border-primary"  data-cue="slideInLeft" data-show="true" style="margin-left: 70px; margin-top: 70px; animation-name: slideInLeft; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-               <img src="./assets/images/landings/sass-v3/hero-frame-left.png" alt="">
+         <div class="text-center position-relative" >
+            <img src="./assets/images/landings/sass-v3/hero-app-screen.png" class="img-fluid bg-light p-3 rounded-3 border" alt="" data-cue="zoomIn">
+            <div class="position-absolute translate-middle top-50 d-none d-lg-block ms-lg-n5"  style="margin-left: 70px; margin-top: 70px;">
+               <img src="./assets/images/landings/sass-v3/hero-frame-left.png" alt="" data-cue="slideInLeft" class="rounded-3 border border-5 border-primary shadow-lg">
             </div>
             <div class="position-absolute top-50 end-0 translate-middle me-n9 d-none d-lg-block">
-               <img src="./assets/images/landings/sass-v3/hero-frame-right-1.svg" class="me-n9 mb-4" alt="" data-cue="slideInRight" data-show="true" style="animation-name: slideInRight; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+               <img src="./assets/images/landings/sass-v3/hero-frame-right-1.svg" class="me-n9 mb-4" alt="" data-cue="slideInRight">
                <br>
-               <img src="./assets/images/landings/sass-v3/hero-frame-right-2.svg" alt="" data-cue="slideInRight" data-show="true" style="animation-name: slideInRight; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+               <img src="./assets/images/landings/sass-v3/hero-frame-right-2.svg" alt="" data-cue="slideInRight">
             </div>
          </div>
       </div>
    </div>
 </section>
 
-<section id="features" class="container py-lg-8 py-5" data-cue="fadeIn" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+<section id="features" class="container py-lg-8 py-5" data-cue="fadeIn">
    <div class="row justify-content-center mb-8">
       <div class="col-xl-6 col-lg-10 col-12">
          <div class="text-center d-flex flex-column gap-5">
@@ -76,11 +76,11 @@ layout: default
       </div>
    </div>
    <div class="row g-6">
-      <div class="col-12" data-cue="zoomIn" data-show="true" style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-         <div class="border rounded-3 bg-body-tertiary bg-opacity-50 overflow-hidden">
+      <div class="col-12" data-cue="zoomIn" style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+         <div class="border rounded-3 bg-body-tertiary bg-opacity-50 overflow-hidden" data-cue="slideInUp">
             <div class="pattern-square"></div>
             <div class="row align-items-center">
-               <div class="col-lg-6 col-12" data-cue="slideInLeft" data-show="true" style="animation-name: slideInLeft; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+               <div class="col-lg-6 col-12" data-cue="slideInLeft" style="animation-name: slideInLeft; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
                   <div class="p-lg-8 p-5 my-lg-4 d-flex flex-column gap-4">
                      <div class="icon-shape icon-xl bg-primary bg-opacity-10 rounded-3 border border-primary">
                         <i class="bi {{ page.features.items[0].icon }} fs-3 text-primary"></i>
@@ -93,7 +93,7 @@ layout: default
                      </div>
                   </div>
                </div>
-               <div class="col-lg-6 col-12 d-lg-flex justify-content-center" data-cue="slideInRight" data-show="true" style="animation-name: slideInRight; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+               <div class="col-lg-6 col-12 d-lg-flex justify-content-center" data-cue="slideInRight">
                   <figure class="p-3 p-lg-0 mb-0">
                      <img src="./assets/images/landings/sass-v3/feature-1.png" class="img-fluid rounded border border-primary border-opacity-25">
                   </figure>
@@ -101,7 +101,7 @@ layout: default
             </div>
          </div>
       </div>
-      <div class="col-lg-6 col-12" data-cue="zoomIn" data-show="true" style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+      <div class="col-lg-6 col-12" data-cue="slideInLeft">
          <div class="border rounded-3 bg-body-tertiary bg-opacity-50 overflow-hidden h-100 position-relative">
             <div class="pattern-square"></div>
             <div class="p-lg-8 p-5 d-flex flex-column gap-4">
@@ -120,7 +120,7 @@ layout: default
             </div>
          </div>
       </div>
-      <div class="col-lg-6 col-12" data-cue="zoomIn" data-show="true" style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 200ms; animation-direction: normal; animation-fill-mode: both;">
+      <div class="col-lg-6 col-12" data-cue="slideInRight">
          <div class="border rounded-3 bg-body-tertiary bg-opacity-50 overflow-hidden h-100 position-relative">
             <div class="pattern-square"></div>
             <div class="p-lg-8 p-5 d-flex flex-column gap-4">
@@ -142,7 +142,7 @@ layout: default
    </div>
 </section>
 
-<section class="container py-lg-8 py-5" data-cue="fadeIn" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+<section class="container py-lg-8 py-5" data-cue="fadeIn">
    <div class="row mb-8">
       <div class="col-xl-5 col-lg-10 col-12">
          <div class="d-flex flex-column gap-5">
@@ -170,7 +170,7 @@ layout: default
    </div>
    <div class="row gy-5">
       {% for item in page.additional_features.items %}
-      <div class="{{ item.col_type }}" data-cue="zoomIn" data-duration="1500" data-show="true" style="animation-name: zoomIn; animation-duration: 1500ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+      <div class="{{ item.col_type }}" data-cue="zoomIn" data-duration="1500">
          <div class="card">
             <div class="card-body">
                <div class="d-flex">
@@ -193,7 +193,7 @@ layout: default
 
 <div class="pattern-square"></div>
 <section class="my-lg-7 py-6 my-5">
-   <div class="container">
+   <div class="container" data-cue="zoomIn">
       <div class="row">
          <div class="col-lg-8 offset-lg-2 col-md-12">
             <div class="text-center mb-5 mb-lg-7">
@@ -274,6 +274,7 @@ layout: default
                   <div class="tab-pane fade {% if forloop.first %}active show{% endif %}" 
                        id="pills-{{ item.tab_title | downcase | replace: ' ', '-' }}" 
                        role="tabpanel" 
+                       data-cue="slideInDown"
                        aria-labelledby="pills-{{ item.tab_title | downcase | replace: ' ', '-' }}-tab" 
                        tabindex="0">
                      <div class="row align-items-center">
@@ -305,7 +306,7 @@ layout: default
                                  </figure>
                                  <div class="position-absolute bottom-0 end-0 me-md-n7 me-n3 mb-n4">
                                     <figure>
-                                       <img src="{{ item.foreground_image }}" alt="account" class="rounded border border-success border-4 shadow" style="max-height: 200px; width: 100%;">
+                                       <img src="{{ item.foreground_image }}" alt="account" class="rounded border {{ item.outline_class }} border-4 shadow" style="max-height: 200px; width: 100%;">
                                     </figure>
                                  </div>
                               </div>
@@ -326,7 +327,7 @@ layout: default
                                  {% if item.foreground_image %}
                                  <div class="position-absolute bottom-0 ms-2 mb-5">
                                     <figure>
-                                       <img src="{{ item.foreground_image }}" alt="account" class="rounded border border-info border-4 shadow" style="max-height: 200px; height: 100%;">
+                                       <img src="{{ item.foreground_image }}" alt="account" class="rounded border {{ item.outline_class }} border-4 shadow" style="max-height: 200px; height: 100%;">
                                     </figure>
                                  </div>
                                  {% endif %}
@@ -370,7 +371,7 @@ layout: default
 
 
 
-<section class="cta container mb-lg-8 py-lg-8 py-5" data-cue="zoomIn" data-show="true" style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+<section class="cta container mb-lg-8 py-lg-8 py-5" data-cue="slideInUp">
    <div class="row g-0">
       <div class="col-12">
          <div class="border border-primary bg-gray-900 rounded-3">
