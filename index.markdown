@@ -4,13 +4,13 @@
 
 layout: home
 hero:
-  title: AI Insights Made Simple for Your Business
-  description: Effortlessly chat with your files and create actionable dashboards.
+  title: Chat with your documents and share insights.
+  description: Use AI to find insights in your documents and turn them into reports that you can share with your team and clients.
   offer:
     text: Get 20% off yearly plans
     url: "https://app.chatterkb.com/checkout/yearly"
   button:
-    text: Get Started
+    text: Get Started For Free
     url: "https://app.chatterkb.com/checkout/plans"
   link:
     text: Learn more
@@ -30,7 +30,7 @@ features:
       description: Engage in natural conversations with AI powered by your own files. Simply ask questions to get instant insights and answers directly from your personalized knowledge base.
     - icon: bi-pin-angle
       title_highlight: Pin
-      title_suffix: and Share Important Findings
+      title_suffix: and Share Important Insights
       description: Transform your conversations into visual tables and charts for a clearer understanding of your data. Pin these insights to a board you can share with your team or clients, making collaboration effortless.
 
 additional_features:

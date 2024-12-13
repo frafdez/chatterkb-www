@@ -43,6 +43,7 @@ plugins:
   - jekyll-seo-tag
 sass:
     sass_dir: _sass
+    quiet_deps: true
     
 
 # header_pages:
