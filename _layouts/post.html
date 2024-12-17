@@ -1,27 +1,41 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+<div class="container">
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="py-xl-9 py-4">
+      <div class="container">
+        <div class="row">
+          <article class="col-lg-8 offset-lg-2">
+            <h1>{{ page.title }}</h1>
+            <div class="d-flex align-items-center mt-lg-6 mt-4">
+              <div class="me-5">
+                <span class="fs-6">Written by</span>
+                <div class="d-flex align-items-center mt-2">
+                  <img src="{{ site.baseurl }}/assets/images/avatar/author.png" alt="Avatar" width="24" height="24" class="avatar avatar-xs rounded-circle" />
+                  <div class="ms-2">
+                    {{ page.author }}
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span class="fs-6">Published on</span>
+                <div class="mt-2 text-body-secondary">
+                  <span class="fs-6">{{ page.date | date: "%B %d, %Y" }}</span>
+                </div>
+              </div>
+            </div>
+            {% if page.image %}
+            <figure class="my-6">
+              <img src="{{ page.image }}" alt="{{ page.title }}" class="rounded-3 img-fluid w-100" data-cue="slideInUp" data-delay="250" />
+            </figure>
+            {% else %}
+            <br/>
+            {% endif %}
+            {{ content }}
+          </article>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
