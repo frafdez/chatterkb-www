@@ -5,6 +5,10 @@ date:   2024-12-17 09:01:58 +0100
 categories: marketing
 image: /assets/images/posts/unlocking-the-power-of-ai-for-marketing-rag.jpeg 
 author: "Frank Fernandez"
+sitemap:
+  lastmod: 2024-12-17
+  changefreq: weekly
+  priority: 0.8
 ---
 As a marketing manager or CMO, you're constantly looking for ways to stay ahead of the curve and leverage the latest technologies to drive business growth. One such technology that's gaining traction is Retrieval-Augmented Generation (RAG), a powerful AI framework that's revolutionizing the way we approach marketing and customer engagement.
 
