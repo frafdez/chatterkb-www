@@ -6,12 +6,11 @@ excerpt: Explore our collection of articles and insights
 comments: false
 ---
 <section>
-  <div class="container">
     <!-- Blog Cards -->
-    <div class="table-responsive-lg">
-      <div class="row g-5 flex-nowrap pb-4 pb-lg-0 me-5 me-lg-0">
-        {%- for post in site.posts limit:112 -%}
-        <article class="col-lg-4 col-md-6 col-12" data-cue="slideInUp" data-delay="250">
+    <div class="container-fluid">
+      <div class="row pb-4 pb-lg-0 me-lg-0">
+        {%- for post in site.posts limit:30 -%}
+        <article class="col-lg-4 mb-4" data-cue="slideInUp" data-delay="250">
           <figure class="mb-4 zoom-img">
             <a href="{{ post.url }}">
               {% if post.image %}
@@ -48,5 +47,4 @@ comments: false
         {%- endfor -%}
       </div>
     </div>
-  </div>
 </section>
