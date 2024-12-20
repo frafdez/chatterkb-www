@@ -99,7 +99,7 @@ smbs:
           color_class: text-primary
           title: Chat with your data
           description: "Generate a chart comparing the ROI of all campaigns in the last six months."
-        - icon: bi-currency-exchange
+        - icon: bi-clipboard-data-fill
           color_class: text-success
           title: Instant insights
           description: Pin this chart to your 'Campaign Performance' board and impress your clients with real-time insights.
@@ -119,7 +119,7 @@ smbs:
           outline_class: border-warning
           title: Chat with your data
           description: "Which products are low in stock but high in demand?"
-        - icon: bi-currency-exchange
+        - icon: bi-credit-card-2-back-fill
           color_class: text-success
           title: Instant insights
           description: Pin this table to your 'Restock Priorities' board and keep your procurement team in the loop.
@@ -156,7 +156,7 @@ smbs:
           color_class: text-primary
           title: Chat with your data
           description: "What are the upcoming milestones for Project Alpha in the next two weeks?"
-        - icon: bi-currency-exchange
+        - icon: bi-code-square
           color_class: text-success
           title: Instant insights
           description: Pin this to your 'Project Alpha Dashboard' and keep your development team aligned and focused.
