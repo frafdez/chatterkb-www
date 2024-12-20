@@ -4,44 +4,17 @@
 
 layout: home
 hero:
-  title: Turn complex documents into simple, actionable reports
-  description: Chat with your documents to find hidden insights and turn them into reports that you can share with your team and clients.
+  title: Chat with your documents and share insights.
+  description: Use AI to find insights in your documents and turn them into reports that you can share with your team and clients.
   offer:
     text: Get 20% off yearly plans
     url: "https://app.chatterkb.com/checkout/yearly"
   button:
-    text: Try It For Free
+    text: Get Started For Free
     url: "https://app.chatterkb.com/checkout/plans"
   link:
     text: Learn more
-    url: "#problems"
-
-problems:
-  section_title: "Problems"
-  items:
-    - section_title: "Work Automation"
-      title: "Wasting Time on Manual Work"
-      description: "Sifting through countless documents to find what matters is tedious and time-consuming. Every hour spent scrolling is an hour not spent acting on insights."
-      image: ./assets/images/landings/sass-v3/manual-work.jpg
-      side: left
-    - section_title: "Data Clarity"
-      title: "Overwhelmed by Information Overload"
-      description: "From reports to presentations, the sheer volume of information makes it easy to miss critical details, slowing down decision-making and impacting results."
-      image: ./assets/images/landings/sass-v3/information-overload.jpg
-      side: right
-    - section_title: "Simplified Collaboration"
-      title: "Collaboration Bottlenecks"
-      description: "Sharing insights with your team often involves multiple tools, confusing email chains, and endless revisions – not to mention wasted effort recreating reports."
-      image: ./assets/images/landings/sass-v3/collaboration-bottlenecks.jpg
-      side: left
-
-solution:
-  title: "Finally, a Smarter Way to Handle Your Documents"
-  description: "Use AI to find insights in your documents and turn them into reports that you can share with your team and clients."
-  button:
-    text: Try It For Free
-    url: "https://app.chatterkb.com/checkout/plans"
-
+    url: "#features"
 features:
   section_title: Features
   title: Upload. Chat. Pin.
@@ -86,25 +59,24 @@ smbs:
   section_title: Benefits
   title: Here's How Our Platform Empowers You
   items:
-    - title: Transform Marketing Data into Actionable Visuals Instantly
-      tab_title: Marketing
-      description: Imagine uploading your latest campaign data and instantly generating a comprehensive ROI analysis.
+    - title: Upload your financial statements
+      tab_title: Finance
+      description: Imagine uploading your quarterly financial statements and, within seconds, generating a comparative analysis of your revenue growth.
       style: left
-      outline_class: border-success border-opacity-50
-      background_image: ./assets/images/landings/marketing/tab-bg-1.svg
-      foreground_image: ./assets/images/landings/marketing/tab-g-1.png
-      main_image: ./assets/images/landings/marketing/tab.jpg
+      outline_class: border-warning border-opacity-50
+      background_image: ./assets/images/landings/finance/tab-bg-1.svg
+      foreground_image: ./assets/images/landings/finance/tab-g-1.png
+      main_image: ./assets/images/landings/finance/tab.jpg
       points:
         - icon: bi-chat-fill
           color_class: text-primary
           title: Chat with your data
-          description: "Generate a chart comparing the ROI of all campaigns in the last six months."
-        - icon: bi-currency-exchange
+          description: "What was our total revenue growth in Q4 compared to Q3?"
+        - icon: bi-graph-up-arrow
           color_class: text-success
           title: Instant insights
-          description: Pin this chart to your 'Campaign Performance' board and impress your clients with real-time insights.
-
-
+          description: Pin this chart to your 'Quarterly Financials' board and share it with stakeholders instantly.
+    
     - title: Optimize Your E-commerce Operations
       tab_title: Ecommerce
       description: Imagine uploading your sales data and inventory levels, and within seconds, pinpointing which products are flying off the shelves but are low in stock.
@@ -124,24 +96,23 @@ smbs:
           title: Instant insights
           description: Pin this table to your 'Restock Priorities' board and keep your procurement team in the loop.
 
-    - title: Upload your financial statements
-      tab_title: Finance
-      description: Imagine uploading your quarterly financial statements and, within seconds, generating a comparative analysis of your revenue growth.
+    - title: Transform Marketing Data into Actionable Visuals Instantly
+      tab_title: Marketing
+      description: Imagine uploading your latest campaign data and instantly generating a comprehensive ROI analysis.
       style: left
-      outline_class: border-warning border-opacity-50
-      background_image: ./assets/images/landings/finance/tab-bg-1.svg
-      foreground_image: ./assets/images/landings/finance/tab-g-1.png
-      main_image: ./assets/images/landings/finance/tab.jpg
+      outline_class: border-success border-opacity-50
+      background_image: ./assets/images/landings/marketing/tab-bg-1.svg
+      foreground_image: ./assets/images/landings/marketing/tab-g-1.png
+      main_image: ./assets/images/landings/marketing/tab.jpg
       points:
         - icon: bi-chat-fill
           color_class: text-primary
           title: Chat with your data
-          description: "What was our total revenue growth in Q4 compared to Q3?"
-        - icon: bi-graph-up-arrow
+          description: "Generate a chart comparing the ROI of all campaigns in the last six months."
+        - icon: bi-currency-exchange
           color_class: text-success
           title: Instant insights
-          description: Pin this chart to your 'Quarterly Financials' board and share it with stakeholders instantly.
-    
+          description: Pin this chart to your 'Campaign Performance' board and impress your clients with real-time insights.
 
     - title: Elevate Your Startup's Project Management
       tab_title: Tech Startups
