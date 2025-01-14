@@ -3,6 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+image: ./assets/images/ckb-card.png
+
 hero:
   title: Turn complex documents into simple, actionable reports
   description: Chat with your documents to find hidden insights and turn them into reports that you can share with your team and clients.
