@@ -3,7 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-image: ./assets/images/ckb-card.png
 
 hero:
   title: Turn complex documents into simple, actionable reports

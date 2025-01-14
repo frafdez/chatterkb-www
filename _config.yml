@@ -45,7 +45,12 @@ sass:
     sass_dir: _sass
     quiet_deps: true
     
-
+defaults:
+   -
+    scope:
+      path: "" # Applies to all posts and pages
+    values:
+      image: ./assets/images/ckb-card.png
 # header_pages:
 #   - pager-1.markdown
 #   - about.markdown
