@@ -7,6 +7,8 @@ layout: home
 hero:
   title: Turn complex documents into simple, actionable reports
   description: Chat with your documents to find hidden insights and turn them into reports that you can share with your team and clients.
+  image: ./assets/images/landings/sass-v3/hero-app-screen.webp
+  image_left: ./assets/images/landings/sass-v3/hero-frame-left.webp
   offer:
     text: Get 20% off yearly plans
     url: "https://app.chatterkb.com/checkout/yearly"
@@ -51,16 +53,18 @@ features:
     - icon: bi-upload
       title_highlight: Upload
       title_suffix: Your Files
-      description: Simply upload your files to create a knowledge base you can chat with. No technical setup—just drag, drop, and let AI provide insights from your own data.
+      description: Simply upload your files to create a knowledge base you can chat with. No technical setup—just drag, drop, and let AI provide insights from your own data. 
+      image: ./assets/images/landings/sass-v3/feature-1.webp
     - icon: bi-chat
       title_highlight: Chat
       title_suffix: with Your Data
       description: Engage in natural conversations with AI powered by your own files. Simply ask questions to get instant insights and answers directly from your personalized knowledge base.
+      image: ./assets/images/landings/sass-v3/feature-2.webp
     - icon: bi-pin-angle
       title_highlight: Pin
       title_suffix: and Share Important Insights
       description: Transform your conversations into visual tables and charts for a clearer understanding of your data. Pin these insights to a board you can share with your team or clients, making collaboration effortless.
-
+      image: ./assets/images/landings/sass-v3/feature-3.webp
 additional_features:
   section_title: Additional Features
   title: More than just a chatbot
