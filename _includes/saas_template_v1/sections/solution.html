@@ -12,6 +12,24 @@
          </div>
       </div>
    </div>
+   
+   {% if page.solution.video_url %}
+   <div class="ratio ratio-16x9 mt-5" data-cue="slideInUp">
+      {% if page.solution.video_type == 'html5' %}
+         <video controls class="rounded-4 shadow-lg">
+            <source src="{{ page.solution.video_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+         </video>
+      {% else %}
+         <iframe src="{{ page.solution.video_url }}" 
+                 title="Solution Video" 
+                 allowfullscreen 
+                 class="rounded-4 shadow-lg">
+         </iframe>
+      {% endif %}
+   </div>
+   {% endif %}
+   
 </section>
 
 {% endif %}
