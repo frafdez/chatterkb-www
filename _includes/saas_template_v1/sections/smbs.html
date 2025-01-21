@@ -112,11 +112,13 @@
                                  <figure>
                                     <img src="{{ item.main_image }}" alt="tab1" class="img-fluid rounded-3 mb-5">
                                  </figure>
+                                 {% if item.foreground_image %}
                                  <div class="position-absolute bottom-0 end-0 me-md-n7 me-n3 mb-n4">
                                     <figure>
                                        <img src="{{ item.foreground_image }}" alt="account" class="rounded border {{ item.outline_class }} border-4 shadow" style="max-height: 200px; width: 100%;">
                                     </figure>
                                  </div>
+                                 {% endif %}
                               </div>
                               <div class="position-absolute start-0 bottom-0 z-n1 d-none d-lg-block">
                                  <figure>

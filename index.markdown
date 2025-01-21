@@ -44,8 +44,11 @@ solution:
   button:
     text: Try It For Free
     url: "https://app.chatterkb.com/checkout/plans"
-  video_url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-overview.m4v"
-  video_type: "html5"
+
+video:
+  url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-overview.m4v"
+  type: "html5"
+  poster: ./assets/images/landings/sass-v3/video-poster.webp
 
 features:
   section_title: Features
