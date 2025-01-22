@@ -41,6 +41,7 @@ pricing_url_yearly: "https://app.chatterkb.com/checkout/yearly"
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
 sass:
     sass_dir: _sass
     quiet_deps: true

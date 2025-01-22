@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Jekyll Serve",
+            "name": "Jekyll Server",
             "type": "node",
             "request": "launch",
             "runtimeExecutable": "bundle",
