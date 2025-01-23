@@ -10,9 +10,9 @@ comments: false
     <div class="container-fluid">
       <div class="row pb-4 pb-lg-0 me-lg-0">
         {%- for post in site.posts limit:30 -%}
-        <article class="col-lg-4 mb-4" data-cue="slideInUp" data-delay="250">
+        <article class="col-lg-4 mb-5" data-cue="slideInUp" data-delay="250">
           <figure class="mb-4 zoom-img">
-            <a href="{{ post.url }}">
+            <a href="{{ post.url }}" class="text-decoration-none d-flex align-items-center" style="min-height: 300px;">
               {% if post.image %}
               <img src="{{ post.image }}" alt="{{ post.title }}" class="img-fluid rounded-3">
               {% else %}

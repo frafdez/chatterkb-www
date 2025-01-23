@@ -7,7 +7,7 @@ description: "A comprehensive guide to help organizations begin their AI journey
 image: /assets/images/posts/getting-started-with-ai-organizations.jpg
 author: "Frank Fernandez"
 sitemap:
-  lastmod: 2024-12-17
+  lastmod: 2025-01-22
   changefreq: weekly
   priority: 0.8
 ---
