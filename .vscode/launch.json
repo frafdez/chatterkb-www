@@ -11,7 +11,9 @@
                 "jekyll",
                 "serve",
                 "--livereload",
-                "--quiet"
+                "--quiet",
+                "--config",
+                "_config-dev.yml"
             ],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
