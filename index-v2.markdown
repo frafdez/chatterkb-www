@@ -2,6 +2,9 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
+sitemap:
+  exclude: 'yes'
+
 layout: home
 hero:
   title: Chat with your documents and share insights.
