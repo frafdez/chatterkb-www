@@ -49,7 +49,8 @@ video:
   url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-overview.m4v"
   type: "html5"
   poster: ./assets/images/landings/sass-v3/video-poster.webp
-
+  container_class: "pb-5 px-4"
+  
 features:
   section_title: Features
   title: Upload. Chat. Pin.

@@ -10,10 +10,12 @@
       <div class="row d-flex align-items-center my-4">
          <div class="col-lg-5 col-md-6 col-12" data-cue="slideInLeft">
             <div data-cue="fadeIn">
+               {% if item.section_title %}
                <small class="text-primary text-uppercase ls-md fw-semibold">{{ item.section_title }}</small>
+               {% endif %}
                <div class="my-4">
                   <h2 class="mb-3">{{ item.title }}</h2>
-                  <p class="mb-0 lead">{{ item.description }}</p>
+                  <p class="mb-0 lead">{{ item.description | markdownify }}</p> 
                </div>
             </div>
          </div>
@@ -36,10 +38,12 @@
          </div>
          <div class="col-lg-5 offset-lg-1 col-md-6 col-12 order-lg-2" data-cue="slideInRight">
             <div class="mt-4">
+               {% if item.section_title %}
                <small class="text-primary text-uppercase ls-md fw-semibold">{{ item.section_title }}</small>
+               {% endif %}
                <div class="my-4">
                   <h2 class="mb-3">{{ item.title }}</h2>
-                  <p class="lead mb-0">{{ item.description }}</p>
+                  <p class="lead mb-0">{{ item.description | markdownify }}</p>
                </div>
             </div>
          </div>
