@@ -10,8 +10,8 @@ hero:
   image: ./assets/images/landings/sass-v3/hero-app-screen.webp
   image_left: ./assets/images/landings/sass-v3/hero-frame-left.webp
   offer:
-    text: Get 20% off yearly plans
-    url: "https://app.chatterkb.com/checkout/yearly"
+    text: Get 20 ChatGPT Prompts for Free!
+    url: "/offers/20-marketing-ai-templates-2025"
   button:
     text: Try It For Free
     url: "https://app.chatterkb.com/checkout/plans"
@@ -50,7 +50,7 @@ video:
   type: "html5"
   poster: ./assets/images/landings/sass-v3/video-poster.webp
   container_class: "pb-5 px-4"
-  
+
 features:
   section_title: Features
   title: Upload. Chat. Pin.

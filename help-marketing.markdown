@@ -4,33 +4,36 @@ layout: ad-lp
 hero:
   title: "Stop Wasting Time on Documents and Client Updates"
   description: "Use ChatterKB’s AI chat to organize docs, streamline client requests, and create shareable reports—so you spend less time searching and more time growing."
-  image: ./assets/images/landings/sass-v3/hero-app-screen.webp
-  image_left: ./assets/images/landings/sass-v3/hero-frame-left.webp
+  image: /assets/images/landings/sass-v3/hero-app-screen.webp
+  image_left: /assets/images/landings/sass-v3/hero-frame-left.webp
   button:
     text: "Try It For Free"
     url: "https://app.chatterkb.com/checkout/plans"
   link:
     text: "Learn more"
     url: "#problems"
-
+  offer:
+    text: Get 20 ChatGPT Prompts for Free!
+    url: "/offers/20-marketing-ai-templates-2025"
+    
 problems:
   section_title: "Problems"
   items:
     - title: "Wasting Hours Searching for Documents?"
       description: "How often do you find yourself (or your team) scrambling to locate the latest version of a document or digging through endless folders for a client update from months ago? Every wasted minute is a lost opportunity—whether it’s billable hours, meeting deadlines, or growing your business. **The chaos is costing you more than just time.**"
-      image: ./assets/images/landings/sass-v3/manual-work.jpg
+      image: /assets/images/landings/sass-v3/manual-work.jpg
       side: left
     - title: "Struggling to Keep Up with Client Demands?"
       description: "Clients expect updates **yesterday**—and every request means tracking changes, updating documents, and delivering a polished, customized result. The constant back-and-forth eats into your time, piles on stress, and leaves you scrambling to keep everything perfect. **It’s exhausting, and it’s holding you back.**"
-      image: ./assets/images/landings/sass-v3/information-overload.jpg
+      image: /assets/images/landings/sass-v3/information-overload.jpg
       side: right
     - title: "Frustrated with Creating Presentations?"
       description: "Staring at a blank slide, trying to turn complex data into something simple and professional? It’s a constant struggle—**especially when you can’t quickly pull the right insights**. **It’s time-consuming, stressful, and pulling you away from the work that really matters.**"
-      image: ./assets/images/landings/sass-v3/collaboration-bottlenecks.jpg
+      image: /assets/images/landings/sass-v3/collaboration-bottlenecks.jpg
       side: left
     - title: "Overwhelmed by Disconnected Data?"
       description: "Your data is scattered across platforms—Google Analytics, HubSpot, dashboards—you name it. Manually pulling numbers, cleaning data, and piecing it all together for clients wastes hours you don’t have. Meanwhile, your competitors are moving faster and smarter. **It’s a data nightmare, and it’s costing you time and opportunities.**"
-      image: ./assets/images/landings/sass-v3/data-frustration.jpg
+      image: /assets/images/landings/sass-v3/data-frustration.jpg
       side: right
 
 solution:
@@ -43,7 +46,7 @@ solution:
 video:
   url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-overview.m4v"
   type: "html5"
-  poster: ./assets/images/landings/sass-v3/video-poster-marketing.webp
+  poster: /assets/images/landings/sass-v3/video-poster-marketing.webp
   container_class: "pb-5 px-4"
 
 additional_features:
