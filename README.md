@@ -1,5 +1,5 @@
 # ChatterKB Website
-This is the source for ChatterKB's website.
+This is the source for [ChatterKB's website](https://chatterkb.com).
 
 It lets me use Bootstrap for styling while leveraging the Jekyll static site generator to break down the site into smaller, more manageable pieces.
 
