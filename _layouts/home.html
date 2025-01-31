@@ -2,16 +2,38 @@
 layout: default
 ---
 
-{% include saas_template_v1/sections/hero/title.html %}   
-{% include saas_template_v1/sections/hero/banner.html %}
-{% include saas_template_v1/sections/problems.html %}
-{% include saas_template_v1/sections/solution.html %}
-{% include saas_template_v1/video.html %}
-{% include saas_template_v1/sections/features/main.html %}
-{% include saas_template_v1/sections/features/additional.html %}
-{% include saas_template_v1/sections/smbs.html %}
-{% include saas_template_v1/sections/cta.html %}
+{% if page.hero %}
+{% include template/sections/hero/title.html %}   
+{% include template/sections/hero/banner.html %}
+{% endif %}
 
+{% if page.problems %}
+{% include template/sections/problems.html %}
+{% endif %}
+
+{% if page.solution %}
+{% include template/sections/solution.html %}
+{% endif %}
+
+{% if page.video %}
+{% include template/sections/video.html %}
+{% endif %}
+
+{% if page.features %}
+{% include template/sections/features/main.html %}
+{% endif %}
+
+{% if page.additional_features %}
+{% include template/sections/features/additional.html %}
+{% endif %}
+
+{% if page.smbs %}
+{% include template/sections/smbs.html %}
+{% endif %}
+
+{% if page.cta %}
+{% include template/sections/cta.html %}
+{% endif %}
 
 
 

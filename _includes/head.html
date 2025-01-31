@@ -2,36 +2,18 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   {%- seo -%}
 
-  <link rel="icon" type="image/png" href="./assets/images/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="./assets/images/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon/favicon-96x96.png' | relative_url }}" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon/favicon.svg' | relative_url }}" />
+  <link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon.ico' | relative_url }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon/apple-touch-icon.png' | relative_url }}" />
   <meta name="apple-mobile-web-app-title" content="ChatterKB" />
 
   <link rel="stylesheet" href="{{ '/assets/scrollCue.css' | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+
   {%- feed_meta -%}
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-  {% for file in site.static_files %}
-    {% if file.path contains '/js/' and file.extname == '.js' %}
-      <script src="{{ file.path | relative_url }}"></script>
-    {% endif %}
-  {% endfor %}
-
-  {%- if jekyll.environment == 'production' -%}
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "pysxcc40ea");
-  </script>
-  {%- endif -%}
 </head>

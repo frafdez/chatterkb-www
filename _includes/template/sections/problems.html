@@ -1,0 +1,54 @@
+{% if page.problems %}
+<section id="problems" class="container my-xl-7 py-5">
+   <!-- <div class="d-flex justify-content-center">
+      <span class="bg-primary bg-opacity-10 text-primary border-primary border px-3 py-2 fs-6 rounded-pill lh-1 align-items-center d-flex">
+         <span class="ms-1 text-uppercase ls-md fw-semibold">{{ page.problems.section_title }}</span>
+      </span>
+   </div> -->
+  {% for item in page.problems.items %}
+      {% if item.side == 'left' %}
+      <div class="row d-flex align-items-center my-4">
+         <div class="col-lg-5 col-md-6 col-12" data-cue="slideInLeft">
+            <div data-cue="fadeIn">
+               {% if item.section_title %}
+               <small class="text-primary text-uppercase ls-md fw-semibold">{{ item.section_title }}</small>
+               {% endif %}
+               <div class="my-4">
+                  <h2 class="mb-3">{{ item.title }}</h2>
+                  <p class="mb-0 lead">{{ item.description | markdownify }}</p> 
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-6 offset-lg-1 col-md-6 col-12" data-cue="slideInRight">
+            <div class="position-relative">
+               <figure>
+                  <img src="{{ item.image | relative_url }}" alt="landing" class="img-fluid rounded-4">
+               </figure>
+            </div>
+         </div>
+      </div>
+      {% else %}
+      <div class="row d-flex align-items-center my-4">
+         <div class="col-lg-6 col-md-6 col-12 order-lg-2 order-1" data-cue="slideInLeft">
+            <div class="position-relative">
+               <figure>
+                  <img src="{{ item.image | relative_url }}" alt="landing" class="img-fluid rounded-4">
+               </figure>
+            </div>
+         </div>
+         <div class="col-lg-5 offset-lg-1 col-md-6 col-12 order-lg-2" data-cue="slideInRight">
+            <div class="mt-4">
+               {% if item.section_title %}
+               <small class="text-primary text-uppercase ls-md fw-semibold">{{ item.section_title }}</small>
+               {% endif %}
+               <div class="my-4">
+                  <h2 class="mb-3">{{ item.title }}</h2>
+                  <p class="lead mb-0">{{ item.description | markdownify }}</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endif %}
+  {% endfor %}
+</section>
+{% endif %}

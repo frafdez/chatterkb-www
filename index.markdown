@@ -7,8 +7,8 @@ layout: home
 hero:
   title: Turn complex documents into simple, actionable reports
   description: Chat with your documents to find hidden insights and turn them into reports that you can share with your team and clients.
-  image: ./assets/images/landings/sass-v3/hero-app-screen.webp
-  image_left: ./assets/images/landings/sass-v3/hero-frame-left.webp
+  image: /assets/images/template/content/hero-app-screen.webp
+  image_left: /assets/images/template/content/hero-frame-left.webp
   offer:
     text: Get 20 ChatGPT Prompts for Free!
     url: "/offers/20-marketing-ai-templates-2025"
@@ -25,17 +25,17 @@ problems:
     - section_title: "Work Automation"
       title: "Wasting Time on Manual Work"
       description: "Sifting through countless documents to find what matters is tedious and time-consuming. Every hour spent scrolling is an hour not spent acting on insights."
-      image: ./assets/images/landings/sass-v3/manual-work.jpg
+      image: /assets/images/template/content/manual-work.jpg
       side: left
     - section_title: "Data Clarity"
       title: "Overwhelmed by Information Overload"
       description: "From reports to presentations, the sheer volume of information makes it easy to miss critical details, slowing down decision-making and impacting results."
-      image: ./assets/images/landings/sass-v3/information-overload.jpg
+      image: ./assets/images/template/content/information-overload.jpg
       side: right
     - section_title: "Simplified Collaboration"
       title: "Collaboration Bottlenecks"
       description: "Sharing insights with your team often involves multiple tools, confusing email chains, and endless revisions – not to mention wasted effort recreating reports."
-      image: ./assets/images/landings/sass-v3/collaboration-bottlenecks.jpg
+      image: ./assets/images/template/content/collaboration-bottlenecks.jpg
       side: left
 
 solution:
@@ -48,7 +48,7 @@ solution:
 video:
   url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-overview.m4v"
   type: "html5"
-  poster: ./assets/images/landings/sass-v3/video-poster.webp
+  poster: ./assets/images/template/content/video-poster.webp
   container_class: "pb-5 px-4"
 
 features:
@@ -60,17 +60,17 @@ features:
       title_highlight: Upload
       title_suffix: Your Files
       description: Simply upload your files to create a knowledge base you can chat with. No technical setup—just drag, drop, and let AI provide insights from your own data. 
-      image: ./assets/images/landings/sass-v3/feature-1.webp
+      image: ./assets/images/template/content/feature-1.webp
     - icon: bi-chat
       title_highlight: Chat
       title_suffix: with Your Data
       description: Engage in natural conversations with AI powered by your own files. Simply ask questions to get instant insights and answers directly from your personalized knowledge base.
-      image: ./assets/images/landings/sass-v3/feature-2.webp
+      image: ./assets/images/template/content/feature-2.webp
     - icon: bi-pin-angle
       title_highlight: Pin
       title_suffix: and Share Important Insights
       description: Transform your conversations into visual tables and charts for a clearer understanding of your data. Pin these insights to a board you can share with your team or clients, making collaboration effortless.
-      image: ./assets/images/landings/sass-v3/feature-3.webp
+      image: ./assets/images/template/content/feature-3.webp
 additional_features:
   section_title: Additional Features
   title: More than just a chatbot
@@ -102,9 +102,9 @@ smbs:
       description: Imagine uploading your latest campaign data and instantly generating a comprehensive ROI analysis.
       style: left
       outline_class: border-success border-opacity-50
-      background_image: ./assets/images/landings/marketing/tab-bg-1.svg
-      foreground_image: ./assets/images/landings/marketing/tab-g-1.png
-      main_image: ./assets/images/landings/marketing/tab.jpg
+      background_image: /assets/images/template/marketing/tab-bg-1.svg
+      foreground_image: /assets/images/template/marketing/tab-g-1.png
+      main_image: /assets/images/template/marketing/tab.jpg
       points:
         - icon: bi-chat-fill
           color_class: text-primary
@@ -121,9 +121,9 @@ smbs:
       description: Imagine uploading your sales data and inventory levels, and within seconds, pinpointing which products are flying off the shelves but are low in stock.
       style: right
       outline_class: border-info border-opacity-50
-      background_image: ./assets/images/landings/ecommerce/tab-bg-1.svg
-      foreground_image: ./assets/images/landings/ecommerce/tab-g-1.png
-      main_image: ./assets/images/landings/ecommerce/tab.jpg
+      background_image: ./assets/images/template/ecommerce/tab-bg-1.svg
+      foreground_image: ./assets/images/template/ecommerce/tab-g-1.png
+      main_image: ./assets/images/template/ecommerce/tab.jpg
       points:
         - icon: bi-chat-fill
           color_class: text-primary
@@ -140,9 +140,9 @@ smbs:
       description: Imagine uploading your quarterly financial statements and, within seconds, generating a comparative analysis of your revenue growth.
       style: left
       outline_class: border-warning border-opacity-50
-      background_image: ./assets/images/landings/finance/tab-bg-1.svg
-      foreground_image: ./assets/images/landings/finance/tab-g-1.png
-      main_image: ./assets/images/landings/finance/tab.jpg
+      background_image: ./assets/images/template/finance/tab-bg-1.svg
+      foreground_image: ./assets/images/template/finance/tab-g-1.png
+      main_image: ./assets/images/template/finance/tab.jpg
       points:
         - icon: bi-chat-fill
           color_class: text-primary
@@ -159,9 +159,9 @@ smbs:
       description: Imagine uploading your project plans and timelines, and within seconds, gaining a clear overview of upcoming milestones and resource allocations.
       style: right
       outline_class: border-secondary border-opacity-50
-      background_image: ./assets/images/landings/tech/tab-bg-1.svg
-    #   foreground_image: ./assets/images/landings/tech/tab-g-1.png
-      main_image: ./assets/images/landings/tech/tab.jpg
+      background_image: ./assets/images/template/tech/tab-bg-1.svg
+    #   foreground_image: ./assets/images/template/tech/tab-g-1.png
+      main_image: ./assets/images/template/tech/tab.jpg
       points:
         - icon: bi-chat-fill
           color_class: text-primary

@@ -1,7 +1,7 @@
 ---
-layout: offer-lp-ty
+layout: offers/ty
 title: "Thank You!"
-image: ./assets/images/offers/20-chatgpt-prompts-marketing.webp
+image: /assets/images/offers/20-chatgpt-prompts-marketing.webp
 
 hero:
   title: "Thank You!"
@@ -19,4 +19,4 @@ solution:
 
 ---
 
-{% include saas_template_v1/sections/solution.html %}
+{% include template/sections/solution.html %}

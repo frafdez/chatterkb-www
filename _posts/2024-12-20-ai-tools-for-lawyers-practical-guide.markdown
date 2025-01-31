@@ -49,7 +49,7 @@ In a regulatory environment that grows more complex by the day, AI-powered compl
 
 ## Introducing ChatterKB: Your Partner in Legal Intelligence
 
-Even with the best AI tools, legal teams must still navigate a tide of complex documents and data. ChatterKB helps by:
+Even with the best AI tools, legal teams must still navigate a tide of complex documents and data. ChatterKB helandings by:
 
 - Converting complex documents into simple, actionable reports
 - Saving time by eliminating manual document review

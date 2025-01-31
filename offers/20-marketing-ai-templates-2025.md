@@ -1,7 +1,7 @@
 ---
-layout: offer-lp
+layout: offers/offer
 title: "20 ChatGPT Prompts Every Marketer Needs in 2025"
-image: ./assets/images/offers/20-chatgpt-prompts-marketing.webp
+image: /assets/images/offers/20-chatgpt-prompts-marketing.webp
 
 hero:
   title: "20 ChatGPT Prompts to Elevate Your Marketing in 2025"
@@ -11,10 +11,10 @@ hero:
     html: "<div class=\"ml-embedded mt-4\" data-form=\"r3f8vn\"></div>"
 ---
 
-<section class="container py-lg-8 py-6">
+<section class="container py-lg-8 py-6" data-cue="fadeIn" >
     <div class="row justify-content-center">
         <div class="col-md-10 col-12">
-            <p class="lead mb-0"><strong>ChatterKB</strong> helps you organize and transform your knowledge into actionable insights—perfect for marketers ready to scale smarter.</p>
+            <p class="lead mb-0"><strong>ChatterKB</strong> helandings you organize and transform your knowledge into actionable insights—perfect for marketers ready to scale smarter.</p>
         </div>
     </div>
 </section>

@@ -604,7 +604,7 @@ Similar to tables and dark tables, use the modifier classes `.table-light` or `.
 
 ### Captions
 
-A `<caption>` functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it.
+A `<caption>` functions like a heading for a table. It helandings users with screen readers to find a table and understand what it's about and decide if they want to read it.
 
 <div class="bd-example">
   <table class="table">
