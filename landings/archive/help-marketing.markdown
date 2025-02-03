@@ -11,7 +11,7 @@ hero:
   image_left: /assets/images/template/content/hero-frame-left.webp
   button:
     text: "Try It For Free"
-    url: "https://app.chatterkb.com/checkout/plans"
+    # url: "https://app.chatterkb.com/checkout/plans"
   link:
     text: "Learn more"
     url: "#problems"
@@ -44,7 +44,7 @@ solution:
   description: "With ChatterKB’s AI chat, just ask for insights, generate reports, and handle updates in minutes. No more endless searching—just faster, smarter client work."
   button:
     text: "Start Saving Time—Try It Free"
-    url: "https://app.chatterkb.com/checkout/plans"
+    # url: "https://app.chatterkb.com/checkout/plans"
 
 video:
   url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-overview.m4v"
@@ -79,5 +79,5 @@ cta:
   description: "Sign up for free today to chat with your documents, save time, and streamline your workflow."
   button:
     text: "Get Started for Free"
-    url: "https://app.chatterkb.com/checkout/plans"
+    # url: "https://app.chatterkb.com/checkout/plans"
 ---
