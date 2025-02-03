@@ -36,6 +36,7 @@ company_name: "Beatspoken LLC."
 sign_in_url: "https://app.chatterkb.com"
 pricing_url: "https://app.chatterkb.com/checkout/plans"
 pricing_url_yearly: "https://app.chatterkb.com/checkout/yearly"
+signup_url: "https://oauth.chatterkb.com/signup?client_id=3dcms8p6lfsh1o4hb1bu79nhjj&redirect_uri=https%3A%2F%2Fapp.chatterkb.com%2Fclients%2Fauth%2Fcognito_oauth2%2Fcallback&response_type=code&scope%5B%5D=openid&scope%5B%5D=email&scope%5B%5D=aws.cognito.signin.user.admin"
 
 # Build settings
 # theme: minima

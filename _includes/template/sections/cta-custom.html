@@ -10,7 +10,7 @@
                          <p class="mb-0 me-lg-8">{{ page.cta.description }}</p>
                       </div>
                       <div>
-                         <a href="{{ page.cta.button.url }}" class="btn btn-primary">{{ page.cta.button.text }}</a>
+                         <a href="{{ page.cta.button.url | default: site.signup_url }}" class="btn btn-primary">{{ page.cta.button.text }}</a>
                       </div>
                       <div>
                          <ul class="list-inline">

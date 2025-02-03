@@ -1,6 +1,8 @@
 ---
-layout: rag
-
+layout: home
+permalink: /rag
+sitemap:
+  exclude: 'yes'
 
 hero:
   title: "Launch an AI-Powered Knowledge Base in Minutes"
@@ -12,7 +14,7 @@ hero:
     url: "https://app.chatterkb.com/checkout/yearly"
   button:
     text: "Try It For Free"
-    url: "https://app.chatterkb.com/checkout/plans"
+    # url: "https://app.chatterkb.com/checkout/plans"
   link:
     text: "Learn more"
     url: "#problems"
@@ -22,7 +24,7 @@ problems:
   items:
     - section_title: "Slow Document Workflows"
       title: "Manually Organizing Knowledge Is Painful"
-      description: "Endless hours are spent sifting through documents, trying to piece together the relevant information. It’s a bottleneck that eats up time and resources."
+      description: "Endless hours are spent sifting through documents, trying to piece together the relevant information. It's a bottleneck that eats up time and resources."
       image: /assets/images/template/content/manual-work.jpg
       side: left
 
@@ -43,7 +45,7 @@ solution:
   description: "Stop wrestling with scattered documents. Quickly spin up a dedicated knowledge base where you can ask questions, pin key findings, and share AI-curated reports."
   button:
     text: "Try It For Free"
-    url: "https://app.chatterkb.com/checkout/plans"
+    # url: "https://app.chatterkb.com/checkout/plans"
 
 features:
   section_title: "Features"
@@ -103,7 +105,7 @@ smbs:
       style: left
       outline_class: border-success border-opacity-50
       background_image: /assets/images/template/marketing/tab-bg-1.svg
-      # foreground_image: /assets/images/template/marketing/tab-g-1.png
+      # foreground_image: ./assets/images/template/marketing/tab-g-1.png
       main_image: /assets/images/template/marketing/tab.jpg
       points:
         - icon: bi-chat-fill
@@ -117,11 +119,11 @@ smbs:
 
     - title: "E-commerce Operators"
       tab_title: "Ecommerce"
-      description: "Stay ahead of stock and sales trends. Understand what’s selling and what needs restocking—all in one place."
+      description: "Stay ahead of stock and sales trends. Understand what's selling and what needs restocking—all in one place."
       style: right
       outline_class: border-info border-opacity-50
       background_image: /assets/images/template/ecommerce/tab-bg-1.svg
-      # foreground_image: /assets/images/template/ecommerce/tab-g-1.png
+      # foreground_image: ./assets/images/template/ecommerce/tab-g-1.png
       main_image: /assets/images/template/ecommerce/tab.jpg
       points:
         - icon: bi-chat-fill
@@ -139,7 +141,7 @@ smbs:
       style: left
       outline_class: border-warning border-opacity-50
       background_image: /assets/images/template/finance/tab-bg-1.svg
-      # foreground_image: /assets/images/template/finance/tab-g-1.png
+      # foreground_image: ./assets/images/template/finance/tab-g-1.png
       main_image: /assets/images/template/finance/tab.jpg
       points:
         - icon: bi-chat-fill
@@ -162,9 +164,16 @@ smbs:
         - icon: bi-chat-fill
           color_class: text-primary
           title: "Ask for milestone updates"
-          description: "Get an AI-generated summary of what’s due this sprint and who’s responsible."
+          description: "Get an AI-generated summary of what's due this sprint and who's responsible."
         - icon: bi-code-square
           color_class: text-success
           title: "Immediate visibility"
           description: "Pin critical milestones to a shared dashboard so your entire dev team stays in sync."
+
+cta:
+  title: Start Chatting with Your Data Now
+  description: Sign up for a free account today — no credit card required.
+  button:
+    text: Get Started for Free
+    # url: "https://app.chatterkb.com/checkout/plans"
 ---

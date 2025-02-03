@@ -10,7 +10,7 @@
          <p class="mb-0 lead">{{ page.solution.description }}</p>
          {% endif %}
          <div class="d-flex flex-row gap-4 justify-content-center">
-            <a href="{{ page.solution.button.url }}" class="btn btn-primary">{{ page.solution.button.text }}</a>
+            <a href="{{ page.solution.button.url | default: site.signup_url }}" class="btn btn-primary">{{ page.solution.button.text }}</a>
          </div>
       </div>
    </div>

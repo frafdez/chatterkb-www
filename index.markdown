@@ -14,7 +14,7 @@ hero:
     url: "/offers/20-marketing-ai-templates-2025"
   button:
     text: Try It For Free
-    url: "https://app.chatterkb.com/checkout/plans"
+    # url: "https://app.chatterkb.com/checkout/plans"
   link:
     text: Learn more
     url: "#problems"
@@ -43,7 +43,7 @@ solution:
   description: "Use AI to find insights in your documents and turn them into reports that you can share with your team and clients."
   button:
     text: Try It For Free
-    url: "https://app.chatterkb.com/checkout/plans"
+    # url: "https://app.chatterkb.com/checkout/plans"
 
 video:
   url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-overview.m4v"
@@ -172,5 +172,10 @@ smbs:
           title: Instant insights
           description: Pin this to your 'Project Alpha Dashboard' and keep your development team aligned and focused.
 
-      
+cta:
+  title: Start Chatting with Your Data Now
+  description: Sign up for a free account today — no credit card required.
+  button:
+    text: Get Started for Free
+    # url: "https://app.chatterkb.com/checkout/plans"
 ---
