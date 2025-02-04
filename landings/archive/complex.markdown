@@ -5,7 +5,7 @@
 layout: home
 
 hero:
-  title: Turn your documents into simple, actionable reports
+  title: Turn complex documents into simple, actionable reports
   description: Chat with your documents to find hidden insights and turn them into reports that you can share with your team and clients.
   image: /assets/images/template/content/hero-app-screen.webp
   image_left: /assets/images/template/content/hero-frame-left.webp
