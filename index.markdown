@@ -80,7 +80,7 @@ features:
 additional_features:
   section_title: Additional Features
   title: More than just a chatbot
-  description: Chat with your files, create dashboards, and more.
+  description: Convert your files into smart, interactive knowledge bases—enabling seamless chat, real-time dashboards, and so much more.
   items:
     - icon: bi-speedometer  
       col_type: col-md-6        
