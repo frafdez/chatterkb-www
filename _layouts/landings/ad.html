@@ -4,7 +4,11 @@ layout: landings/default
 
 {% if page.hero %}
 {% include template/sections/hero/title.html %}   
+{% if page.hero.video %}
+{% include template/sections/hero/banner-with-video.html %}
+{% else %}
 {% include template/sections/hero/banner.html %}
+{% endif %}
 {% endif %}
 
 {% if page.problems %}
