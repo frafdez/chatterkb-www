@@ -5,7 +5,7 @@
 layout: home-video
 
 hero:
-  title: Turn your documents into simple, actionable reports
+  title: Turn your documents into actionable reports
   description: Chat with your documents to find hidden insights and turn them into reports that you can share with your team and clients.
   # image: /assets/images/template/content/hero-app-screen.webp
   # image_left: /assets/images/template/content/hero-frame-left.webp
@@ -16,8 +16,8 @@ hero:
 
   container_class: "pb-5 px-4"
   offer:
-    text: Get 20 ChatGPT Prompts for Free!
-    url: "/offers/20-marketing-ai-templates-2025"
+    text: Get 20% off yearly plans
+    url: "https://app.chatterkb.com/checkout/yearly"
   button:
     text: Try It For Free
     # url: "https://app.chatterkb.com/checkout/plans"
