@@ -71,7 +71,7 @@ features:
       title_highlight: Chat
       title_suffix: with Your Data
       description: Engage in natural conversations with AI powered by your own files. Simply ask questions to get instant insights and answers directly from your personalized knowledge base.
-      image: ./assets/images/template/content/feature-2.webp
+      image: /assets/images/template/content/feature-2b.webp
     - icon: bi-pin-angle
       title_highlight: Pin
       title_suffix: and Share Important Insights
