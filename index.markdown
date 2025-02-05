@@ -2,13 +2,19 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
+layout: home-video
 
 hero:
   title: Turn your documents into simple, actionable reports
   description: Chat with your documents to find hidden insights and turn them into reports that you can share with your team and clients.
-  image: /assets/images/template/content/hero-app-screen.webp
-  image_left: /assets/images/template/content/hero-frame-left.webp
+  # image: /assets/images/template/content/hero-app-screen.webp
+  # image_left: /assets/images/template/content/hero-frame-left.webp
+  video:
+    url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-hero-video.m4v"
+    type: "html5"
+    poster:  /assets/images/template/content/hero-app-video.webp
+
+  container_class: "pb-5 px-4"
   offer:
     text: Get 20 ChatGPT Prompts for Free!
     url: "/offers/20-marketing-ai-templates-2025"
@@ -45,11 +51,11 @@ solution:
     text: Try It For Free
     # url: "https://app.chatterkb.com/checkout/plans"
 
-video:
-  url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-overview.m4v"
-  type: "html5"
-  poster: ./assets/images/template/content/video-poster.webp
-  container_class: "pb-5 px-4"
+# video:
+#   url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-hero-video.m4v"
+#   type: "html5"
+#   poster:  /assets/images/template/content/hero-app-video.webp
+#   container_class: "pb-5 px-4"
 
 features:
   section_title: Features
@@ -103,7 +109,7 @@ smbs:
       style: left
       outline_class: border-success border-opacity-50
       background_image: /assets/images/template/marketing/tab-bg-1.svg
-      foreground_image: /assets/images/template/marketing/tab-g-1.png
+      # foreground_image: /assets/images/template/marketing/tab-g-1.png
       main_image: /assets/images/template/marketing/tab.jpg
       points:
         - icon: bi-chat-fill
@@ -122,7 +128,7 @@ smbs:
       style: right
       outline_class: border-info border-opacity-50
       background_image: ./assets/images/template/ecommerce/tab-bg-1.svg
-      foreground_image: ./assets/images/template/ecommerce/tab-g-1.png
+      # foreground_image: ./assets/images/template/ecommerce/tab-g-1.png
       main_image: ./assets/images/template/ecommerce/tab.jpg
       points:
         - icon: bi-chat-fill
@@ -141,7 +147,7 @@ smbs:
       style: left
       outline_class: border-warning border-opacity-50
       background_image: ./assets/images/template/finance/tab-bg-1.svg
-      foreground_image: ./assets/images/template/finance/tab-g-1.png
+      # foreground_image: ./assets/images/template/finance/tab-g-1.png
       main_image: ./assets/images/template/finance/tab.jpg
       points:
         - icon: bi-chat-fill
