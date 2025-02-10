@@ -6,12 +6,16 @@
 .highlight {
   color: #24292f;
   background-color: #f6f8fa;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 /* Dark theme */
 [data-bs-theme="dark"] .highlight {
   color: #e6edf3;
   background-color: #161b22;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 /* Keywords */
