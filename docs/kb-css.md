@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ChatterKB Knowledge Base CSS
+image: /docs/images/image1.webp
 description: A comprehensive guide to ChatterKB's CSS classes and theming system
 ---
 
@@ -73,30 +74,38 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </style>
 
+### Skin your knowledge base
+You can skin your knowledge base by providing your own CSS. This is a great way to make your knowledge base reflect your brand.
+
 <div class="row image-list my-5">
-    <div class="col-lg-4 col-md-12 d-flex justify-content-center">
+    <div class="col-lg-4 col-md-12 d-flex justify-content-center mb-4">
       <img src="/docs/images/image2.webp" class="d-block" alt="...">
     </div>
-    <div class="col-lg-4 col-md-4 d-flex justify-content-center d-none d-lg-flex">
+    <div class="col-lg-4 col-md-4 d-flex justify-content-center d-none d-lg-flex mb-4">
       <img src="/docs/images/image1.webp" class="d-block" alt="...">
     </div>
-    <div class="col-lg-4 col-md-4 d-flex justify-content-center d-none d-lg-flex">
+    <div class="col-lg-4 col-md-4 d-flex justify-content-center d-none d-lg-flex mb-4">
       <img src="/docs/images/image3.webp" class="d-block" alt="...">
+    </div>
+    <div class="col-lg-6 col-md-46 d-flex justify-content-center d-none d-lg-flex mb-4">
+      <img src="/docs/images/image4.webp" class="d-block" alt="...">
+    </div>
+    <div class="col-lg-6 col-md-4 d-flex justify-content-center d-none d-lg-flex mb-4">
+      <img src="/docs/images/image5.webp" class="d-block" alt="...">
     </div>
 </div>
 
-## Skin your knowledge base
-You can skin your knowledge base by providing your own CSS. This is a great way to make your knowledge base reflect your brand.
-## How to Use
+
+### How to Use
 Create the CSS file for your theme and copy the code into the knowledge base settings. You can access the settings by clicking on the gear icon for the knowledge base and then clicking on the gear icon menu and selecting "Edit". You'll find a section called "Css" in the advanced settings area. Here are some example CSS files you can use as a starting point.
 
-<a href="/docs/files/ckb-example.css" class="btn btn-outline-primary">Download Example 1 CSS</a>
-<a href="/docs/files/ckb-example-simple.css" class="btn btn-outline-primary">Download Example 2 CSS</a>
 
+<a href="/docs/files/ckb-example-simple.css" class="btn btn-outline-primary mb-2">Download Example 2 CSS (Simple)</a>
+<a href="/docs/files/ckb-example.css" class="btn btn-outline-primary mb-2">Download Example 1 CSS (Advanced)</a>
 
-## Core Layout Components
+### Core Layout Components
 
-### Body & Container
+#### Body & Container
 ```css
 .chatterkb-body {
     background-color: #ffffff;
@@ -109,7 +118,7 @@ Create the CSS file for your theme and copy the code into the knowledge base set
 }
 ```
 
-### Navigation & Header
+#### Navigation & Header
 ```css
 .chatterkb-nav-link {
     color: #178D00 !important;
@@ -147,9 +156,9 @@ Create the CSS file for your theme and copy the code into the knowledge base set
 }
 ```
 
-## Knowledge Base Components
+### Knowledge Base Components
 
-### Knowledge Base Card
+#### Knowledge Base Card
 ```css
 .chatterkb-knowledge-base-card {
     background-color: #000000E6;
@@ -171,7 +180,7 @@ Create the CSS file for your theme and copy the code into the knowledge base set
 }
 ```
 
-### Action Buttons
+#### Action Buttons
 ```css
 .chatterkb-knowledge-base-subscribe-button {
     background-color: #178D0033;
@@ -201,9 +210,9 @@ Create the CSS file for your theme and copy the code into the knowledge base set
 }
 ```
 
-## Conversation Components
+### Conversation Components
 
-### Conversation List
+#### Conversation List
 ```css
 .chatterkb-conversations-list-group {
     --bs-list-group-bg: #f1f1f1 !important;
@@ -226,7 +235,7 @@ Create the CSS file for your theme and copy the code into the knowledge base set
 }
 ```
 
-### Response Elements
+#### Response Elements
 ```css
 .chatterkb-response-button {
     color: #178D00 !important;
@@ -238,9 +247,9 @@ Create the CSS file for your theme and copy the code into the knowledge base set
 }
 ```
 
-## Theme Variations
+### Theme Variations
 
-### Light Theme
+#### Light Theme
 ```css
 .chatterkb-body[data-bs-theme="light"] .chatterkb-input-container {
     background-color: #000000;
@@ -259,7 +268,7 @@ Create the CSS file for your theme and copy the code into the knowledge base set
 }
 ```
 
-### Dark Theme
+#### Dark Theme
 ```css
 .chatterkb-body[data-bs-theme="dark"] .chatterkb-input-container {
     background-color: #333333;
