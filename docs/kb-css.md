@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ChatterKB Knowledge Base CSS
+title: Custom CSS
 image: /docs/images/image1.webp
 description: A comprehensive guide to ChatterKB's CSS classes and theming system
 ---
