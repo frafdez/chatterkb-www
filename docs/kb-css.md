@@ -97,7 +97,7 @@ You can skin your knowledge base by providing your own CSS. This is a great way 
 
 
 ### How to Use
-Create the CSS file for your theme and copy the code into the knowledge base settings. You can access the settings by clicking on the gear icon for the knowledge base and then clicking on the gear icon menu and selecting "Edit". You'll find a section called "Css" in the advanced settings area. Here are some example CSS files you can use as a starting point.
+Create the CSS file for your theme and copy the code into the knowledge base settings. You can access the settings by clicking on the gear icon for the knowledge base and then clicking "Style". Here are some example CSS files you can use as a starting point.
 
 
 <a href="/docs/files/ckb-example-simple.css" class="btn btn-outline-primary mb-2">Download Example 2 CSS (Simple)</a>
