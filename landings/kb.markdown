@@ -48,7 +48,7 @@ problems:
       image: /assets/images/template/content/kb-benefit4.webp
       side: right
 
-
+ 
 # solution:
 #   title: "Finally, a Smarter Way to Handle Your Documents"
 #   description: "Use AI to find insights in your documents and turn them into reports that you can share with your team and clients."
