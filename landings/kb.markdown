@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home-custom
+image: /assets/images/chk-card-kb.webp
 
 hero:
   title: Share Your Knowledge Beyond a Newsletter
