@@ -1,10 +1,17 @@
 {% if page.problems %}
 <section id="problems" class="container my-xl-7 py-5">
-   <!-- <div class="d-flex justify-content-center">
-      <span class="bg-primary bg-opacity-10 text-primary border-primary border px-3 py-2 fs-6 rounded-pill lh-1 align-items-center d-flex">
-         <span class="ms-1 text-uppercase ls-md fw-semibold">{{ page.problems.section_title }}</span>
-      </span>
-   </div> -->
+   {% if page.problems.section_title %}
+   <div class="row justify-content-center mb-8">
+      <div class="col-xl-6 col-lg-10 col-12">
+         <div class="text-center d-flex flex-column gap-5">
+            <div class="d-flex flex-column gap-3 mx-lg-8">
+               <h1 class="mb-0">{{ page.problems.title }}</h1>
+               <p class="mb-0">{{ page.problems.description }}</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   {% endif %}
   {% for item in page.problems.items %}
       {% if item.side == 'left' %}
       <div class="row d-flex align-items-center my-4">
