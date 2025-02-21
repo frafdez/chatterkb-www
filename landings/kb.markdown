@@ -2,8 +2,8 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home-custom
-image: /assets/images/chk-card-kb.webp
+layout: landings/ad-custom
+image: /assets/images/ckb-card-kb.webp
 
 hero:
   title: Share Your Knowledge Beyond a Newsletter
@@ -17,9 +17,9 @@ hero:
   #   poster:  /assets/images/template/content/hero-app-video.webp
 
   container_class: "pb-5 px-4"
-  offer:
-    text: Get 20% off yearly plans
-    url: "https://app.chatterkb.com/checkout/yearly"
+  # offer:
+  #   text: Get 20% off yearly plans
+  #   url: "https://app.chatterkb.com/checkout/yearly"
   button:
     text: Try It For Free
     # url: "https://app.chatterkb.com/checkout/plans"
