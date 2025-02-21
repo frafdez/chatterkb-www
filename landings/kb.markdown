@@ -33,19 +33,19 @@ problems:
     - title: "Answer Questions 24/7"
       description: "Let your readers find answers without waiting for a reply—freeing you from repetitive messages."
       image: /assets/images/template/content/kb-benefit1.webp
-      side: right
+      side: left
     - title: "Boost Engagement"
       description: "Transform casual subscribers into active participants who keep coming back for more."
       image: /assets/images/template/content/kb-benefit3.webp
-      side: left
+      side: right
     - title: "Gain Actionable Insights"
       description: "See what people are really asking about, so you can tailor future content to their biggest needs."
       image: /assets/images/template/content/kb-benefit2.webp
-      side: right
+      side: left   
     - title: "Monetize Your Expertise"
       description: "Offer premium access or subscription tiers (coming soon), turning your knowledge base into a revenue stream."
       image: /assets/images/template/content/kb-benefit4.webp
-      side: left
+      side: right
 
 
 # solution:
