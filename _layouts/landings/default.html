@@ -7,7 +7,10 @@
     <main class="page-content" aria-label="Content" style="margin-top: 60px;">
       <div class="wrapper">
         <div class="d-flex justify-content-center align-items-center">
-          <img src="{{ '/assets/images/chatterkb-logo.png' | relative_url }}" alt="ChatterKB Logo" style="width: 160px;">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="{{ '/assets/images/chatterkb-logo-ex.png' | relative_url }}" alt="ChatterKB Logo" class="logo-image" style="width: 3rem; max-height: 3rem !important;">
+            <span class="logo-text fs-3">Chatter<span style="color: darkgray;">KB</span></span>
+          </a>
         </div>
         {{ content }}
       </div>

@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: landings/ad-custom
-image: /assets/images/ckb-card-kb.webp
+image: ./assets/images/ckb-card-kb.png
 
 hero:
   title: Share Your Knowledge Beyond a Newsletter
