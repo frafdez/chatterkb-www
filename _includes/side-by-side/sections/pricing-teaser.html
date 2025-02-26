@@ -1,0 +1,66 @@
+{% if page.pricing_teaser %}
+<section id="pricing" class="container my-xl-7 py-5">
+   <div class="row justify-content-center mb-5">
+      <div class="col-xl-6 col-lg-8 col-12">
+         <div class="text-center d-flex flex-column gap-4">
+            <div class="d-flex justify-content-center">
+               <span class="bg-primary bg-opacity-10 text-primary border-primary border px-3 py-2 fs-6 rounded-pill lh-1 align-items-center d-flex">
+                  <i class="bi bi-tag-fill me-2"></i>
+                  <span class="text-uppercase ls-md fw-semibold">{{ page.pricing_teaser.section_title }}</span>
+               </span>
+            </div>
+            <div class="d-flex flex-column gap-3 mx-lg-8">
+               <h1 class="mb-0">{{ page.pricing_teaser.title }}</h1>
+               <p class="mb-0 lead">{{ page.pricing_teaser.description }}</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="row justify-content-center mt-4">
+      <div class="col-lg-8 col-12">
+         <div class="d-flex flex-wrap justify-content-center gap-4">
+            {% for plan in page.pricing_teaser.plans %}
+            <div class="border rounded-3 p-4 {% if plan.highlighted %}border-primary shadow-sm{% endif %}" style="width: 280px;">
+               <div class="d-flex flex-column gap-3">
+                  <div>
+                     <h4 class="mb-1">{{ plan.name }}</h4>
+                     <p class="mb-0 text-body-secondary">{{ plan.description }}</p>
+                  </div>
+                  <div>
+                     <h3 class="mb-0">{{ plan.price }}</h3>
+                     {% if plan.billing_period %}
+                     <p class="mb-0 text-body-secondary">{{ plan.billing_period }}</p>
+                     {% endif %}
+                  </div>
+                  <div>
+                     <ul class="list-unstyled mb-0">
+                        {% for feature in plan.features %}
+                        <li class="d-flex align-items-center gap-2 mb-2">
+                           <i class="bi bi-check-circle-fill text-success"></i>
+                           <span>{{ feature }}</span>
+                        </li>
+                        {% endfor %}
+                     </ul>
+                  </div>
+                  {% if plan.button %}
+                  <div class="mt-3">
+                     <a href="{{ plan.button.url | default: site.signup_url }}" class="btn {% if plan.highlighted %}btn-primary{% else %}btn-outline-primary{% endif %} w-100">{{ plan.button.text }}</a>
+                  </div>
+                  {% endif %}
+               </div>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+
+   {% if page.pricing_teaser.cta %}
+   <div class="row justify-content-center mt-5">
+      <div class="col-lg-6 col-12 text-center">
+         <a href="{{ page.pricing_teaser.cta.url }}" class="btn btn-link">{{ page.pricing_teaser.cta.text }} <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+   </div>
+   {% endif %}
+</section>
+{% endif %} 

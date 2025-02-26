@@ -1,0 +1,124 @@
+{% if page.problems %}
+<section id="problems" class="container my-xl-7 py-5">
+   {% if page.problems.title %}
+   <div class="row justify-content-center mb-5">
+      <div class="col-xl-8 col-lg-10 col-12">
+         <div class="text-center d-flex flex-column gap-4">
+            <div class="d-flex justify-content-center">
+               <span class="bg-primary bg-opacity-10 text-primary border-primary border px-3 py-2 fs-6 rounded-pill lh-1 align-items-center d-flex">
+                  <i class="bi bi-check-circle-fill me-2"></i>
+                  <span class="text-uppercase ls-md fw-semibold">{{ page.problems.section_title }}</span>
+               </span>
+            </div>
+            <div class="d-flex flex-column gap-3 mx-lg-8">
+               <h1 class="mb-0">{{ page.problems.title }}</h1>
+               {% if page.problems.description %}
+               <p class="mb-0 lead">{{ page.problems.description }}</p>
+               {% endif %}
+            </div>
+         </div>
+      </div>
+   </div>
+   {% endif %}
+
+   {% if page.problems.bifurcated %}
+   <div class="row mt-5">
+      <div class="col-lg-6 col-12 mb-5">
+         <div class="border rounded-3 p-5 h-100 position-relative">
+            <div class="pattern-square"></div>
+            <h3 class="mb-4 text-primary">{{ page.problems.for_teams.title }}</h3>
+            <div class="d-flex flex-column gap-4">
+               {% for benefit in page.problems.for_teams.benefits %}
+               <div class="d-flex gap-3">
+                  <div class="icon-shape icon-md bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
+                     <i class="bi {{ benefit.icon }} text-primary"></i>
+                  </div>
+                  <div>
+                     <h5 class="mb-2">{{ benefit.title }}</h5>
+                     <p class="mb-0 text-body">{{ benefit.description }}</p>
+                  </div>
+               </div>
+               {% endfor %}
+            </div>
+            {% if page.problems.for_teams.image %}
+            <div class="mt-4">
+               <img src="{{ page.problems.for_teams.image | relative_url }}" alt="For Teams" class="img-fluid rounded-3 border">
+            </div>
+            {% endif %}
+         </div>
+      </div>
+      
+      <div class="col-lg-6 col-12 mb-5">
+         <div class="border rounded-3 p-5 h-100 position-relative">
+            <div class="pattern-square"></div>
+            <h3 class="mb-4 text-info">{{ page.problems.for_creators.title }}</h3>
+            <div class="d-flex flex-column gap-4">
+               {% for benefit in page.problems.for_creators.benefits %}
+               <div class="d-flex gap-3">
+                  <div class="icon-shape icon-md bg-info bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
+                     <i class="bi {{ benefit.icon }} text-info"></i>
+                  </div>
+                  <div>
+                     <h5 class="mb-2">{{ benefit.title }}</h5>
+                     <p class="mb-0 text-body">{{ benefit.description }}</p>
+                  </div>
+               </div>
+               {% endfor %}
+            </div>
+            {% if page.problems.for_creators.image %}
+            <div class="mt-4">
+               <img src="{{ page.problems.for_creators.image | relative_url }}" alt="For Creators" class="img-fluid rounded-3 border">
+            </div>
+            {% endif %}
+         </div>
+      </div>
+   </div>
+   {% else %}
+   {% for item in page.problems.items %}
+      {% if item.side == 'left' %}
+      <div class="row d-flex align-items-center my-4">
+         <div class="col-lg-5 col-md-6 col-12" data-cue="slideInLeft">
+            <div data-cue="fadeIn">
+               {% if item.section_title %}
+               <small class="text-primary text-uppercase ls-md fw-semibold">{{ item.section_title }}</small>
+               {% endif %}
+               <div class="my-4">
+                  <h2 class="mb-3">{{ item.title }}</h2>
+                  <p class="mb-0 lead">{{ item.description | markdownify }}</p> 
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-6 offset-lg-1 col-md-6 col-12" data-cue="slideInRight">
+            <div class="position-relative">
+               <figure>
+                  <img src="{{ item.image | relative_url }}" alt="landing" class="img-fluid rounded-4">
+               </figure>
+            </div>
+         </div>
+      </div>
+      {% else %}
+      <div class="row d-flex align-items-center my-4">
+         <div class="col-lg-6 col-md-6 col-12 order-lg-2 order-1" data-cue="slideInLeft">
+            <div class="position-relative">
+               <figure>
+                  <img src="{{ item.image | relative_url }}" alt="landing" class="img-fluid rounded-4">
+               </figure>
+            </div>
+         </div>
+         <div class="col-lg-5 offset-lg-1 col-md-6 col-12 order-lg-2" data-cue="slideInRight">
+            <div class="mt-4">
+               {% if item.section_title %}
+               <small class="text-primary text-uppercase ls-md fw-semibold">{{ item.section_title }}</small>
+               {% endif %}
+               <div class="my-4">
+                  <h2 class="mb-3">{{ item.title }}</h2>
+                  <p class="lead mb-0">{{ item.description | markdownify }}</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endif %}
+   {% endfor %}
+   {% endif %}
+</section>
+{% endif %}
