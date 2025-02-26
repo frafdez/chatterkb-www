@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </style>
 
 ### Skin your knowledge base
-You can skin your knowledge base by providing your own CSS. This is a great way to make your knowledge base reflect your brand.
+You can skin your knowledge base by providing your own CSS. This is a great way to make your knowledge base reflect your brand. Note:
 
 <div class="row image-list my-5">
     <div class="col-lg-4 col-md-12 d-flex justify-content-center mb-4">
@@ -85,74 +85,42 @@ You can skin your knowledge base by providing your own CSS. This is a great way 
       <img src="/docs/images/image1.webp" class="d-block" alt="...">
     </div>
     <div class="col-lg-4 col-md-4 d-flex justify-content-center d-none d-lg-flex mb-4">
-      <img src="/docs/images/image3.webp" class="d-block" alt="...">
-    </div>
-    <div class="col-lg-6 col-md-46 d-flex justify-content-center d-none d-lg-flex mb-4">
       <img src="/docs/images/image4.webp" class="d-block" alt="...">
-    </div>
-    <div class="col-lg-6 col-md-4 d-flex justify-content-center d-none d-lg-flex mb-4">
-      <img src="/docs/images/image5.webp" class="d-block" alt="...">
     </div>
 </div>
 
 
 ### How to Use
-Create the CSS file for your theme and copy the code into the knowledge base settings. You can access the settings by clicking on the gear icon for the knowledge base and then clicking "Style". Here are some example CSS files you can use as a starting point.
+Create the CSS file for your theme and copy the code into the knowledge base settings. You can access the settings by clicking on the gear icon for the knowledge base and then clicking "Style". Here are some example CSS files you can use as a starting point. These are a few examples of what you can do. For a full list of classes, see the knowledge base style controls.
 
 
-<a href="/docs/files/ckb-example-simple.css" class="btn btn-outline-primary mb-2">Download Example 2 CSS (Simple)</a>
-<a href="/docs/files/ckb-example.css" class="btn btn-outline-primary mb-2">Download Example 1 CSS (Advanced)</a>
+<a href="https://chatterkb.s3.us-east-1.amazonaws.com/cbs-example-simple.css" class="btn btn-outline-primary mb-2" target="_blank">Download Example 2 CSS (Simple)</a>
 
 ### Core Layout Components
 
 #### Body & Container
 ```css
 .chatterkb-body {
-    background-color: #ffffff;
-    background-image: url("PLACEHOLDER_BACKGROUND_IMAGE_URL");
+  background-color: #F5F5F5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23F5F5F5'/%3E%3Cpath d='M0 0 L200 200 M200 0 L0 200' stroke='%23E0E0E0' stroke-width='1'/%3E%3C/svg%3E");
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
-.chatterkb-offcanvas {
-    background-color: #ffffff;
-    color: #333333;
+.chatterkb-chat-sidebar {
+  background-color: #ffffff;
+  color: #37474F;
 }
 ```
 
 #### Navigation & Header
 ```css
 .chatterkb-nav-link {
-    color: #178D00 !important;
+  color: #607D8B !important;
 }
 
-.chatterkb-logo-text:before {
-    content: "Starter ";
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    color: #178D00;
-}
-
-.chatterkb-logo-text:after {
-    content: "Syrup";
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-weight: bold;
-    color: #178D00;
-}
-
-.chatterkb-sm-logo {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    content: url("PLACEHOLDER_SM_LOGO_URL");
-}
-
-.chatterkb-lg-logo {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    content: url("PLACEHOLDER_LG_LOGO_URL");
+.chatterkb-brand-text {
+  color: #607D8B;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 ```
 
@@ -160,53 +128,58 @@ Create the CSS file for your theme and copy the code into the knowledge base set
 
 #### Knowledge Base Card
 ```css
-.chatterkb-knowledge-base-card {
-    background-color: #000000E6;
-    background-image: url("PLACEHOLDER_SVG_URL");
-    color: white;
+.chatterkb-card {
+  background-color: #ECEFF1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.05'%3E%3Cpolygon fill='%23455A64' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23455A64' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23455A64' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23455A64' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23455A64' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23455A64' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23455A64' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23455A64' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23455A64' points='990 150 1080 0 900 0'/%3E%3C/g%3E%3C/svg%3E");
+  color: #37474F;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
-.chatterkb-knowledge-base-image {
-    margin-top: 40px;
-    margin-bottom: 40px !important;
+.chatterkb-card-kb-name {
+  color: #37474F;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
-.chatterkb-knowledge-base-name {
-    /* Styles for knowledge base name */
-}
-
-.chatterkb-knowledge-base-description {
-    /* Styles for knowledge base description */
+.chatterkb-card-kb-description {
+  color: #607D8B;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 ```
 
 #### Action Buttons
 ```css
-.chatterkb-knowledge-base-subscribe-button {
-    background-color: #178D0033;
-    border-color: #178D00;
-    color: #178D00;
+.chatterkb-join-subscribe-btn {
+  background-color: #4FC3F7;
+  border: 1px solid #4FC3F7;
+  color: #ffffff;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
-.chatterkb-knowledge-base-subscribe-button:hover {
-    background-color: #178D00;
-    color: white;
+.chatterkb-join-subscribe-btn:hover {
+  background-color: #039BE5;
+  color: #ffffff;
 }
 
-.chatterkb-knowledge-base-sign-up-button {
-    background-color: #178D00;
-    color: white;
+.chatterkb-join-sign-up-btn {
+  background-color: #4FC3F7;
+  border: 1px solid #4FC3F7;
+  color: #ffffff;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
-.chatterkb-knowledge-base-sign-up-button:hover {
-    background-color: #178D00;
-    color: white;
+.chatterkb-join-sign-up-btn:hover {
+  background-color: #039BE5;
+  color: #ffffff;
 }
 
 .chatterkb-new-chat-btn {
-    --bs-btn-bg: #178D00 !important;
-    --bs-btn-hover-bg: #218838 !important;
-    color: white;
+  background-color: #607D8B;
+  color: #ffffff;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.chatterkb-new-chat-btn:hover {
+  background-color: #455A64;
 }
 ```
 
@@ -215,35 +188,54 @@ Create the CSS file for your theme and copy the code into the knowledge base set
 #### Conversation List
 ```css
 .chatterkb-conversations-list-group {
-    --bs-list-group-bg: #f1f1f1 !important;
-    --bs-list-group-action-hover-bg: #e9ecef !important;
-    border: none;
+  background-color: #FAFAFA !important;
 }
 
 .chatterkb-conversations-list-item {
-    --bs-highlight-bg: #178D0033 !important;
+  background-color: #f8f9fa;
+  color: #6c757d;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.chatterkb-conversations-list-item:hover {
+  background-color: #ECEFF1;
 }
 
 .chatterkb-conversations-list-item.active {
-    background-color: #178D0033;
-    color: #178D00;
-    border: none;
+  background-color: #B0BEC5 !important;
+  color: #37474F;
 }
 
 .chatterkb-conversation-name {
-    color: #333333 !important;
+  color: #37474F !important;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 ```
 
-#### Response Elements
+#### Chat Elements
 ```css
-.chatterkb-response-button {
-    color: #178D00 !important;
+
+.chatterkb-chat-prompt {
+  background-color: #FFFFFF;
+  border-radius: 20px;
 }
 
-.chatterkb-response-button:hover {
-    color: #ffffff !important;
-    background-color: #178D0033 !important;
+.chatterkb-chat-prompt-input {
+  background-color: #ffffff;
+  color: #212529;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.chatterkb-chat-response {
+  color: #37474F !important;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.chatterkb-chat-kb-name {
+  color: #607D8B;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 ```
 
@@ -251,39 +243,65 @@ Create the CSS file for your theme and copy the code into the knowledge base set
 
 #### Light Theme
 ```css
-.chatterkb-body[data-bs-theme="light"] .chatterkb-input-container {
-    background-color: #000000;
-    background-image: url("PLACEHOLDER_LIGHT_INPUT_CONTAINER_BACKGROUND_IMAGE_URL");
-    border-top: 1px solid #e0e0e0;
+.chatterkb-chat-prompt-input-container {
+  background-color: #f8f9fa;
 }
 
-.chatterkb-body[data-bs-theme="light"] .chatterkb-footer {
-    background-color: #151515;
-    background-image: url("PLACEHOLDER_LIGHT_FOOTER_BACKGROUND_IMAGE_URL");
-    color: gray !important;
+.chatterkb-chat-footer {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
-.chatterkb-body[data-bs-theme="light"] .chatterkb-send-button {
-    color: #178D00;
+.chatterkb-chat-send-btn {
+  background-color: #607D8B;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.chatterkb-chat-send-btn:hover {
+  background-color: #455A64;
 }
 ```
 
 #### Dark Theme
 ```css
-.chatterkb-body[data-bs-theme="dark"] .chatterkb-input-container {
-    background-color: #333333;
-    background-image: url("PLACEHOLDER_DARK_INPUT_CONTAINER_BACKGROUND_IMAGE_URL");
-    border-top: 1px solid #444444;
+.chatterkb-body[data-bs-theme="dark"] {
+  background-color: #263238;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23263238'/%3E%3Cpath d='M0 0 L200 200 M200 0 L0 200' stroke='%2337474F' stroke-width='1'/%3E%3C/svg%3E");
 }
 
-.chatterkb-body[data-bs-theme="dark"] .chatterkb-footer {
-    background-color: #222222;
-    background-image: url("PLACEHOLDER_DARK_FOOTER_BACKGROUND_IMAGE_URL");
-    color: #cccccc !important;
+.chatterkb-body[data-bs-theme="dark"] .chatterkb-chat-prompt-input-container {
+  background-color: #343a40;
 }
 
-.chatterkb-body[data-bs-theme="dark"] .chatterkb-send-button {
-    color: #00FF00;
+.chatterkb-body[data-bs-theme="dark"] .chatterkb-chat-footer {
+  background-color: #343a40;
+  color: #adb5bd;
+}
+
+.chatterkb-body[data-bs-theme="dark"] .chatterkb-chat-send-btn {
+  background-color: #607D8B;
+  color: #ffffff;
+}
+
+.chatterkb-body[data-bs-theme="dark"] .chatterkb-chat-send-btn:hover {
+  background-color: #455A64;
+}
+
+.chatterkb-body[data-bs-theme="dark"] .chatterkb-chat-prompt {
+  background-color: #424242;
+  color: #ECEFF1;
+}
+
+.chatterkb-body[data-bs-theme="dark"] .chatterkb-chat-response {
+  background-color: #455A64;
+  color: #ECEFF1 !important;
+}
+
+.chatterkb-body[data-bs-theme="dark"] .chatterkb-chat-sidebar {
+  background-color: #212529;
+  color: #f8f9fa;
 }
 ```
 
