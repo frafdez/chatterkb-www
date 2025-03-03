@@ -34,7 +34,7 @@
             <div class="d-flex flex-column gap-4">
                {% for step in page.how_it_works.for_teams.steps %}
                <div class="d-flex gap-3">
-                  <div class="icon-shape icon-md bg-primary bg-opacity-10 rounded-circle text-primary fs-5 fw-bold">{{ forloop.index }}</div>
+                  <div class="icon-shape icon-md text-primary fs-5 fw-bold">{{ forloop.index }}</div>
                   <div>
                      <h5 class="mb-2">{{ step.title }}</h5>
                      <p class="mb-0 text-body">{{ step.description }}</p>
@@ -62,7 +62,7 @@
             <div class="d-flex flex-column gap-4">
                {% for step in page.how_it_works.for_creators.steps %}
                <div class="d-flex gap-3">
-                  <div class="icon-shape icon-md bg-info bg-opacity-10 rounded-circle text-info fs-5 fw-bold">{{ forloop.index }}</div>
+                  <div class="icon-shape icon-md text-info fs-5 fw-bold">{{ forloop.index }}</div>
                   <div>
                      <h5 class="mb-2">{{ step.title }}</h5>
                      <p class="mb-0 text-body">{{ step.description }}</p>

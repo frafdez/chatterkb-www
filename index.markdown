@@ -146,6 +146,25 @@ features:
       description: "Collaborate with your team or audience through interactive knowledge bases."
       image: /assets/images/template/content/feature-share.webp
 
+integrations:
+  section_title: Integrations
+  title: "Connect with Your Favorite Tools"
+  description: "Seamlessly import your content from the platforms you already use."
+  logos:
+    items:
+      - name: "Notion"
+        image: /assets/images/template/logos/notion.png
+        description: "Import your Notion pages and databases directly into ChatterKB."
+      - name: "Google Drive"
+        image: /assets/images/template/logos/google-drive.png
+        description: "Connect your Google Docs, Sheets, and Slides for instant knowledge extraction."
+      - name: "More Coming Soon"
+        image: /assets/images/template/logos/coming-soon.svg
+        description: "We're constantly adding new integrations to make your workflow smoother."
+  # cta:
+  #   text: "See All Integrations"
+  #   url: "https://app.chatterkb.com/integrations"
+
 # testimonials:
 #   section_title: Testimonials
 #   title: "Trusted by Teams and Creators Like You"
