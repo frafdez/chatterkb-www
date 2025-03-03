@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: landings/side-by-side
+layout: side-by-side
 image: ./assets/images/ckb-card-kb.png
 
 hero:
@@ -21,7 +21,7 @@ hero:
     url: "#features-overview"
 
 features_overview:
-  section_title: Features Overview
+  section_title: Overview
   title: "Two Powerful Solutions in One Platform"
   for_teams:
     title: "For Teams: Turn Documents into Actionable Reports"
@@ -114,7 +114,7 @@ how_it_works:
       - title: "Share"
         description: "Send a link to your audience."
         icon: bi-link-45deg
-      - title: "Engage"
+      - title: "Engage" 
         description: "Answer questions via AI, anytime."
         icon: bi-chat-dots
     image: /assets/images/template/content/creator-workflow.webp
@@ -148,8 +148,8 @@ features:
 
 integrations:
   section_title: Integrations
-  title: "Connect with Your Favorite Tools"
-  description: "Seamlessly import your content from the platforms you already use."
+  title: "Connect Your Existing Content"
+  description: "Seamlessly import from the platforms where your knowledge already lives."
   logos:
     items:
       - name: "Notion"
@@ -161,10 +161,6 @@ integrations:
       - name: "More Coming Soon"
         image: /assets/images/template/logos/coming-soon.svg
         description: "We're constantly adding new integrations to make your workflow smoother."
-  # cta:
-  #   text: "See All Integrations"
-  #   url: "https://app.chatterkb.com/integrations"
-
 # testimonials:
 #   section_title: Testimonials
 #   title: "Trusted by Teams and Creators Like You"
