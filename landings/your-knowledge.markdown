@@ -209,7 +209,7 @@ pricing_teaser:
       highlighted: false
     - name: "Plus"  
       description: "For serious content creators and businesses"
-      price: "$20"
+      price: "$30"
       billing_period: "per month"
       features:
         - "Up to 1000 monthly chats"

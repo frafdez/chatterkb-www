@@ -205,7 +205,7 @@ pricing_teaser:
       highlighted: false
     - name: "Plus"  
       description: "For serious teams and creators"
-      price: "$20"
+      price: "$30"
       billing_period: "per month"
       features:
         - "Up to 1000 monthly chats"
@@ -227,4 +227,26 @@ cta:
   button:
     text: "Get Started Free"
     url: "https://app.chatterkb.com/auth/signup"
+
+models:
+  section_title: AI Models
+  title: "Powered by Leading AI Models"
+  description: "ChatterKB leverages state-of-the-art language models to deliver accurate, nuanced responses to your questions."
+  items:
+    - name: "LLama 3.3"
+      image: /assets/images/template/logos/llama.png
+      description: "Meta's advanced open-source large language model, optimized for performance and efficiency."
+      capabilities:
+        - "Exceptional reasoning capabilities"
+        - "Efficient knowledge retrieval"
+        - "Optimized for document analysis"
+        - "Open-source foundation"
+    - name: "Claude 3.7 Sonnet"
+      image: /assets/images/template/logos/claude.png
+      description: "Anthropic's powerful AI assistant known for its helpfulness, harmlessness, and honesty."
+      capabilities:
+        - "Superior contextual understanding"
+        - "Nuanced response generation"
+        - "Advanced reasoning abilities"
+        - "Designed for safety and reliability"
 ---
