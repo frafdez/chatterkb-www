@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Unlocking the Power of AI for Marketing: A Guide to Retrieval-Augmented Generation (RAG)"
-date:   2024-12-17 09:01:58 +0100
-categories: marketing
-image: /assets/images/posts/unlocking-the-power-of-ai-for-marketing-rag.jpeg 
+title:  "Unlocking the Power of an AI Knowledge Base: Revolutionizing Information Management"
+date:   2025-03-07 09:01:58 +0100
+categories: technology
+image: /assets/images/posts/unlocking-the-power-of-ai-knowledge-base.png 
 author: "Frank Fernandez"
 sitemap:
-  lastmod: 2024-12-17
+  lastmod: 2025-03-07
   changefreq: weekly
   priority: 0.8
----
+--- 
 As a marketing manager or CMO, you're constantly looking for ways to stay ahead of the curve and leverage the latest technologies to drive business growth. One such technology that's gaining traction is Retrieval-Augmented Generation (RAG), a powerful AI framework that's revolutionizing the way we approach marketing and customer engagement.
 
 ## What is Retrieval-Augmented Generation (RAG)?
