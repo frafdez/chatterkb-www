@@ -4,6 +4,9 @@
 
 layout: home-video
 
+sitemap:
+  exclude: 'yes'
+
 hero:
   title: Turn your documents into actionable reports
   description: Chat with your documents to find hidden insights and turn them into reports that you can share with your team and clients.
