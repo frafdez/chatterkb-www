@@ -22,7 +22,7 @@ hero:
     url: "https://app.chatterkb.com/checkout/yearly"
   button:
     text: Try It For Free
-    # url: "https://app.chatterkb.com/checkout/plans"
+    url: "https://app.chatterkb.com/auth/signup"
   link:
     text: Learn more
     url: "#problems"
@@ -51,7 +51,7 @@ solution:
   description: "Use AI to find insights in your documents and turn them into reports that you can share with your team and clients."
   button:
     text: Try It For Free
-    # url: "https://app.chatterkb.com/checkout/plans"
+    url: "https://app.chatterkb.com/auth/signup"
 
 # video:
 #   url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-hero-video.m4v"
@@ -68,7 +68,7 @@ features:
       title_highlight: Upload
       title_suffix: Your Files
       description: Simply upload your files to create a knowledge base you can chat with. No technical setup—just drag, drop, and let AI provide insights from your own data. 
-      image: ./assets/images/template/content/feature-1.webp
+      image: /assets/images/template/content/feature-1.webp
     - icon: bi-chat
       title_highlight: Chat
       title_suffix: with Your Data
@@ -78,7 +78,7 @@ features:
       title_highlight: Pin
       title_suffix: and Share Important Insights
       description: Transform your conversations into visual tables and charts for a clearer understanding of your data. Pin these insights to a board you can share with your team or clients, making collaboration effortless.
-      image: ./assets/images/template/content/feature-3.webp
+      image: /assets/images/template/content/feature-3.webp
 additional_features:
   section_title: Additional Features
   title: More than just a chatbot
@@ -180,10 +180,83 @@ smbs:
           title: Instant insights
           description: Pin this to your 'Project Alpha Dashboard' and keep your development team aligned and focused.
 
+integrations:
+  section_title: Integrations
+  title: "Connect Your Existing Content"
+  description: "Seamlessly import from the platforms where your knowledge already lives."
+  logos:
+    items:
+      - name: "Notion"
+        image: /assets/images/template/logos/notion.png
+        description: "Import your Notion pages and databases directly into ChatterKB."
+      - name: "Google Drive"
+        image: /assets/images/template/logos/google-drive.png
+        description: "Connect your Google Docs, Sheets, and Slides for instant knowledge extraction."
+      - name: "More Coming Soon"
+        image: /assets/images/template/logos/coming-soon.svg
+        description: "We're constantly adding new integrations to make your workflow smoother."
+
+models:
+  section_title: AI Models
+  title: "Powered by Leading AI Models"
+  description: "ChatterKB leverages state-of-the-art language models to deliver accurate, nuanced responses to your questions."
+  items:
+    - name: "LLama 3.3"
+      image: /assets/images/template/logos/llama.png
+      description: "Meta's advanced open-source large language model, optimized for performance and efficiency."
+      capabilities:
+        - "Exceptional reasoning capabilities"
+        - "Efficient knowledge retrieval"
+        - "Optimized for document analysis"
+        - "Open-source foundation"
+    - name: "Claude 3.7 Sonnet"
+      image: /assets/images/template/logos/claude.png
+      description: "Anthropic's powerful AI assistant known for its helpfulness, harmlessness, and honesty."
+      capabilities:
+        - "Superior contextual understanding"
+        - "Nuanced response generation"
+        - "Advanced reasoning abilities"
+        - "Designed for safety and reliability"
+
+pricing_teaser:
+  section_title: Pricing
+  title: "Start Free, Scale as You Grow"
+  description: "Plans for teams and creators, starting at $0. No credit card required."
+  plans:
+    - name: "Free"
+      description: "For individuals just getting started"
+      price: "$0"
+      features:
+        - "Up to 30 monthly chats"
+        - "1 knowledge base"
+        - "Subscribe to Creator KBs"
+      button:
+        text: "Get Started"
+        url: "https://app.chatterkb.com/auth/signup"
+      highlighted: false
+    - name: "Plus"  
+      description: "For serious teams and creators"
+      price: "$30"
+      billing_period: "per month"
+      features:
+        - "Up to 1000 monthly chats"
+        - "3 knowledge bases"
+        - "1 GB of storage"
+        - "Custom branding"
+        - "Analytics dashboard (coming soon)"
+        - "Public or Private KBs"
+      button:
+        text: "Upgrade to Pro"
+        url: "https://app.chatterkb.com/checkout/plans"
+      highlighted: true
+  cta:
+    text: "View all pricing options"
+    url: "https://app.chatterkb.com/checkout/plans"
+
 cta:
   title: Start Chatting with Your Data Now
   description: Sign up for a free account today — no credit card required.
   button:
     text: Get Started for Free
-    # url: "https://app.chatterkb.com/checkout/plans"
+    url: "https://app.chatterkb.com/auth/signup"
 ---

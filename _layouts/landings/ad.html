@@ -35,6 +35,22 @@ layout: landings/default
 {% include template/sections/smbs.html %}
 {% endif %}
 
+{% if page.integrations %}
+{% include side-by-side/sections/integrations.html %}
+{% endif %}
+
+{% if page.pricing_teaser %}
+{% include side-by-side/sections/pricing-teaser.html %}
+{% endif %}
+
+{% if page.models %}
+{% include side-by-side/sections/models.html %}
+{% endif %}
+
+{% if page.testimonials %}
+{% include side-by-side/sections/testimonials.html %}
+{% endif %}
+
 {% if page.cta %}
 {% include template/sections/cta.html %}
 {% endif %}
