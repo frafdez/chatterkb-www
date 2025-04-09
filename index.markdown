@@ -2,251 +2,181 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: side-by-side
-image: ./assets/images/ckb-card-kb.png
+layout: home-video
 
+sitemap:
+  exclude: 'yes'
+
+# Page content follows below
 hero:
-  title: "Unlock the Power of Your Knowledge with AI"
-  description: "Chat with your documents, extract insights, and share your expertise interactively—all in one seamless platform."
-  split_screen:
-    left_image: /assets/images/template/content/team-chat-document.webp
-    left_label: For Teams
-    right_image: /assets/images/template/content/creator-knowledge-base.webp
-    right_label: For Creators
+  title: "Your Creative Brain, Supercharged by AI"
+  description: "Turn scattered decks, docs, and threads into instant answers, reports, and dashboards. All from one chat. Ask questions. Pin insights. Automate your workflows."
+  video:
+    url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-hero-video.m4v"
+    type: "html5"
+    poster: "/assets/images/template/content/hero-app-video.webp"
+  container_class: "pb-5 px-4"
+  offer:
+    text: "Get 20% off yearly plans"
+    url: "https://app.chatterkb.com/checkout/yearly"
   button:
-    text: Get Started Free
-    url:  "https://app.chatterkb.com/auth/signup"
+    text: "Get Started for Free"
+    url: "https://app.chatterkb.com/checkout/plans"
   link:
-    text: Learn more
-    url: "#features-overview"
-
-features_overview:
-  section_title: Overview
-  title: "Two Powerful Solutions in One Platform"
-  for_teams:
-    title: "For Teams: Turn Documents into Actionable Reports"
-    tagline: "Analyze, collaborate, and share—faster than ever."
-    description: "Upload your docs, chat to uncover insights, and generate real-time reports your team can act on."
-    key_benefit: "Cut analysis time in half and keep everyone aligned."
-    icon: bi-file-earmark-text
-    image: /assets/images/template/content/team-dashboard.webp
-    cta:
-      text: Start Analyzing Now
-      url:  "https://app.chatterkb.com/auth/signup"
-  for_creators:
-    title: "For Creators: Share Your Knowledge Interactively"
-    tagline: "Engage your audience 24/7 with AI."
-    description: "Turn your content into an interactive knowledge base where followers ask questions and explore insights."
-    key_benefit: "Boost engagement and monetize your expertise."
-    icon: bi-people
-    image: /assets/images/template/content/creator-kb.webp
-    cta:
-      text: Build Your Knowledge Base
-      url:  "https://app.chatterkb.com/auth/signup"
+    text: "See how it works"
+    url: "#problems"
 
 problems:
-  section_title: "Benefits"
-  title: "Why You'll Love It"
-  description: "Tailored solutions for both teams analyzing documents and creators sharing knowledge."
-  bifurcated: true
-  for_teams:
-    title: "For Teams"
-    benefits:
-      - title: "Cut Analysis Time in Half"
-        description: "Extract insights from lengthy documents in minutes instead of hours."
-        icon: "bi-clock-history"
-      - title: "Uncover Hidden Connections"
-        description: "Discover relationships between documents that manual review might miss."
-        icon: "bi-diagram-3"
-      - title: "Collaborate Seamlessly"
-        description: "Share insights and reports with your team in real-time."
-        icon: "bi-people"
-      - title: "Make Data-Driven Decisions"
-        description: "Turn document insights into actionable business intelligence."
-        icon: "bi-graph-up-arrow"
-    image: /assets/images/template/content/team-benefits.webp
-  for_creators:
-    title: "For Creators"
-    benefits:
-      - title: "Answer Questions 24/7"
-        description: "Let your audience find answers without waiting for a reply—freeing you from repetitive messages."
-        icon: "bi-clock"
-      - title: "Boost Engagement"
-        description: "Transform casual subscribers into active participants who keep coming back for more."
-        icon: "bi-hand-thumbs-up"
-      - title: "Gain Audience Insights"
-        description: "See what people are really asking about, so you can tailor future content to their biggest needs."
-        icon: "bi-lightbulb"
-      - title: "Monetize Your Expertise"
-        description: "Offer premium access or subscription tiers, turning your knowledge base into a revenue stream."
-        icon: "bi-cash-coin"
-    image: /assets/images/template/content/creator-benefits.webp
+  section_title: "Why ChatterKB"
+  items:
+    - section_title: "Manual Work"
+      title: "Still digging through docs?"
+      description: "From Slack to Sheets to Slides, your team's best insights are lost in the noise. Finding what matters shouldn't take hours."
+      image: "/assets/images/template/content/manual-work.jpg"
+      side: "left"
+    - section_title: "Information Overload"
+      title: "Too much data, too little clarity"
+      description: "Marketing reports. Campaign results. Strategy docs. They're everywhere but rarely where you need them when you need them."
+      image: "/assets/images/template/content/information-overload.jpg"
+      side: "right"
+    - section_title: "Collaboration Gaps"
+      title: "Insights stuck in silos"
+      description: "Even when you find something great, sharing it means screenshots, email threads, or another tool. Let AI do the organizing."
+      image: "/assets/images/template/content/collaboration-bottlenecks.jpg"
+      side: "left"
 
-how_it_works:
-  section_title: How It Works
-  title: "Your Knowledge, Powered by AI—In 4 Simple Steps"
-  description: "Getting started is easy, whether you're a team analyzing documents or a creator sharing expertise."
-  for_teams:
-    title: "For Teams"
-    steps:
-      - title: "Upload"
-        description: "Drag and drop your documents."
-        icon: bi-upload
-      - title: "Chat"
-        description: "Ask questions and get instant answers."
-        icon: bi-chat-dots
-      - title: "Pin"
-        description: "Highlight key insights for reports."
-        icon: bi-pin-angle
-      - title: "Share"
-        description: "Collaborate with real-time updates."
-        icon: bi-share
-    image: /assets/images/template/content/team-workflow.webp
-  for_creators:
-    title: "For Creators"
-    steps:
-      - title: "Upload"
-        description: "Add your articles, videos, or notes."
-        icon: bi-upload
-      - title: "Customize"
-        description: "Tailor the look and feel."
-        icon: bi-palette
-      - title: "Share"
-        description: "Send a link to your audience."
-        icon: bi-link-45deg
-      - title: "Engage" 
-        description: "Answer questions via AI, anytime."
-        icon: bi-chat-dots
-    image: /assets/images/template/content/creator-workflow.webp
+solution:
+  title: "Ask. Analyze. Act. All in One Chat."
+  description: "Upload your files. Ask questions. Pin what matters. Share it instantly. Soon, you'll be able to generate workflows from plain language, turning insights into action automatically."
+  button:
+    text: "Try ChatterKB Free"
+    url: "https://app.chatterkb.com/checkout/plans"
 
 # video:
 #   url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-hero-video.m4v"
 #   type: "html5"
-#   poster: /assets/images/template/content/hero-app-video.webp
+#   poster: "/assets/images/template/content/hero-app-video.webp"
 #   container_class: "pb-5 px-4"
 
 features:
-  section_title: Features
-  title: "Powerful Features for Teams and Creators"
-  description: "Everything you need to analyze documents and share knowledge effectively"
+  section_title: "Features"
+  title: "Upload. Chat. Pin. Share."
+  description: "Everything you need to go from knowledge to action, faster than ever."
   items:
-    - icon: bi-chat-dots
-      title_highlight: Chat
-      title_suffix: with Your Data
-      description: "Ask questions in plain language and get instant, accurate answers based on your documents."
-      image: /assets/images/template/content/feature-chat.webp
-    - icon: bi-pin-angle
-      title_highlight: Pin
-      title_suffix: Important Insights
-      description: "Save key findings and organize them into shareable dashboards and reports."
-      image: /assets/images/template/content/feature-pin.webp
-    - icon: bi-share
-      title_highlight: Share
-      title_suffix: Knowledge Seamlessly
-      description: "Collaborate with your team or audience through interactive knowledge bases."
-      image: /assets/images/template/content/feature-share.webp
+    - icon: "bi-upload"
+      title_highlight: "Upload"
+      title_suffix: "your docs"
+      description: "Drag and drop any doc or slide deck. Connect Google Drive, Notion, Slack, or YouTube transcripts. ChatterKB builds your AI-ready knowledge base."
+      image: "/assets/images/template/content/feature-1.webp"
+    - icon: "bi-chat"
+      title_highlight: "Ask"
+      title_suffix: "in plain English"
+      description: "Don't search, just ask. Find insights, write summaries, or get answers from your files in seconds. Like ChatGPT, but trained on your stuff."
+      image: "/assets/images/template/content/feature-2b.webp"
+    - icon: "bi-pin-angle"
+      title_highlight: "Pin"
+      title_suffix: "to dashboards"
+      description: "Turn answers into visuals. Pin tables, scorecards, or writeups to team dashboards you can share or make public-facing in one click."
+      image: "/assets/images/template/content/feature-3.webp"
 
-integrations:
-  section_title: Integrations
-  title: "Connect Your Existing Content"
-  description: "Seamlessly import from the platforms where your knowledge already lives."
-  logos:
-    items:
-      - name: "Notion"
-        image: /assets/images/template/logos/notion.png
-        description: "Import your Notion pages and databases directly into ChatterKB."
-      - name: "Google Drive"
-        image: /assets/images/template/logos/google-drive.png
-        description: "Connect your Google Docs, Sheets, and Slides for instant knowledge extraction."
-      - name: "More Coming Soon"
-        image: /assets/images/template/logos/coming-soon.svg
-        description: "We're constantly adding new integrations to make your workflow smoother."
-# testimonials:
-#   section_title: Testimonials
-#   title: "Trusted by Teams and Creators Like You"
-#   items:
-#     - name: "Sarah T."
-#       title: "Project Manager"
-#       quote: "ChatterKB turned our 50-page reports into actionable insights in minutes. It's a game-changer."
-#       type: "team"
-#       image: /assets/images/template/testimonials/user1.webp
-#     - name: "Mark R."
-#       title: "Content Creator"
-#       quote: "My subscribers love asking questions on my knowledge base. Engagement is up 40%!"
-#       type: "creator"
-#       image: /assets/images/template/testimonials/user2.webp
-#   logos:
-#     title: "Integrates with your favorite tools"
-#     items:
-#       - name: "Slack"
-#         image: /assets/images/template/logos/slack.svg
-#       - name: "Google Drive"
-#         image: /assets/images/template/logos/google-drive.svg
-#       - name: "Notion"
-#         image: /assets/images/template/logos/notion.svg
-#       - name: "Microsoft Teams"
-#         image: /assets/images/template/logos/ms-teams.svg
+additional_features:
+  section_title: "Coming Soon: Workflows"
+  title: "Your Knowledge, on Autopilot"
+  description: "Automate your most common knowledge tasks by simply writing them in plain language. No nodes. No code. Just intent -> action."
+  items:
+    - icon: "bi-lightning-charge"
+      col_type: "col-md-6"
+      title: "Natural language automation"
+      description: "Say what you want done: 'Write a content brief using last month's data' and watch the steps generate in real-time."
+    - icon: "bi-journal-code"
+      col_type: "col-md-6"
+      title: "Reproducible workflows"
+      description: "Save workflows for recurring tasks like campaign reviews, client reports, and competitor analysis."
+    - icon: "bi-box-arrow-down"
+      col_type: "col-md-6"
+      title: "Plug into your process"
+      description: "Trigger workflows from new files, new campaigns, or new Slack threads. Connect to external apps via API or Zapier."
+    - icon: "bi-graph-up"
+      col_type: "col-md-6"
+      title: "Actionable + measurable"
+      description: "Each workflow step is tracked. Soon, you'll be able to see what's working and what's getting stuck right from your dashboard."
 
-pricing_teaser:
-  section_title: Pricing
-  title: "Start Free, Scale as You Grow"
-  description: "Plans for teams and creators, starting at $0. No credit card required."
-  plans:
-    - name: "Free"
-      description: "For individuals just getting started"
-      price: "$0"
-      features:
-        - "Up to 30 monthly chats"
-        - "1 knowledge base"
-        - "Subscribe to Creator KBs"
-      button:
-        text: "Get Started"
-        url: "https://app.chatterkb.com/auth/signup"
-      highlighted: false
-    - name: "Plus"  
-      description: "For serious teams and creators"
-      price: "$30"
-      billing_period: "per month"
-      features:
-        - "Up to 1000 monthly chats"
-        - "3 knowledge bases"
-        - "1 GB of storage"
-        - "Custom branding"
-        - "Analytics dashboard (coming soon)"
-        - "Public or Private KBs"
-      button:
-        text: "Upgrade to Pro"
-        url: "https://app.chatterkb.com/checkout/plans"
-      highlighted: true
-  cta:
-    text: "View all pricing options"
-    url: "https://app.chatterkb.com/checkout/plans"
+smbs:
+  section_title: "Who It's For"
+  title: "ChatterKB Works Across Teams"
+  items:
+    - title: "Make Your Marketing Click"
+      tab_title: "Marketing"
+      description: "Launch a knowledge base with campaign assets, brand voice, and reports. Generate insights instantly, pin your best performing ideas, and share them with your team or clients."
+      style: "left"
+      outline_class: "border-success border-opacity-50"
+      background_image: "/assets/images/template/marketing/tab-bg-1.svg"
+      main_image: "/assets/images/template/marketing/tab.jpg"
+      points:
+        - icon: "bi-bullseye"
+          color_class: "text-primary"
+          title: "Analyze creative performance"
+          description: "What's the best-performing copy variation for our ad set last week?"
+        - icon: "bi-pie-chart-fill"
+          color_class: "text-success"
+          title: "Build shareable dashboards"
+          description: "Turn chat into charts, pin to a 'Client Results' board, and keep everyone aligned."
+
+    - title: "Stay On Top of Your Store"
+      tab_title: "Ecommerce"
+      description: "Turn your inventory, sales, and marketing data into a living dashboard that answers questions and alerts your team when action is needed."
+      style: "right"
+      outline_class: "border-info border-opacity-50"
+      background_image: "/assets/images/template/ecommerce/tab-bg-1.svg"
+      main_image: "/assets/images/template/ecommerce/tab.jpg"
+      points:
+        - icon: "bi-bar-chart-steps"
+          color_class: "text-primary"
+          title: "Product insights"
+          description: "Which SKUs are low on stock but trending in sales?"
+        - icon: "bi-share-fill"
+          color_class: "text-success"
+          title: "Share it with ops"
+          description: "Pin to your 'Reorder Board' and send a Slack alert to the buyer team."
+
+    - title: "Financial Clarity, Fast"
+      tab_title: "Finance"
+      description: "Upload your statements and get instant comparisons, trend graphs, and variance analysis. Chat with your financials, not just your accountant."
+      style: "left"
+      outline_class: "border-warning border-opacity-50"
+      background_image: "/assets/images/template/finance/tab-bg-1.svg"
+      main_image: "/assets/images/template/finance/tab.jpg"
+      points:
+        - icon: "bi-bar-chart-fill"
+          color_class: "text-primary"
+          title: "Ask questions directly"
+          description: "How did our Q4 EBITDA compare to last year?"
+        - icon: "bi-journal-arrow-up"
+          color_class: "text-success"
+          title: "Create visual reports"
+          description: "Pin to the CFO board and export as a client report in seconds."
+
+    - title: "Empower Your Product Team"
+      tab_title: "Tech Startups"
+      description: "From user interviews to roadmap decks, let your team ask questions, surface insights, and automate reporting. All from one chat-based hub."
+      style: "right"
+      outline_class: "border-secondary border-opacity-50"
+      background_image: "/assets/images/template/tech/tab-bg-1.svg"
+      main_image: "/assets/images/template/tech/tab.jpg"
+      points:
+        - icon: "bi-terminal"
+          color_class: "text-primary"
+          title: "Get instant clarity"
+          description: "What features did users mention most often in feedback this week?"
+        - icon: "bi-kanban"
+          color_class: "text-success"
+          title: "Keep teams aligned"
+          description: "Pin to the 'Feedback Radar' and use it in sprint planning."
+
 cta:
-  title: "Ready to Transform Your Knowledge?"
-  description: "Join thousands of teams and creators using ChatterKB today."
+  title: "Stop Searching. Start Chatting with Your Knowledge."
+  description: "Sign up for a free account. No credit card, no setup, no noise."
   button:
     text: "Get Started Free"
-    url: "https://app.chatterkb.com/auth/signup"
-
-models:
-  section_title: AI Models
-  title: "Powered by Leading AI Models"
-  description: "ChatterKB leverages state-of-the-art language models to deliver accurate, nuanced responses to your questions."
-  items:
-    - name: "LLama 3.3"
-      image: /assets/images/template/logos/llama.png
-      description: "Meta's advanced open-source large language model, optimized for performance and efficiency."
-      capabilities:
-        - "Exceptional reasoning capabilities"
-        - "Efficient knowledge retrieval"
-        - "Optimized for document analysis"
-        - "Open-source foundation"
-    - name: "Claude 3.7 Sonnet"
-      image: /assets/images/template/logos/claude.png
-      description: "Anthropic's powerful AI assistant known for its helpfulness, harmlessness, and honesty."
-      capabilities:
-        - "Superior contextual understanding"
-        - "Nuanced response generation"
-        - "Advanced reasoning abilities"
-        - "Designed for safety and reliability"
+    url: "https://app.chatterkb.com/checkout/plans"
 ---
