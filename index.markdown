@@ -41,7 +41,7 @@ solution:
       badges:
         - "Slack"
         - "Google Drive"
-        - "Notion"
+        - "Notion" 
         - "YouTube"
         - "Zapier"
         - "And more..."
