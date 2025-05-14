@@ -1,182 +1,121 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: marketing-home
 
-layout: home-video
+# SEO and metadata
+title: "Agency Workflow and Knowledge Base Solution | ChatterKB"
+description: "ChatterKB turns your client knowledge into workflows, reports, and automations without the manual lift."
 
-sitemap:
-  exclude: 'yes'
-
-# Page content follows below
+# Page content
 hero:
-  title: "Your Creative Brain, Supercharged by AI"
-  description: "Turn scattered decks, docs, and threads into instant answers, reports, and dashboards. All from one chat. Ask questions. Pin insights. Automate your workflows."
-  video:
-    url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-hero-video.m4v"
-    type: "html5"
-    poster: "/assets/images/template/content/hero-app-video.webp"
-  container_class: "pb-5 px-4"
-  offer:
-    text: "Get 20% off yearly plans"
-    url: "https://app.chatterkb.com/checkout/yearly"
-  button:
-    text: "Get Started for Free"
-    url: "https://app.chatterkb.com/checkout/plans"
-  link:
-    text: "See how it works"
-    url: "#problems"
+  title: "Your Agency's Brain. Automated."
+  split_title:
+    main: "Your Agency's Brain."
+    highlight: "Automated."
+  description: "ChatterKB turns your client knowledge into workflows, reports, and campaigns without the manual lift."
+  image: "/assets/images/marketing/hero-image.webp"
+  primary_button:
+    text: "Try It Free"
+    url: "https://app.chatterkb.com/auth/signup"
+  secondary_button:
+    text: "Book 15-Min Call"
+    url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
 
 problems:
-  section_title: "Why ChatterKB"
+  section_title: "What's Slowing Your Team Down"
   items:
-    - section_title: "Manual Work"
-      title: "Still digging through docs?"
-      description: "From Slack to Sheets to Slides, your team's best insights are lost in the noise. Finding what matters shouldn't take hours."
-      image: "/assets/images/template/content/manual-work.jpg"
-      side: "left"
-    - section_title: "Information Overload"
-      title: "Too much data, too little clarity"
-      description: "Marketing reports. Campaign results. Strategy docs. They're everywhere but rarely where you need them when you need them."
-      image: "/assets/images/template/content/information-overload.jpg"
-      side: "right"
-    - section_title: "Collaboration Gaps"
-      title: "Insights stuck in silos"
-      description: "Even when you find something great, sharing it means screenshots, email threads, or another tool. Let AI do the organizing."
-      image: "/assets/images/template/content/collaboration-bottlenecks.jpg"
-      side: "left"
+    - title: "Brilliant Work, Buried and Forgotten"
+      description: "Your team says smart things every day - but it's scattered across 12 tools and nobody can find it when it matters. That means wasted time, missed context, and clients getting half the value they paid for."
+    - title: "Reporting That Bleeds Profit"
+      description: "Every hour spent rebuilding decks and updates is an hour stolen from strategy. You're paying smart people to copy and paste - and clients feel it."
+    - title: "Your Growth Is Breaking Your Team"
+      description: "The more clients you win, the more your team drowns in repeatable tasks. Without systems, quality drops, delivery slows, and top performers burn out."
 
 solution:
-  title: "Ask. Analyze. Act. All in One Chat."
-  description: "Upload your files. Ask questions. Pin what matters. Share it instantly. Soon, you'll be able to generate workflows from plain language, turning insights into action automatically."
-  button:
-    text: "Try ChatterKB Free"
-    url: "https://app.chatterkb.com/checkout/plans"
-
-# video:
-#   url: "https://chatterkb.s3.us-east-1.amazonaws.com/chatterkb-hero-video.m4v"
-#   type: "html5"
-#   poster: "/assets/images/template/content/hero-app-video.webp"
-#   container_class: "pb-5 px-4"
+  title: "From Knowledge to Action in One Move"
+  description: "ChatterKB is a workflow engine powered by everything your team already knows."
+  image: "/assets/images/marketing/workflow-diagram.webp"
+  steps:
+    - title: "Capture Knowledge"
+      description: "Connect your tools and ChatterKB automatically collects insights from meetings, documents, and chats."
+      image: "/assets/images/marketing/workflow-step1.webp"
+      badges:
+        - "Slack"
+        - "Google Drive"
+        - "Notion"
+        - "YouTube"
+        - "Zapier"
+        - "And more..."
+    - title: "Process & Organize"
+      description: "AI structures information into actionable formats, categorizing insights and identifying patterns."
+      image: "/assets/images/marketing/workflow-step2.webp"
+      badges:
+        - "Categorize"
+        - "Summarize"
+        - "Connect"
+    - title: "Generate Results"
+      description: "Transform insights into reports, workflows, and campaigns with a single click."
+      image: "/assets/images/marketing/workflow-step3.webp"
+      badges:
+        - "Reports"
+        - "Workflows"
+        - "Zapier MCP"
 
 features:
-  section_title: "Features"
-  title: "Upload. Chat. Pin. Share."
-  description: "Everything you need to go from knowledge to action, faster than ever."
+  tagline: "DISCOVER • AUTOMATE • SCALE"
+  title: "Work Smarter, Not Harder"
   items:
-    - icon: "bi-upload"
-      title_highlight: "Upload"
-      title_suffix: "your docs"
-      description: "Drag and drop any doc or slide deck. Connect Google Drive, Notion, Slack, or YouTube transcripts. ChatterKB builds your AI-ready knowledge base."
-      image: "/assets/images/template/content/feature-1.webp"
-    - icon: "bi-chat"
-      title_highlight: "Ask"
-      title_suffix: "in plain English"
-      description: "Don't search, just ask. Find insights, write summaries, or get answers from your files in seconds. Like ChatGPT, but trained on your stuff."
-      image: "/assets/images/template/content/feature-2b.webp"
-    - icon: "bi-pin-angle"
-      title_highlight: "Pin"
-      title_suffix: "to dashboards"
-      description: "Turn answers into visuals. Pin tables, scorecards, or writeups to team dashboards you can share or make public-facing in one click."
-      image: "/assets/images/template/content/feature-3.webp"
+    - icon: "bi-pin-angle-fill"
+      title: "Pin Insights, Instantly Create Reports"
+      description: "Mark key moments during chats and turn them into client-ready reports with no formatting needed."
+      image: "/assets/images/marketing/feature-pin.png"
+    - icon: "bi-file-earmark-text"
+      title: "Get the Gold Without Reading the Docs"
+      description: "Drop in a 50-page strategy PDF and get key messages, audience insights, and action items in seconds. No skimming. No guesswork."
+      image: "/assets/images/marketing/feature-docs.webp"
+    - icon: "bi-kanban"
+      title: "Build SOPs That Run Themselves"
+      description: "Turn your agency's best practices into AI-powered workflows that guide your team step by step - without you holding their hand."
+      image: "/assets/images/marketing/feature-sop.png"
+    - icon: "bi-people"
+      title: "Keep the Brains, Even When People Leave"
+      description: "Capture your team's expertise and make it usable forever. When someone quits, their knowledge stays - and your systems keep improving."
+      image: "/assets/images/marketing/feature-team.webp"
 
-additional_features:
-  section_title: "Coming Soon: Workflows"
-  title: "Your Knowledge, on Autopilot"
-  description: "Automate your most common knowledge tasks by simply writing them in plain language. No nodes. No code. Just intent -> action."
-  items:
-    - icon: "bi-lightning-charge"
-      col_type: "col-md-6"
-      title: "Natural language automation"
-      description: "Say what you want done: 'Write a content brief using last month's data' and watch the steps generate in real-time."
-    - icon: "bi-journal-code"
-      col_type: "col-md-6"
-      title: "Reproducible workflows"
-      description: "Save workflows for recurring tasks like campaign reviews, client reports, and competitor analysis."
-    - icon: "bi-box-arrow-down"
-      col_type: "col-md-6"
-      title: "Plug into your process"
-      description: "Trigger workflows from new files, new campaigns, or new Slack threads. Connect to external apps via API or Zapier."
-    - icon: "bi-graph-up"
-      col_type: "col-md-6"
-      title: "Actionable + measurable"
-      description: "Each workflow step is tracked. Soon, you'll be able to see what's working and what's getting stuck right from your dashboard."
-
-smbs:
-  section_title: "Who It's For"
-  title: "ChatterKB Works Across Teams"
-  items:
-    - title: "Make Your Marketing Click"
-      tab_title: "Marketing"
-      description: "Launch a knowledge base with campaign assets, brand voice, and reports. Generate insights instantly, pin your best performing ideas, and share them with your team or clients."
-      style: "left"
-      outline_class: "border-success border-opacity-50"
-      background_image: "/assets/images/template/marketing/tab-bg-1.svg"
-      main_image: "/assets/images/template/marketing/tab.jpg"
-      points:
-        - icon: "bi-bullseye"
-          color_class: "text-primary"
-          title: "Analyze creative performance"
-          description: "What's the best-performing copy variation for our ad set last week?"
-        - icon: "bi-pie-chart-fill"
-          color_class: "text-success"
-          title: "Build shareable dashboards"
-          description: "Turn chat into charts, pin to a 'Client Results' board, and keep everyone aligned."
-
-    - title: "Stay On Top of Your Store"
-      tab_title: "Ecommerce"
-      description: "Turn your inventory, sales, and marketing data into a living dashboard that answers questions and alerts your team when action is needed."
-      style: "right"
-      outline_class: "border-info border-opacity-50"
-      background_image: "/assets/images/template/ecommerce/tab-bg-1.svg"
-      main_image: "/assets/images/template/ecommerce/tab.jpg"
-      points:
-        - icon: "bi-bar-chart-steps"
-          color_class: "text-primary"
-          title: "Product insights"
-          description: "Which SKUs are low on stock but trending in sales?"
-        - icon: "bi-share-fill"
-          color_class: "text-success"
-          title: "Share it with ops"
-          description: "Pin to your 'Reorder Board' and send a Slack alert to the buyer team."
-
-    - title: "Financial Clarity, Fast"
-      tab_title: "Finance"
-      description: "Upload your statements and get instant comparisons, trend graphs, and variance analysis. Chat with your financials, not just your accountant."
-      style: "left"
-      outline_class: "border-warning border-opacity-50"
-      background_image: "/assets/images/template/finance/tab-bg-1.svg"
-      main_image: "/assets/images/template/finance/tab.jpg"
-      points:
-        - icon: "bi-bar-chart-fill"
-          color_class: "text-primary"
-          title: "Ask questions directly"
-          description: "How did our Q4 EBITDA compare to last year?"
-        - icon: "bi-journal-arrow-up"
-          color_class: "text-success"
-          title: "Create visual reports"
-          description: "Pin to the CFO board and export as a client report in seconds."
-
-    - title: "Empower Your Product Team"
-      tab_title: "Tech Startups"
-      description: "From user interviews to roadmap decks, let your team ask questions, surface insights, and automate reporting. All from one chat-based hub."
-      style: "right"
-      outline_class: "border-secondary border-opacity-50"
-      background_image: "/assets/images/template/tech/tab-bg-1.svg"
-      main_image: "/assets/images/template/tech/tab.jpg"
-      points:
-        - icon: "bi-terminal"
-          color_class: "text-primary"
-          title: "Get instant clarity"
-          description: "What features did users mention most often in feedback this week?"
-        - icon: "bi-kanban"
-          color_class: "text-success"
-          title: "Keep teams aligned"
-          description: "Pin to the 'Feedback Radar' and use it in sprint planning."
+roi:
+  title: "The ROI of Getting This Right"
+  benefits:
+    - icon: "bi-clock"
+      title: "Save Time"
+      description: "10+ hours per week per strategist - reclaimed from reporting, searching, and re-explaining the same things."
+    - icon: "bi-graph-up-arrow"
+      title: "Grow Smarter"
+      description: "Faster onboarding, repeatable results, and cleaner handoffs. Your systems grow with your team."
+    - icon: "bi-robot"
+      title: "Automate the Grind"
+      description: "Turn repeat work into workflows. Free up your best people to actually think and lead."
 
 cta:
-  title: "Stop Searching. Start Chatting with Your Knowledge."
-  description: "Sign up for a free account. No credit card, no setup, no noise."
-  button:
-    text: "Get Started Free"
-    url: "https://app.chatterkb.com/checkout/plans"
----
+  title: "Let's Build Your Agency's Brain"
+  description: "See how ChatterKB can automate your workflows, elevate your team, and impress your clients."
+  image: "/assets/images/marketing/product-screenshot.png"
+  primary_button:
+    text: "Try It Free"
+    url: "https://app.chatterkb.com/auth/signup"
+  secondary_button:
+    text: "Book 15-Min Call"
+    url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
+
+_trusted:
+  text: "Trusted by fast-moving agencies that actually ship work"
+  logos:
+    - name: "Agency 1"
+      image: "/assets/images/marketing/agency1-logo.webp"
+    - name: "Agency 2"
+      image: "/assets/images/marketing/agency2-logo.webp"
+    - name: "Agency 3"
+      image: "/assets/images/marketing/agency3-logo.webp"
+    - name: "Agency 4"
+      image: "/assets/images/marketing/agency4-logo.webp"
+    - name: "Agency 5"
+      image: "/assets/images/marketing/agency5-logo.webp"
+--- 
