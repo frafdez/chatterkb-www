@@ -1,5 +1,7 @@
 ---
 layout: marketing-home
+redirect_from:
+  - /index.html
 
 # SEO and metadata
 title: "Agency Workflow and Knowledge Base Solution | ChatterKB"
