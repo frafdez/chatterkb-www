@@ -26,6 +26,9 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://chatterkb.com" # the base hostname & protocol for your site, e.g. http://example.com
 
+# Force HTTPS for canonical URLs
+enforce_ssl: chatterkb.com
+
 google_analytics: G-SS1WEGKVQN
 google_ads: AW-16845040931
 # twitter_username: frank_fdez
@@ -44,6 +47,7 @@ signup_url: "https://app.chatterkb.com/auth/signup"
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 sass:
     sass_dir: _sass
@@ -59,7 +63,13 @@ defaults:
 #   - pager-1.markdown
 #   - about.markdown
 
-    
+# SEO and canonical URL settings
+webmaster_verifications:
+  google: # Add your Google Search Console verification code here if you have one
+
+# URL settings to help with canonicalization
+permalink: pretty
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

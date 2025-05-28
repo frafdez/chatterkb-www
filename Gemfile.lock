@@ -66,6 +66,8 @@ GEM
       sinatra-contrib (>= 1.4)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-redirect-from (0.16.0)
+      jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (3.0.0)
       sass-embedded (~> 1.54)
     jekyll-seo-tag (2.8.0)
@@ -195,6 +197,7 @@ DEPENDENCIES
   jekyll (~> 4.3.4)
   jekyll-admin (~> 0.11.1)
   jekyll-feed (~> 0.12)
+  jekyll-redirect-from
   jekyll-seo-tag
   rack (~> 2.2)
   tzinfo (>= 1, < 3)

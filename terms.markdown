@@ -1,7 +1,11 @@
 ---
 layout: page
 title: Terms of Service
---- 
+permalink: /terms/
+redirect_from:
+  - /terms.html
+  - /terms
+---
 
 **Last updated:** {{ site.time | date: '%B %d, %Y' }}
 

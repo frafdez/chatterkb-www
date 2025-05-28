@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://chatterkb.com/sitemap.xml
+
+# Disallow tracking URLs and fragments
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?from=*
+Disallow: /*#!* 
