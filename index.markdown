@@ -81,6 +81,20 @@ features:
       description: "Capture your team's expertise and make it usable forever. When someone quits, their knowledge stays - and your systems keep improving."
       image: "/assets/images/marketing/feature-team.webp"
 
+branded_content:
+  title: "Turn Your Agency Into a Thought Leader"
+  description: "Create branded, public knowledge bases that showcase your expertise while attracting premium clients. Position your agency as the go-to authority in your space."
+  image: "/assets/images/marketing/custom-branding.webp"
+  features:
+    - title: "Agency Branding"
+      description: "Add your logo, colors, and custom CSS for complete brand control"
+    - title: "Client Attraction"
+      description: "Showcase expertise through valuable, accessible knowledge"
+    - title: "Thought Leadership"
+      description: "Position your agency as the expert authority in your field"
+    - title: "Client Self-Service"
+      description: "Reduce support load with intelligent, branded resource centers"
+
 roi:
   title: "The ROI of Getting This Right"
   benefits:

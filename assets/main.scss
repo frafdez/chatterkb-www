@@ -219,6 +219,11 @@ $primary:   #3a71a7;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important;
 }
 
+/* Ensure cards are above line in dark mode */
+[data-bs-theme="dark"] .mt_workflow_card {
+  z-index: 10;
+}
+
 /* Card images */
 .mt_workflow_card img {
   aspect-ratio: 1/1;
@@ -255,15 +260,15 @@ $primary:   #3a71a7;
 
 /* Card background colors - dark mode */
 [data-bs-theme="dark"] .mt_workflow_card_1 {
-  background-color: rgba(var(--bs-primary-rgb), 0.15);
+  background-color: rgba(var(--bs-primary-rgb), 0.8);
 }
 
 [data-bs-theme="dark"] .mt_workflow_card_2 {
-  background-color: rgba(var(--bs-info-rgb), 0.15);
+  background-color: rgba(var(--bs-info-rgb), 0.8);
 }
 
 [data-bs-theme="dark"] .mt_workflow_card_3 {
-  background-color: rgba(var(--bs-success-rgb), 0.15);
+  background-color: rgba(var(--bs-success-rgb), 0.8);
 }
 
 /* Make sure text is visible in dark mode */
@@ -1118,4 +1123,16 @@ body[data-bs-theme="dark"] .btn-outline-theme {
 .mt-header-offset {
   margin-top: 7rem; // Adjust this value to match your sticky header's height + some breathing room
 }
+
+[data-bs-theme="dark"] .mt_workflow_card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important;
+}
+
+/* Ensure cards are above line in dark mode */
+[data-bs-theme="dark"] .mt_workflow_card {
+  z-index: 10;
+  background-color: var(--bs-body-bg) !important;
+}
+
+/* Card images */
 
