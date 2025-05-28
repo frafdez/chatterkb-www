@@ -53,5 +53,5 @@ We've built this so **you're in control**. No mystery pricing. Just clear value 
 
 > Tip: For most users, mixing models gives the best balance of quality and cost.
 
-Need help choosing? [Contact Us →](/contact)
+Need help choosing? [Contact Us](mailto:hello@chatterkb.com)
 
