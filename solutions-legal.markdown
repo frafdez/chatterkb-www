@@ -80,10 +80,6 @@ features:
       title: "Intelligent Brief Generation"
       description: "Automated document creation that gets smarter with each use. Timeline execution tracks case progress without exposing technical complexity."
       image: "/assets/images/marketing/feature-team.webp"
-    - icon: "bi-megaphone"
-      title: "Branded Legal Thought Leadership"
-      description: "Create public knowledge bases with your firm's branding to share legal insights and expertise. Generate qualified leads while establishing your firm as the go-to legal authority."
-      image: "/assets/images/marketing/feature-pin.png"
 
 branded_content:
   title: "Turn Legal Expertise Into Client Acquisition"

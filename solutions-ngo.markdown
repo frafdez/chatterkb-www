@@ -80,10 +80,6 @@ features:
       title: "Intelligent Grant Reporting"
       description: "Automated report generation that gets smarter with each funding cycle. Timeline execution tracks program progress without exposing technical complexity."
       image: "/assets/images/marketing/feature-team.webp"
-    - icon: "bi-megaphone"
-      title: "Branded Mission Expertise Hub"
-      description: "Create public knowledge bases with your organization's branding to share program insights and impact stories. Build donor trust while positioning your NGO as the expert in your cause."
-      image: "/assets/images/marketing/feature-pin.png"
 
 branded_content:
   title: "Turn Mission Expertise Into Donor Engagement"
