@@ -1,5 +1,6 @@
 ---
 layout: marketing-solutions
+permalink: /solutions/public-sector
 
 # SEO and metadata
 title: "Knowledge Management for Public Sector | ChatterKB"

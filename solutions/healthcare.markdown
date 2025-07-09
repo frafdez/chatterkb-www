@@ -1,5 +1,6 @@
 ---
 layout: marketing-solutions
+permalink: /solutions/healthcare
 
 # SEO and metadata
 title: "Knowledge Management for Healthcare & Pharma | ChatterKB"

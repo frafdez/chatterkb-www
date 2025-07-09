@@ -105,8 +105,8 @@ cta:
 
 ## Examples
 
-- `solutions-ngo.markdown` - NGO/nonprofit organizations
-- `solutions-credit-unions.markdown` - Credit unions and community banks
+- `ngo.markdown` - NGO/nonprofit organizations
+- `credit-unions.markdown` - Credit unions and community banks
 
 ## Best Practices
 
@@ -119,10 +119,10 @@ cta:
 
 ## File Naming
 
-Use the pattern: `solutions-[industry].markdown`
+Use the pattern: `<industry>.markdown` (inside the `solutions/` folder)
 
 Examples:
-- `solutions-healthcare.markdown`
-- `solutions-education.markdown`
-- `solutions-manufacturing.markdown`
-- `solutions-consulting.markdown` 
+- `healthcare.markdown`
+- `education.markdown`
+- `manufacturing.markdown`
+- `consulting.markdown` 

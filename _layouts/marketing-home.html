@@ -18,6 +18,10 @@ layout: marketing-template/default
 {% include marketing-template/sections/features.html %}
 {% endif %}
 
+{% if page.enterprise %}
+{% include marketing-template/sections/enterprise.html %}
+{% endif %}
+
 {% if page.branded_content %}
 {% include marketing-template/sections/branded-content.html %}
 {% endif %}

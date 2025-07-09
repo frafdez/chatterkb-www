@@ -1,5 +1,6 @@
 ---
 layout: marketing-solutions
+permalink: /solutions/academia
 
 # SEO and metadata
 title: "Knowledge Management for Academia | ChatterKB"
