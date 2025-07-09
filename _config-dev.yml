@@ -59,6 +59,10 @@ defaults:
 #   - pager-1.markdown
 #   - about.markdown
 
+collections:
+  workflow_library:
+    output: true
+    permalink: /workflow-library/:name/
     
 # Exclude from processing.
 # The following items will not be processed, by default.
