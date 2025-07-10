@@ -1,0 +1,30 @@
+---
+layout: marketing-template/default
+---
+
+{% if page.hero %}
+{% include marketing-template/sections/hero.html %}
+{% endif %}
+
+{% comment %}
+  Main markdown content comes right after the hero section, before the feature blocks
+{% endcomment %}
+{% if content != "" %}
+<section class="container my-5">
+  {{ content }}
+</section>
+{% endif %}
+
+{% if page.features %}
+{% include marketing-feature/sections/features.html %}
+{% endif %}
+
+{% if page.faqs %}
+{% include marketing-feature/sections/faqs.html %}
+{% endif %}
+
+{% include marketing-feature/sections/workflow-library.html %}
+
+{% if page.cta %}
+{% include marketing-template/sections/cta-simple.html %}
+{% endif %} 

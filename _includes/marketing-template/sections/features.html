@@ -35,9 +35,11 @@
               <div>
                 <h3 class="fs-4 fw-semibold mb-3">{{ feature.title }}</h3>
                 <p class="mb-3 opacity-75">{{ feature.description }}</p>
-                <!-- <a href="#" class="text-decoration-none d-inline-flex align-items-center gap-2 small fw-medium">
+                {% if feature.url %}
+                <a href="{{ feature.url }}" class="text-decoration-none d-inline-flex align-items-center gap-2 small fw-medium">
                   Learn more <i class="bi bi-arrow-right"></i>
-                </a> -->
+                </a>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -68,9 +70,11 @@
               <div>
                 <h3 class="fs-4 fw-semibold mb-3">{{ feature.title }}</h3>
                 <p class="mb-3 opacity-75">{{ feature.description }}</p>
-                <!-- <a href="#" class="text-decoration-none d-inline-flex align-items-center gap-2 small fw-medium {{ text_class }}">
+                {% if feature.url %}
+                <a href="{{ feature.url }}" class="text-decoration-none d-inline-flex align-items-center gap-2 small fw-medium {{ text_class }}">
                   Learn more <i class="bi bi-arrow-right"></i>
-                </a> -->
+                </a>
+                {% endif %}
               </div>
             </div>
           </div>

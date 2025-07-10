@@ -1,6 +1,6 @@
 ---
 layout: marketing-page
-title: Workflow Examples Library
+title: Workflow Example Library
 description: Real-world automated workflow templates you can clone and adapt.
 header_image: "/assets/images/marketing/workflow-diagram.png"
 ---

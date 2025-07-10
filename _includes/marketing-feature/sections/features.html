@@ -1,0 +1,66 @@
+{% if page.features %}
+<section id="features" class="mt_features py-5 py-md-7">
+  <div class="container">
+    {% if page.features.section_title or page.features.title %}
+    <div class="text-center mb-5 pb-3">
+      {% if page.features.section_title %}
+      <div class="badge bg-primary text-white mb-3 py-2 px-4 rounded-pill fw-normal">{{ page.features.section_title }}</div>
+      {% endif %}
+      {% if page.features.title %}
+      <h2 class="display-5 fw-bold">{{ page.features.title }}</h2>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% for feature in page.features.items %}
+      {% assign side = feature.side | default: "left" %}
+      <div class="row align-items-center mb-7 py-4 {% if side == 'right' %}flex-row-reverse{% endif %}">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="position-relative">
+            <div class="rounded-4 shadow-lg overflow-hidden border mt_feature_image_container">
+              {% if feature.image %}
+                <img src="{{ feature.image }}" alt="{{ feature.title }}" class="img-fluid w-100">
+              {% else %}
+                <div class="bg-light w-100" style="display: flex; align-items: center; justify-content: center; min-height: 200px;">
+                  <span class="text-secondary">Feature Image Placeholder</span>
+                </div>
+              {% endif %}
+            </div>
+            {% assign index_mod = forloop.index0 | modulo: 2 %}
+            {% if index_mod == 0 %}
+              {% assign blur_class = "mt_feature_blur_1" %}
+            {% else %}
+              {% assign blur_class = "mt_feature_blur_2" %}
+            {% endif %}
+            <div class="{{ blur_class }} position-absolute start-0 bottom-0" style="transform: translate(-15%, 15%);"></div>
+            <div class="{{ blur_class }} position-absolute end-0 top-0" style="transform: translate(15%, -15%);"></div>
+          </div>
+        </div>
+
+        {% assign text_padding = '' %}
+        {% if side == 'left' %}
+          {% assign text_padding = 'ps-lg-5' %}
+        {% else %}
+          {% assign text_padding = 'pe-lg-5' %}
+        {% endif %}
+        <div class="col-lg-6 {{ text_padding }}">
+          <div class="d-flex flex-column gap-3">
+            <h3 class="fs-3 fw-semibold">{{ feature.title }}</h3>
+            {% if feature.description %}<p class="mb-3 opacity-75">{{ feature.description }}</p>{% endif %}
+            {% if feature.bullets %}
+            <ul class="list-unstyled">
+              {% for bullet in feature.bullets %}
+              <li class="d-flex gap-2 mb-2">
+                <i class="bi bi-check-circle-fill text-success"></i>
+                <span>{{ bullet }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %} 
