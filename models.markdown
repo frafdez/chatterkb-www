@@ -25,15 +25,25 @@ Not every task needs the most powerful AI. Some need speed. Others need volume. 
 
 | **<i class="bi bi-cpu me-1"></i> Model**                  | **Chats per <i class="bi bi-coin ms-1"></i>** | **Best For**                                                                 |
 |---------------------------|----------------------|------------------------------------------------------------------------------|
-| **Claude 3.7 Sonnet**     | 1                    | Deep reasoning, long documents, strategic content, accuracy-critical tasks. |
-| **Claude 3.5 Sonnet**     | 1                    | General-purpose work with solid reasoning.                                  |
-| **DeepSeek-R1**           | 2.5                  | Everyday use, balance of speed and intelligence, technical tasks.           |
-| **Claude 3.5 Haiku**      | 3.75                 | Fast drafts, summaries, low-latency use cases.                              |
-| **Amazon Nova Pro**       | 4                    | Middle ground between performance and value.                                |
-| **Meta Llama 3.3 70B**    | 5.5                  | Creative writing, coding, open-source transparency, budget-conscious power. |
-| **Amazon Nova Light**     | 50                   | Bulk Q&A, lookups, internal tools, high-volume needs, simple reasoning.     |
+| **Perplexity Sonar Pro**\*  | 0.70                 | Fast factual answers powered by live web search; quick research, drafting, fact-checking. |
+| **Claude Sonnet 4**       | 1                 | Next-generation Claude with larger context window and strong compliance; enterprise workflows. |
+| **Claude 3.7 Sonnet**     | 1                 | Deep reasoning, long documents, strategic content, accuracy-critical tasks. |
+| **Claude 3.5 Sonnet**     | 1                 | General-purpose work with solid reasoning and creativity. |
+| **Grok 3**\*                | 1                 | Humorous yet powerful reasoning; trending topic insights, coding help, creative writing. |
+| **Google Gemini 2.5 Pro**\* | 1.20                 | Multimodal reasoning across text, code & images; research, summarization, content creation. |
+| **Perplexity Sonar**\*      | 1.40                 | Balanced everyday assistant with realtime web knowledge; emails, briefs, Q&A. |
+| **OpenAI GPT-4.1**\*        | 1.70                 | High reasoning precision, structured content generation, complex coding tasks. |
+| **OpenAI GPT-4o**\*         | 1.70                 | Ultra-fast GPT-4 with voice & vision capability; interactive assistance & broad tasks. |
+| **DeepSeek-R1**\*           | 2.70                 | Open-source model optimized for technical tasks, code explanation, structured research. |
+| **Grok 3 Mini**\*           | 3.30                 | Low-latency Grok for general chat, idea exploration, rapid insights. |
+| **OpenAI o4-mini**\*        | 3.30                 | Cost-efficient GPT-4-class model for quick drafts, brainstorming, prototyping. |
+| **Claude 3.5 Haiku**      | 4.20                 | Lightning-fast drafts, summaries, real-time interactions. |
+| **Amazon Nova Pro**       | 4.50                 | Balance of performance and cost for internal tools and mid-complexity workflows. |
+| **Meta Llama 3.3 70B**    | 6.30                 | Open-source transparency, creative writing, coding, budget-conscious power. |
+| **Amazon Nova Light**     | 61.10                 | Bulk Q&A, internal lookups, high-volume tasks where speed matters. |
 
-##### Note: Chat counts are approximate and may vary slightly based on usage patterns and prompt complexity.
+##### Note: Chat counts are approximate and may vary based on usage patterns and prompt complexity.
+##### * _models only available on **custom** pricing plans_.
 ---
 
 ## What's the Best Option for Me?
