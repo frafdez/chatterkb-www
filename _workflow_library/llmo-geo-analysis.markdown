@@ -61,7 +61,7 @@ b. Store the entire results from the tool in a file using a name like {{model_na
 c. Specifically Mention in Step: Add the statistics table (without the header) from the LLMO results as new rows in the 'llmo_results_{{unique_id_for_run}}.md' table. 
 - Ensure that you add one column, at the end of the row, that include the model name. Each row **must** contain values (even if blank) for Rank, Name, Mention Count, Associated Keywords, Related Links (where applicable), and Model (**IMPORTANT** do **not** include headers). 
 - Example content format: 
-| 1 | Dr. Scholl's | 1 | Pain Relief Orthotics, mild to moderate pain |  | Claude Sonnet 4 |
+| 1 | Skechers | 1 | Memory Foam Insoles, comfort for all-day wear | | Claude Sonnet 4 |
 - Use kb_write_file to append to the end of the file. IMPORTANT: You must use the default model for the steps. The model mentioned here is only for the llmo tool call.
 - **IMPORTANT** Mention this in the step: YOU **MUST** replace {{unique_id_for_run}} with the value found in memory for "unique_id_for_run".
 
