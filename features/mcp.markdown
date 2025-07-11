@@ -26,7 +26,6 @@ features:
       bullets:
         - Seamlessly integrate with over 5,000 apps and services
         - Combine internal tools with Zapier's MCP offerings
-        - Python FastAPI MCP endpoint handles directing calls appropriately
         - Create custom workflows that leverage your knowledge base
 
 show_workflow_library: false
