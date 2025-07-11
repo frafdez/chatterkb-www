@@ -21,7 +21,7 @@ features:
   items:
     - side: left
       title: Extended Tool Integration
-      description: Connect your knowledge base to thousands of external tools and services through Zapier Multi-Channel Platform integration.
+      description: Connect your knowledge base to thousands of external tools and services through Zapier Model Context Protocol integration.
       image: /assets/images/marketing/internal-tools-feature-step-2.png
       bullets:
         - Seamlessly integrate with over 5,000 apps and services
