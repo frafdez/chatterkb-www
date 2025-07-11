@@ -17,6 +17,8 @@ cta:
 
 If you want to extract meaningful insights from any YouTube video (and quickly repurpose them for your audience), here’s a step-by-step workflow you can run directly in ChatterKB.
 
+**Important:** Before running this workflow, make sure to enable the **YouTube Transcript** tool in your knowledge base settings.
+
 ---
 
 ```markdown
