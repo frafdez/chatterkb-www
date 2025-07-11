@@ -76,11 +76,12 @@ features:
       title: "Build Processes That Run Themselves"
       description: "Turn your organization's best practices into workflow automation that guides your team step by step - without management overhead."
       image: "/assets/images/marketing/feature-sop.png"
-      url: "/workflows"
+      url: "/features/workflows"
     - icon: "bi-people"
       title: "Keep the Intelligence, Even When People Leave"
       description: "Capture your team's expertise in your AI knowledge base and make it usable forever. When someone leaves, their knowledge stays - and your systems keep improving."
       image: "/assets/images/marketing/feature-team.webp"
+      url: "/features/knowledge-base"
 
 enterprise:
   title: "AI for Enterprise: Security Without the Enterprise Headaches"
