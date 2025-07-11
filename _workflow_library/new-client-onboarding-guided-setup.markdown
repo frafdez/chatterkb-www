@@ -2,6 +2,7 @@
 layout: marketing-page
 title: "New Client Onboarding – Guided Setup"
 description: "Streamline client onboarding with automated questionnaires, document collection, and project kickoff workflows."
+header_icon: bi-bar-chart-steps
 cta:
   title: "Automate Your Client Onboarding"
   description: "Transform your client onboarding process with ChatterKB's intelligent workflow automation."

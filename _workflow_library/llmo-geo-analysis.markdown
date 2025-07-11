@@ -2,6 +2,7 @@
 layout: marketing-page
 title: "LLMO/GEO Analysis"
 description: "Compare how different AI models rank and analyze topics across 16 leading language models simultaneously."
+header_icon: bi-bar-chart-steps
 cta:
   title: "Run Multi-Model Analysis"
   description: "See how different AI models interpret the same prompt with ChatterKB's advanced workflow automation."

@@ -2,6 +2,7 @@
 layout: marketing-page
 title: "Review LLMO Analysis"
 description: "Analyze and synthesize results from multi-model LLMO analysis to understand brand mention patterns and reasoning."
+header_icon: bi-bar-chart-steps
 cta:
   title: "Analyze Your LLMO Results"
   description: "Transform raw LLMO data into actionable insights with ChatterKB's intelligent analysis workflows."

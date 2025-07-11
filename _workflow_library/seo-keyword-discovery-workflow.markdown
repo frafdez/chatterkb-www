@@ -2,6 +2,7 @@
 layout: marketing-page
 title: "SEO Keyword Discovery Workflow"
 description: "Automate keyword research, clustering, and brief generation using ChatterKB."
+header_icon: bi-bar-chart-steps
 cta:
   title: "Start Automating Your SEO"
   description: "Try this workflow in ChatterKB and accelerate your SEO content planning."

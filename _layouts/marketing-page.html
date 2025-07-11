@@ -12,15 +12,21 @@
     <div class="mt_bg_gradient position-absolute inset-0 w-100 h-100 top-0"></div>
     <div class="container position-relative">
       <div class="row align-items-center">
-        {% if page.header_image %}
+        {% if page.header_image or page.header_icon %}
           <div class="col-lg-7 text-center text-lg-start">
             <h1 class="display-4 fw-bold mb-3">{{ page.title }}</h1>
             {% if page.description %}
               <p class="lead fs-4 mb-4">{{ page.description }}</p>
             {% endif %}
           </div>
-          <div class="col-lg-5 mt-4 mt-lg-0 text-center">
-            <img src="{{ page.header_image }}" alt="{{ page.title }} header image" class="rounded-3 shadow-lg" style="max-height: 320px; max-width: 100%; object-fit: contain;">
+          <div class="col-lg-5 mt-4 mt-lg-0 text-center d-flex justify-content-center align-items-center">
+            {% if page.header_image %}
+              <img src="{{ page.header_image }}" alt="{{ page.title }} header image" class="rounded-3 shadow-lg" style="max-height: 320px; max-width: 100%; object-fit: contain;">
+            {% elsif page.header_icon %}
+              <span class="d-inline-flex justify-content-center align-items-center rounded-circle border" style="width: 200px; height: 200px; border-color: var(--mt-light-border); background: rgba(59,130,246,0.1); transform: translateY(-10%);">
+                <i class="bi {{ page.header_icon }}" style="font-size: 4rem; color:#3b82f6;"></i>
+              </span>
+            {% endif %}
           </div>
         {% else %}
           <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
