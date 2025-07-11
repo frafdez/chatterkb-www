@@ -23,6 +23,29 @@ sitemap:
     {% endunless %}
   {% endfor %}
 
+  {%- comment -%}
+    Loop through every collection (except 'posts') and include their documents.
+    This means any new collection you add to _config.yml with `output: true`
+    will automatically be listed in the sitemap unless a document sets
+    `sitemap.exclude: 'yes'` or `output: false`.
+  {%- endcomment -%}
+
+  {% for coll in site.collections %}
+    {% assign coll_label = coll.label %}
+    {% if coll_label != 'posts' %}
+      {% for doc in coll.docs %}
+        {% unless doc.output == false or doc.sitemap.exclude == 'yes' %}
+        <url>
+          <loc>{{ site.url }}{{ doc.url }}</loc>
+          <lastmod>{{ doc.sitemap.lastmod | default: doc.date | default: site.time | date: "%Y-%m-%d" }}</lastmod>
+          <changefreq>{{ doc.sitemap.changefreq | default: 'monthly' }}</changefreq>
+          <priority>{{ doc.sitemap.priority | default: '0.5' }}</priority>
+        </url>
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
   {% for page in site.pages %}
     {% unless page.sitemap.exclude == "yes" or page.url contains "assets" or page.url contains ".xml" or page.url contains "404" %}
     <url>
