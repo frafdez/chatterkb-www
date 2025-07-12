@@ -193,3 +193,35 @@ layout: marketing-template/default
 {% if page.cta %}
 {% include marketing-template/sections/cta-simple.html %}
 {% endif %} 
+
+<!-- Automatic Schema Markup -->
+{% if page.about and page.about.chatterkb and page.about.competitor %}
+  {% capture schema_json %}
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "ChatterKB",
+      "image": "{{ cb_icon }}",
+      "description": {{ page.about.chatterkb | markdownify | strip_html | strip_newlines | jsonify }}
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "{{ comp_name }}",
+      "image": "{{ comp_icon }}",
+      "description": {{ page.about.competitor | markdownify | strip_html | strip_newlines | jsonify }}
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListOrder": "http://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "url": "#chatterkb-column"},
+        {"@type": "ListItem", "position": 2, "url": "#{{ comp_name | slugify }}-column"}
+      ]
+    }
+  ]
+  {% endcapture %}
+  <script type="application/ld+json">{{ schema_json | strip_newlines }}</script>
+{% endif %} 

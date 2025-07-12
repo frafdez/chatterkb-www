@@ -3,7 +3,7 @@ layout: marketing-comparison
 sitemap:
   exclude: 'no'
 
-title: n8n vs ChatterKB | Workflow Automation Comparison
+title: ChatterKB vs n8n | Workflow Automation Comparison
 
 hero:
   title: "ChatterKB vs n8n"
