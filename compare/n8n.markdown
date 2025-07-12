@@ -4,6 +4,7 @@ sitemap:
   exclude: 'no'
 
 title: ChatterKB vs n8n | Workflow Automation Comparison
+description: "Discover why modern marketing teams choose ChatterKB's AI-powered knowledge & workflow automation over traditional node-based tools like n8n."
 
 hero:
   title: "ChatterKB vs n8n"
@@ -163,7 +164,28 @@ components:
         - Information extraction: Implement extraction flows converting unstructured text into structured data using OutputParsers, facilitating downstream processing.
         - Document summarization: Develop tools summarizing extensive text into concise summaries while maintaining content essence and scope.
     bg: ""
+  - title: Workflow Reliability
+    cb_text: |
+        ChatterKB's memory-centric execution model delivers superior reliability:
 
+        - **Self-Correcting Workflows**: Workflows automatically adapt to new information and recover from errors without manual intervention
+        - **Reasoner-Based Architecture**: Specialized components handle planning, RAG operations, and memory pre-population with focused context
+        - **Dynamic Flow Control**: Intelligent mapping system with on_success and on_failed paths creates truly adaptive workflows
+        - **Enhanced Status Model**: Four-state execution model (success/failure for progression, more_info/critical_failure for intelligent handling)
+        - **Graceful Error Recovery**: When unexpected situations arise, workflows can replan steps and self-correct without human intervention
+        - **Continuous Improvement**: Each workflow execution enriches the knowledge base, making future runs more reliable
+
+    competitor_text: |
+        n8n's node-based architecture follows traditional workflow execution patterns:
+
+        - **Manual Error Handling**: Users must anticipate and explicitly program error conditions for each node
+        - **Fixed Execution Paths**: Flows follow predetermined paths regardless of new context or changing conditions
+        - **Binary Success/Failure**: Limited to basic pass/fail states without nuanced handling of partial information
+        - **Restart Required**: Failed executions typically need manual intervention to diagnose and fix
+        - **Stateless Execution**: Each workflow run starts fresh without benefiting from previous execution insights
+        - **Developer Dependency**: Technical expertise required to implement proper error handling and recovery logic
+    bg: bg-body-tertiary
+    
 choose:
   chatterkb:
     - "You’re a business team that values speed over technical depth"
