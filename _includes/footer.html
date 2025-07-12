@@ -3,28 +3,89 @@
 
 
    </div>
-    <div class="container mt-2 pt-lg-7 pb-4 mt-4">
+    <div class="container pt-7 pb-4">
+       <!-- Brand + Links -->
+       <div class="row row-cols-1 row-cols-md-4 g-4 mb-4 align-items-start d-none d-md-flex">
+         <!-- Product -->
+         <div class="col">
+           <h6 class="text-uppercase fw-semibold small mb-2">Features</h6>
+           <ul class="list-unstyled small mb-0">
+             <li class="mb-2"><a href="/ai-workflow-automation" class="text-reset text-decoration-none">AI Workflow Automation</a></li>
+             <li class="mb-2"><a href="/features/internal-tools" class="text-reset text-decoration-none">Tools</a></li>
+             <li><a href="/features/knowledge-base" class="text-reset text-decoration-none">Knowledge Base</a></li>
+           </ul>
+         </div>
 
-       <div class="row jualign-items-center">
-          <div class="col-md-3">
-            <a class="navbar-brand d-flex align-items-center" href="{{ "/" | relative_url }}">
-              <img src="{{ '/assets/images/chatterkb-logo-ex.png' | relative_url }}" alt="ChatterKB Logo" class="logo-image">
-              <span class="logo-text">Chatter<span style="color: darkgray;">KB</span></span>
-            </a>
-          </div>
-          <div class="col-md-9 col-lg-6 ">
-             <div class="small mb-3 mb-lg-0 text-lg-center">
-                Copyright © {{ site.time | date: '%Y' }} {{ site.company_name }}
+         <!-- Comparisons -->
+         <div class="col">
+           <h6 class="text-uppercase fw-semibold small mb-2">Comparisons</h6>
+           <ul class="list-unstyled small mb-0">
+             <li class="mb-2"><a href="/compare/n8n" class="text-reset text-decoration-none">ChatterKB vs n8n</a></li>
+           </ul>
+         </div>
+
+         <!-- Resources -->
+         <div class="col">
+           <h6 class="text-uppercase fw-semibold small mb-2">Resources</h6>
+           <ul class="list-unstyled small mb-0">
+             <li class="mb-2"><a href="/articles" class="text-reset text-decoration-none">Articles</a></li>
+             <li><a href="/workflow-library" class="text-reset text-decoration-none">Workflow Library</a></li>
+           </ul>
+         </div>
+
+         <!-- Company -->
+         <div class="col">
+           <h6 class="text-uppercase fw-semibold small mb-2">Company</h6>
+           <ul class="list-unstyled small mb-0">
+             <li class="mb-2"><a href="/privacy" class="text-reset text-decoration-none">Privacy Policy</a></li>
+             <li class="mb-2"><a href="/terms" class="text-reset text-decoration-none">Terms of Service</a></li>
+             <li><a href="mailto:hello@chatterkb.com" class="text-reset text-decoration-none">Contact</a></li>
+           </ul>
+         </div>
+       </div>
+
+       <!-- Mobile accordion links -->
+       <div class="accordion d-md-none mb-4" id="footerAccordion">
+         {% assign sections = "Features,Comparisons,Resources,Company" | split: "," %}
+         {% for sec in sections %}
+         <div class="accordion-item border-0">
+           <h2 class="accordion-header" id="heading-{{ forloop.index }}">
+             <button class="accordion-button collapsed py-2 px-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}" aria-expanded="false" aria-controls="collapse-{{ forloop.index }}">
+               <span class="text-uppercase small fw-semibold">{{ sec }}</span>
+             </button>
+           </h2>
+           <div id="collapse-{{ forloop.index }}" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+             <div class="accordion-body px-0">
+               <ul class="list-unstyled small mb-0 lh-lg">
+               {% case sec %}
+                 {% when 'Features' %}
+                   <li><a href="/ai-workflow-automation" class="text-reset text-decoration-none">AI Workflow Automation</a></li>
+                   <li><a href="/features/internal-tools" class="text-reset text-decoration-none">Tools</a></li>
+                   <li><a href="/features/knowledge-base" class="text-reset text-decoration-none">Knowledge Base</a></li>
+                 {% when 'Comparisons' %}
+                   <li><a href="/compare/n8n" class="text-reset text-decoration-none">ChatterKB vs n8n</a></li>
+                 {% when 'Resources' %}
+                   <li><a href="/articles" class="text-reset text-decoration-none">Articles</a></li>
+                   <li><a href="/workflow-library" class="text-reset text-decoration-none">Workflow Library</a></li>
+                 {% when 'Company' %}
+                   <li><a href="/privacy" class="text-reset text-decoration-none">Privacy Policy</a></li>
+                   <li><a href="/terms" class="text-reset text-decoration-none">Terms of Service</a></li>
+                   <li><a href="mailto:hello@chatterkb.com" class="text-reset text-decoration-none">Contact</a></li>
+               {% endcase %}
+               </ul>
              </div>
-          </div>
-          <div class="col-lg-3">
-             <div class="text-lg-end d-flex align-items-center justify-content-lg-end">
-               <div class="me-3"><a href="{{ '/privacy' | relative_url }}" class="text-decoration-none text-reset small">Privacy</a></div>
-               <div class="me-3"><a href="{{ '/terms' | relative_url }}" class="text-decoration-none text-reset small">Terms</a></div>
-               <div class="me-3"><a href="{{ '/articles' | relative_url }}" class="text-decoration-none text-reset small">Articles</a></div>
-               <div><a href="mailto:hello@chatterkb.com" class="text-decoration-none text-reset small">Contact</a></div>
-             </div>
-          </div>
+           </div>
+         </div>
+         {% endfor %}
+       </div>
+
+       <!-- Footer bottom -->
+       <div class="d-flex flex-column flex-md-row justify-content-between align-items-center border-top pt-3 small">
+         <a class="navbar-brand d-flex align-items-center mb-2 mb-md-0" href="{{ '/' | relative_url }}">
+           <img src="{{ '/assets/images/chatterkb-logo-ex.png' | relative_url }}" alt="ChatterKB Logo" class="logo-image" width="28" height="28">
+           <span class="logo-text ms-2">Chatter<span style="color: var(--bs-gray-600);">KB</span></span>
+         </a>
+         <div>© {{ site.time | date: '%Y' }} {{ site.company_name }}</div>
        </div>
     </div>
  
