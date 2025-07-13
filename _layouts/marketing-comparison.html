@@ -203,14 +203,16 @@ layout: marketing-template/default
       "@type": "Product",
       "name": "ChatterKB",
       "image": "{{ cb_icon }}",
-      "description": {{ page.about.chatterkb | markdownify | strip_html | strip_newlines | jsonify }}
+      "description": {{ page.about.chatterkb | markdownify | strip_html | strip_newlines | jsonify }},
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://chatterkb.com/pricing"}
     },
     {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "{{ comp_name }}",
       "image": "{{ comp_icon }}",
-      "description": {{ page.about.competitor | markdownify | strip_html | strip_newlines | jsonify }}
+      "description": {{ page.about.competitor | markdownify | strip_html | strip_newlines | jsonify }},
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
     },
     {
       "@context": "https://schema.org",
