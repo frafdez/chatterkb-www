@@ -68,7 +68,7 @@
                 </div>
               {% endif %}
             {% elsif page.hero.image %}
-              <img src="{{ page.hero.image }}" alt="{{ page.hero.alt | default: page.title }}" class="img-fluid w-100">
+              <img src="{{ page.hero.image }}" alt="{{ page.hero.alt | default: page.title }}" class="img-fluid w-100" fetchpriority="high">
             {% else %}
               <div class="p-5 text-center" style="height: 400px; background-color: var(--bs-secondary-bg);">
                 <div class="d-flex align-items-center justify-content-center h-100">

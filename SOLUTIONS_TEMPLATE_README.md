@@ -31,7 +31,7 @@ The template uses the same images as the homepage by default:
 - **Hero**: `/assets/images/marketing/hero-image.webp`
 - **Solution workflow**: `/assets/images/marketing/workflow-diagram.webp`
 - **Solution steps**: `workflow-step1.webp`, `workflow-step2.webp`, `workflow-step3.webp`
-- **Features**: `feature-pin.png`, `feature-docs.webp`, `feature-sop.png`, `feature-team.webp`
+- **Features**: `feature-pin.webp`, `feature-docs.webp`, `feature-sop.webp`, `feature-team.webp`
 - **CTA**: `/assets/images/marketing/product-screenshot.png`
 
 You can override any of these by specifying different image paths in your page's front matter.
@@ -87,7 +87,7 @@ features:
     - icon: "bi-icon-name"
       title: "Feature Title"
       description: "Feature description"
-      image: "/assets/images/marketing/feature-pin.png"  # Uses homepage image by default
+      image: "/assets/images/marketing/feature-pin.webp"  # Uses homepage image by default
     # ... 3 more features
 
 cta:
