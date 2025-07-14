@@ -1,0 +1,14 @@
+---
+layout: null
+permalink: /workflow-library.json
+sitemap: false
+---
+[
+{% for wf in site.workflow_library %}{% unless forloop.first %},{% endunless %}
+  {
+    "title": {{ wf.title | jsonify }},
+    "description": {{ wf.description | jsonify }},
+    "content": {{ wf.workflow_steps | jsonify }}
+  }
+{% endfor %}
+] 

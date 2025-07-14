@@ -52,6 +52,14 @@
             </a>
           </div>
         {% endif %}
+        {% if page.workflow_introduction %}
+        <div class="mb-4">
+          <div class="lh-lg">{{ page.workflow_introduction | markdownify }}</div>
+        </div>
+       {% endif %}
+        {% if page.workflow_steps %}
+        <pre class="highlight"><code class="language-markdown">{{ page.workflow_steps | escape }}</code></pre>
+        {% endif %}
         {{ content }}
       </div>
     </div>
