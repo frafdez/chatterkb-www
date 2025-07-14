@@ -8,7 +8,8 @@ sitemap: false
   {
     "title": {{ wf.title | jsonify }},
     "description": {{ wf.description | jsonify }},
-    "content": {{ wf.workflow_steps | jsonify }}
+    "content": {{ wf.workflow_steps | jsonify }},
+    "introduction": {{ wf.workflow_introduction | jsonify }}
   }
 {% endfor %}
 ] 
