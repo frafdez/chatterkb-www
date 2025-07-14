@@ -55,6 +55,12 @@ defaults:
       path: "" # Applies to all posts and pages
     values:
       image: ./assets/images/ckb-card.png
+   -
+    scope:
+      type: workflow_library
+    values:
+      order: 1000
+      
 # header_pages:
 #   - pager-1.markdown
 #   - about.markdown

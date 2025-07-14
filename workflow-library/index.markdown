@@ -6,7 +6,7 @@ header_image: "/assets/images/marketing/workflow-diagram.png"
 ---
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-  {% assign workflows = site.workflow_library | sort: 'title' %}
+  {% assign workflows = site.workflow_library | sort: 'order' %}
   {% for wf in workflows %}
     <div class="col">
       <a href="{{ wf.url }}" class="text-decoration-none">
