@@ -38,7 +38,7 @@ differences:
 
 about:
   chatterkb: |
-    ChatterKB transforms how teams work by turning conversations into institutional knowledge and intelligent workflows. Unlike standard AI chatbots, ChatterKB builds compounding intelligence that becomes more valuable over time.
+    [ChatterKB](https://chatterkb.com) transforms how teams work by turning conversations into institutional knowledge and intelligent workflows. Unlike standard AI chatbots, ChatterKB builds compounding intelligence that becomes more valuable over time.
 
     With ChatterKB, your team can:
     - Save conversations to a knowledge base, building system intelligence that grows with your business
@@ -51,7 +51,7 @@ about:
     While ChatGPT excels at standalone conversations, ChatterKB focuses on the journey—creating interconnected knowledge that compounds in value and transforms how your business captures and leverages intelligence.
 
   competitor: |
-    ChatGPT is a powerful AI assistant developed by OpenAI that excels at providing helpful, harmless, and honest responses in real-time conversations. It offers impressive capabilities for standalone interactions across a wide range of topics.
+    [ChatGPT](https://chatgpt.com/) is a powerful AI assistant developed by OpenAI that excels at providing helpful, harmless, and honest responses in real-time conversations. It offers impressive capabilities for standalone interactions across a wide range of topics.
 
     With ChatGPT, users can:
     - Get immediate answers to questions on virtually any subject
@@ -65,9 +65,9 @@ about:
 pricing:
   chatterkb: |
     - **Free Plan**: $0 - 1 KB, 20 credits/mo
-    - **Lite Plan**: $12/mo - 1 KB, 100 credits/mo
-    - **Plus Plan**: $25/mo - 3 KBs, 350 credits/mo
-    - **Pro Plan**: $50/mo - 5 KBs, 800 credits/mo
+    - **Lite Plan**: [$12/mo - 1 KB, 100 credits/mo](https://app.chatterkb.com/checkout/plans)
+    - **Plus Plan**: [$25/mo - 3 KBs, 350 credits/mo](https://app.chatterkb.com/checkout/plans)
+    - **Pro Plan**: [$50/mo - 5 KBs, 800 credits/mo](https://app.chatterkb.com/checkout/plans)
     - **Business Plan**: Starting at $250/month - Custom KBs, credits, and users
     - **20% discount** on all plans with annual billing
     - All plans include unlimited knowledge storage
@@ -75,8 +75,8 @@ pricing:
     - 30-day money-back guarantee on annual plans
   competitor: |
     - Free tier with basic features
-    - **Plus**: $20/month for priority access and advanced features
-    - **Team**: $30/user/month for collaborative features
+    - **Plus**: [$20/month for priority access and advanced features](https://openai.com/chatgpt/pricing/)
+    - **Team**: [$30/user/month for collaborative features](https://openai.com/chatgpt/pricing/)
     - **Enterprise**: Custom pricing for large organizations
     - Usage limits apply to all tiers
 
@@ -115,7 +115,7 @@ components:
     cb_text: |
         ChatterKB provides advanced conversation management features that transform how teams capture and leverage knowledge:
 
-        - **Conversation Forking**: The "chat from here" functionality allows users to branch conversations in different directions, preserving context while exploring new ideas
+        - **[Conversation Forking](/features/chat-assistant-memory/)**: The "chat from here" functionality allows users to branch conversations in different directions, preserving context while exploring new ideas
         - **Conversation Pinning**: Pin important conversations to boards for easy reference and organization
         - **Conversation History**: Comprehensive history with search and filtering capabilities
         - **Conversation Sharing**: Share specific conversations with team members while maintaining context
@@ -140,11 +140,11 @@ components:
         ChatterKB bridges the gap between AI assistants and workflow automation tools:
 
         - **Natural Language Workflow Creation**: Create powerful workflows by simply describing what you want to accomplish in plain English
-        - **Workflow Templates**: Access pre-built templates for common business processes that can be customized to your needs
-        - **Workflow Integration**: Connect workflows to your knowledge base for context-aware automation
+        - **[Workflow Templates](/workflow-library)**: Access pre-built templates for common business processes that can be customized to your needs
+        - **[Workflow Integration](/features/mcp)**: Connect workflows to your knowledge base for context-aware automation
         - **Self-Correcting Workflows**: Intelligent workflows that adapt to new information and can replan steps when needed
-        - **Cross-Platform Integration**: Connect to existing tools and data sources without disrupting your workflow
-        - **Memory-Centric Execution**: Workflows that understand and leverage your organizational knowledge
+        - **[Cross-Platform Integration](/features/mcp)**: Connect to existing tools and data sources without disrupting your workflow
+        - **[Memory-Centric Execution](/features/chat-assistant-memory/)**: Workflows that understand and leverage your organizational knowledge
         - **No-Code Automation**: Powerful automation capabilities accessible to non-technical users
 
     competitor_text: |
@@ -165,7 +165,7 @@ components:
 
         - **Institutional Memory**: Preserve critical business knowledge that would otherwise be lost in ephemeral conversations
         - **Compounding Intelligence**: System that grows smarter with every interaction, building value over time
-        - **Knowledge Organization**: Structured approach to organizing business intelligence for easy retrieval
+        - **[Knowledge Organization](/features/knowledge-base/)**: Structured approach to organizing business intelligence for easy retrieval
         - **Decision Support**: Access previous decisions and their context to inform current choices
         - **Cross-Team Knowledge Sharing**: Break down silos by making organizational knowledge accessible across teams
         - **Insight Extraction**: Automatically identify and highlight key insights from conversations and documents

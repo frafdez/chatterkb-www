@@ -38,7 +38,7 @@ differences:
 
 about:
   chatterkb: |
-    ChatterKB transforms how teams work by turning conversations into intelligent workflows. Unlike traditional automation tools that require technical expertise, ChatterKB lets anyone create powerful workflows simply by describing what they need in plain English.
+    [ChatterKB](https://chatterkb.com) transforms how teams work by turning conversations into intelligent workflows. Unlike traditional automation tools that require technical expertise, ChatterKB lets anyone create powerful workflows simply by describing what they need in plain English.
 
     With ChatterKB, your team can:
     - Convert natural language instructions into executable workflows without coding
@@ -50,16 +50,16 @@ about:
     While technical platforms like n8n focus on node-based configuration for developers, ChatterKB brings workflow automation to everyone in your organization through an intuitive, conversation-first approach that preserves context and builds collective intelligence.
 
   competitor: |
-    n8n is a low-code, source-available, self-hostable alternative to ChatterKB. It’s really good for technical teams who want to build complex workflows faster.
+    [n8n](https://n8n.io/) is a low-code, source-available, self-hostable alternative to ChatterKB. It’s really good for technical teams who want to build complex workflows faster.
 
     With n8n, you can build workflows using Javascript when you need flexibility. Or quickly connect apps with a drag n’ drop GUI when you don’t. You can easily handle advanced functionality like implementing multiple triggers, as well as branching and merging your flows.
 
 pricing:
   chatterkb: |
     - **Free Plan**: $0 - 1 KB, 20 credits/mo
-    - **Lite Plan**: $12/mo - 1 KB, 100 credits/mo
-    - **Plus Plan**: $25/mo - 3 KBs, 350 credits/mo
-    - **Pro Plan**: $50/mo - 5 KBs, 800 credits/mo
+    - **Lite Plan**: [$12/mo - 1 KB, 100 credits/mo](https://app.chatterkb.com/checkout/plans)
+    - **Plus Plan**: [$25/mo - 3 KBs, 350 credits/mo](https://app.chatterkb.com/checkout/plans)
+    - **Pro Plan**: [$50/mo - 5 KBs, 800 credits/mo](https://app.chatterkb.com/checkout/plans)
     - **Business Plan**: Starting at $250/month - Custom KBs, credits, and users
     - **20% discount** on all plans with annual billing
     - All plans include unlimited knowledge storage
@@ -67,7 +67,7 @@ pricing:
     - 30-day money-back guarantee on annual plans
   competitor: |
     - Self-hosted: Free (fair-code)
-    - n8n Cloud: from **$20 / month** for **2.5k executions**
+    - n8n Cloud: from **[$20 / month** for **2.5k executions](https://n8n.io/pricing/)**
     - Costs scale with execution volume
     - Enterprise plan pricing on request
 
@@ -129,12 +129,12 @@ components:
         ChatterKB offers a unified, memory-centric AI system that integrates document processing, knowledge management, and workflow automation in one cohesive platform. Rather than separating AI capabilities into modules, ChatterKB embeds intelligence throughout the entire system.
 
         Key Advantages Over n8n:
-        1. **Memory-First Architecture**
+        1. **[Memory-First Architecture](/features/chat-assistant-memory/)**
         - ChatterKB builds institutional knowledge that compounds over time, unlike n8n's stateless workflow approach
         - Each interaction enriches the system's understanding, creating truly adaptive workflows
         - Knowledge persists across sessions, teams, and workflows without manual configuration
         
-        2. **Natural Language Workflow Creation**
+        2. **[Natural Language Workflow Creation](/features/workflows/)**
         - While n8n recommends "using AI as a starting point" for code that you then edit manually, ChatterKB allows complete workflow creation in plain English
         - No need to switch between AI assistance and manual node configuration
         - Non-technical users can create sophisticated workflows without coding or flowcharts
