@@ -19,7 +19,7 @@ hero:
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: Book a Demo
-    url: "https://app.chatterkb.com/demo"   
+    url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"   
 
 features:
   section_title: Workflows

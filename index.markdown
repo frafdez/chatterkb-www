@@ -72,6 +72,7 @@ features:
       title: "Get the Gold Without Reading the Docs"
       description: "Drop in a 50-page strategy PDF and get key messages, audience insights, and action items in seconds. AI knowledge base that eliminates guesswork."
       image: "/assets/images/marketing/feature-docs.webp"
+      url: "/features/chat-assistant-document-analysis"
     - icon: "bi-kanban"
       title: "Build Processes That Run Themselves"
       description: "Turn your organization's best practices into workflow automation that guides your team step by step - without management overhead."
