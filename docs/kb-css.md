@@ -3,6 +3,7 @@ layout: page
 title: Custom CSS
 image: /docs/images/image1.webp
 description: A comprehensive guide to ChatterKB's CSS classes and theming system
+sitemap_exclude: true
 ---
 
 <style>
