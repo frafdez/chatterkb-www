@@ -15,7 +15,7 @@ hero:
   description: "Transform case strategies and legal research into automated workflows and living precedent dashboards. Write case briefs in plain English, get intelligent systems that learn from every legal victory."
   image: "/assets/images/marketing/hero-image.webp"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"
@@ -105,7 +105,7 @@ cta:
   description: "See how ChatterKB can help your legal team work smarter, research faster, and deliver better client outcomes with intelligent automation that learns from legal expertise."
   image: "/assets/images/marketing/product-screenshot.png"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"

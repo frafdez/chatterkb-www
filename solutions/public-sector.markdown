@@ -15,7 +15,7 @@ hero:
   description: "Transform government processes into automated workflows and living citizen service dashboards. Write policy procedures in plain English, get intelligent systems that learn from every citizen interaction."
   image: "/assets/images/marketing/hero-image.webp"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"
@@ -105,7 +105,7 @@ cta:
   description: "See how ChatterKB can help your organization deliver consistent, efficient, and citizen-focused services with intelligent automation that learns from government expertise."
   image: "/assets/images/marketing/product-screenshot.png"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"

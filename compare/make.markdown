@@ -60,10 +60,15 @@ about:
 
 pricing:
   chatterkb: |
-    - Starts at **Free**
-    - **Unlimited workflows** & knowledge storage
-    - All internal tools included—no premium upsells
-    - Zapier MCP: billed at cost, no markup
+    - **Free Plan**: $0 - 1 KB, 20 credits/mo
+    - **Lite Plan**: $12/mo - 1 KB, 100 credits/mo
+    - **Plus Plan**: $25/mo - 3 KBs, 350 credits/mo
+    - **Pro Plan**: $50/mo - 5 KBs, 800 credits/mo
+    - **Business Plan**: Starting at $250/month - Custom KBs, credits, and users
+    - **20% discount** on all plans with annual billing
+    - All plans include unlimited knowledge storage
+    - No hidden fees or premium upsells - all internal tools included
+    - 30-day money-back guarantee on annual plans
   competitor: |
     - **Free** plan with 1,000 operations / month
     - **Core**: $9 / month → 10,000 ops
@@ -74,7 +79,7 @@ pricing:
 mid_cta:
   headline: "Automate knowledge-driven workflows in minutes—not hours."
   image: /assets/images/marketing/make-compare-mid-cta.png
-  button_text: Start Free Trial
+  button_text: Try ChatterKB Free
   button_url: "https://app.chatterkb.com/auth/signup"
 
 components:
@@ -167,7 +172,7 @@ cta:
   title: "Ready to automate without limits?"
   description: "Start your free trial today and see how ChatterKB turns scattered knowledge into compounding intelligence."
   primary_button:
-    text: Start Free Trial
+    text: Try ChatterKB Free
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: Book a Demo

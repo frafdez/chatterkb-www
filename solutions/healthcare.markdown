@@ -15,7 +15,7 @@ hero:
   description: "Transform clinical protocols and care procedures into automated workflows and living compliance dashboards. Write care pathways in plain English, get intelligent systems that learn from every patient interaction."
   image: "/assets/images/marketing/hero-image.webp"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"
@@ -105,7 +105,7 @@ cta:
   description: "See how ChatterKB can help your healthcare organization deliver consistent, evidence-based care with intelligent automation that learns from clinical expertise."
   image: "/assets/images/marketing/product-screenshot.png"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"

@@ -15,7 +15,7 @@ hero:
   description: "Transform financial processes into automated workflows and living executive dashboards. Write reporting requirements in plain English, get intelligent systems that learn from every financial cycle."
   image: "/assets/images/marketing/hero-image.webp"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"
@@ -105,7 +105,7 @@ cta:
   description: "See how ChatterKB can help your finance team work smarter, report faster, and drive better business decisions with intelligent automation that learns from financial expertise."
   image: "/assets/images/marketing/product-screenshot.png"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"

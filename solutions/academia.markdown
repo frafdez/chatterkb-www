@@ -15,7 +15,7 @@ hero:
   description: "Transform research knowledge, institutional memory, and academic documentation into automated workflows, grant reports, and educational excellence."
   image: "/assets/images/marketing/hero-image.webp"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"
@@ -104,7 +104,7 @@ cta:
   description: "See how ChatterKB can help your institution collaborate better, report faster, and preserve knowledge for lasting academic impact."
   image: "/assets/images/marketing/product-screenshot.png"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"

@@ -15,7 +15,7 @@ hero:
   description: "Transform program knowledge into automated workflows and living impact dashboards. Write grant requirements in plain English, get intelligent systems that learn from every program success."
   image: "/assets/images/marketing/hero-image.webp"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"
@@ -105,7 +105,7 @@ cta:
   description: "See how ChatterKB can help your NGO work smarter, preserve knowledge, and focus on what matters most with intelligent automation that learns from mission expertise."
   image: "/assets/images/marketing/product-screenshot.png"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"

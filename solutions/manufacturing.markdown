@@ -15,7 +15,7 @@ hero:
   description: "Transform processes, safety protocols, and engineering expertise into automated workflows and living dashboards. Write procedures in plain English, get intelligent automation that learns from your operations."
   image: "/assets/images/marketing/hero-image.webp"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"
@@ -105,7 +105,7 @@ cta:
   description: "See how ChatterKB can help your manufacturing team work safer, smarter, and more consistently with intelligent automation that learns from your expertise."
   image: "/assets/images/marketing/product-screenshot.png"
   primary_button:
-    text: "Start Free Trial"
+    text: "Try ChatterKB Free"
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: "Schedule Demo"
