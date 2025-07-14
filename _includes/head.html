@@ -76,4 +76,8 @@
     }
   </style>
 
+  {% if page.hero and page.hero.image %}
+    <link rel="preload" as="image" href="{{ page.hero.image | relative_url }}" fetchpriority="high">
+  {% endif %}
+
 </head>
