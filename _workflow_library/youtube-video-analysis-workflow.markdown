@@ -3,6 +3,7 @@ layout: marketing-page
 title: "YouTube Video Analysis Workflow"
 description: "Automate transcript extraction, summarization, and content repurposing for YouTube videos using ChatterKB."
 header_icon: bi-bar-chart-steps
+order: 30
 workflow_introduction: |
   If you want to extract meaningful insights from any YouTube video (and quickly repurpose them for your audience), here’s a step-by-step workflow you can run directly in ChatterKB.
 

@@ -3,6 +3,7 @@ layout: marketing-page
 title: "SEO Keyword Discovery Workflow"
 description: "Automate keyword research, clustering, and brief generation using ChatterKB."
 header_icon: bi-bar-chart-steps
+order: 10
 workflow_introduction: |
   If you want to reverse-engineer the primary keyword for any webpage (and find some secondary gold while you’re at it), here’s a step-by-step workflow you can run directly in ChatterKB.
 

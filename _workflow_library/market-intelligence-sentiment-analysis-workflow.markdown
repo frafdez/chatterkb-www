@@ -3,6 +3,7 @@ layout: marketing-page
 title: "Market Intelligence and Sentiment Analysis Workflow"
 description: "Research competitors, analyze sentiment, and surface actionable insights using ChatterKB."
 header_icon: bi-bar-chart-steps
+order: 20
 workflow_introduction: |
   If you want to monitor competitors, track industry sentiment, and turn raw web data into strategic advantage, here’s a step-by-step workflow you can run directly in ChatterKB.
 

@@ -10,7 +10,8 @@ sitemap: false
     "description": {{ wf.description | jsonify }},
     "content": {{ wf.workflow_steps | jsonify }},
     "introduction": {{ wf.workflow_introduction | jsonify }},
-    "url": {{ wf.url | absolute_url | jsonify }}
+    "url": {{ wf.url | absolute_url | jsonify }},
+    "order": {{ wf.order | default: 1000 | jsonify }}
   }
 {% endfor %}
 ] 

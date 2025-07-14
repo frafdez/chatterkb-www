@@ -3,6 +3,7 @@ layout: marketing-page
 title: "Review LLMO Analysis"
 description: "Analyze and synthesize results from multi-model LLMO analysis to understand brand mention patterns and reasoning."
 header_icon: bi-bar-chart-steps
+order: 50
 workflow_introduction: |
   This workflow analyzes the results from your LLMO/GEO Analysis to understand why certain brands are mentioned before others. You'll need to customize the brand names and logic to match what you're testing - replace "Brand A," "Brand B," and "Brand C" with your actual brand names or competitors you want to analyze.
 

@@ -3,6 +3,7 @@ layout: marketing-page
 title: "LLMO/GEO Analysis"
 description: "Compare how different AI models rank and analyze topics across 16 leading language models simultaneously."
 header_icon: bi-bar-chart-steps
+order: 40
 workflow_introduction: |
   This workflow is a bit more involved than the others, but it's still easy to follow and showcases the incredible control you have over complex, multi-step processes. You'll run the same prompt across 16 different AI models and automatically compile the results into a comprehensive analysis table.
 
