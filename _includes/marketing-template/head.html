@@ -17,12 +17,10 @@
 
   <!-- Site stylesheets: preload to avoid render-blocking -->
   <link rel="preload" as="style" href="{{ '/assets/main.css' | relative_url }}" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" as="style" href="{{ '/assets/scrollCue.css' | relative_url }}" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" as="style" href="{{ '/assets/syntax.css' | relative_url }}" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/scrollCue.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/syntax.css' | relative_url }}">
+    <!-- <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/syntax.css' | relative_url }}"> -->
   </noscript>
 
   {%- feed_meta -%}
@@ -115,14 +113,4 @@
     /* Fallback heading size until external CSS loads (deprecation fix) */
     article h1, section h1, nav h1, aside h1 { font-size: 2rem; }
   </style>
-  <style id="lcp-fast-hero">
-    /* Make above-the-fold hero elements visible immediately to improve LCP */
-    .mt_hero [data-cue] {
-      opacity: 1 !important;
-      transform: none !important;
-    }
-  </style>
-  {% if page.hero and page.hero.image %}
-    <link rel="preload" as="image" href="{{ page.hero.image | relative_url }}" fetchpriority="high">
-  {% endif %}
 </head> 

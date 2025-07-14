@@ -128,24 +128,26 @@
 <!-- Remove the additional script in header to prevent conflicts -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('.marketing-header');
+    // Use the smallest sticky element, not a wrapper
+    const header = document.querySelector('.navbar'); // or .navbar.navbar-expand-lg
     const body = document.body;
-    
-    if (header) {
-      const headerHeight = header.offsetHeight;
-      
-      function handleStickyState() {
-        if (header.classList.contains('sticky-header')) {
-          if (!body.classList.contains('has-sticky-header')) {
-            body.classList.add('has-sticky-header');
-            body.style.paddingTop = headerHeight + 'px';
-          }
-        } else {
-          body.classList.remove('has-sticky-header');
-          body.style.paddingTop = '0';
+
+    function handleStickyState() {
+      if (header.classList.contains('sticky-header')) {
+        if (!body.classList.contains('has-sticky-header')) {
+          body.classList.add('has-sticky-header');
+          // Clamp to a max reasonable value
+          body.style.paddingTop = Math.min(header.offsetHeight, 120) + 'px';
         }
+      } else {
+        body.classList.remove('has-sticky-header');
+        body.style.paddingTop = '0';
       }
-      
+    }
+
+    if (header) {
+      handleStickyState();
+      window.addEventListener('scroll', handleStickyState);
       const observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
           if (mutation.attributeName === 'class') {
@@ -153,9 +155,7 @@
           }
         });
       });
-      
       observer.observe(header, { attributes: true });
     }
   });
-</script> 
 </script> 
