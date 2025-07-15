@@ -104,6 +104,12 @@ Below is a complete list of our internal tools. When building workflows, you can
       </td>
     </tr>
     <tr>
+      <th scope="row"><i class="bi bi-robot me-2"></i>LLM Evaluate</th>
+      <td>A tool to evaluate the sandboxed results from a specific LLM given a prompt. Just specify the LLM model, the prompt, and how you want to evaluate the results.</td>
+      <td><span class="badge bg-secondary opacity-75"><i class="bi bi-key me-1"></i>llmo</span>
+      </td>
+    </tr>
+    <tr>
       <th scope="row"><i class="bi bi-hash me-2"></i>Document Chunk Count</th>
       <td>Shows how many pieces a large document is split into.</td>
       <td><span class="badge bg-secondary opacity-75"><i class="bi bi-key me-1"></i>kb_document_chunk_count</span>
