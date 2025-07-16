@@ -1,6 +1,24 @@
 ---
 layout: marketing-template/default
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "{{ page.title }}",
+  "image": [
+    "{{ page.image | absolute_url }}"
+    ],
+  "datePublished": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}",
+  "dateModified": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}",
+  "author": [{
+      "@type": "Person",
+      "name": "{{ page.author }}",
+      "url": "https://www.linkedin.com/in/frankfdez"
+  }]
+}
+</script>
+
 <div class="container">
   <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
     <div class="py-xl-9 py-4">

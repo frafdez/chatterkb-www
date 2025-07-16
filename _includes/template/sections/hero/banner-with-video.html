@@ -6,6 +6,21 @@
          <div class="text-center position-relative" >
             <div class="ratio ratio-16x9" data-cue="slideInUp">
                {% if page.hero.video.type == 'html5' %}
+               <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "VideoObject",
+                    "name": "{{ page.hero.title }}",
+                    "description": "{{ page.hero.description }}",
+                    "thumbnailUrl": [
+                      "{{ page.hero.image | absolute_url }}"
+                     ],
+                    "uploadDate": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}",
+                    "contentUrl": "{{ page.hero.video.url }}",
+                    "embedUrl": "{{ page.hero.video.url }}",
+                  }
+                  </script>   
+
                   <video controls class="rounded-4 shadow-lg"
                          {% if page.hero.video.poster %}poster="{{ page.hero.video.poster }}"{% endif %}>
                      <source src="{{ page.hero.video.url }}" type="video/mp4">

@@ -46,6 +46,22 @@
         <div class="position-relative">
           <div class="rounded-4 shadow-lg overflow-hidden border" style="border-color: var(--mt-light-border);">
             {% if page.hero.video %}
+
+            <script type="application/ld+json">
+              {
+                "@context": "https://schema.org",
+                "@type": "VideoObject",
+                "name": "{{ page.hero.title }}",
+                "description": "{{ page.hero.description }}",
+                "thumbnailUrl": [
+                  "{{ page.hero.image | absolute_url }}"
+                 ],
+                "uploadDate": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}",
+                "contentUrl": "{{ page.hero.video.url }}",
+                "embedUrl": "{{ page.hero.video.url }}",
+              }
+              </script>
+
               {% if page.hero.video.type == "html5" %}
                 {% assign v = page.hero.video %}
                 <video class="img-fluid w-100"
