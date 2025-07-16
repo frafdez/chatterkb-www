@@ -8,7 +8,6 @@ workflow_introduction: |
   This workflow helps marketers understand how AI influences customer decision-making from initial curiosity to final purchase. By creating realistic buyer personas and mapping their decision journey, you can identify the key questions, concerns, and trade-offs that drive purchasing decisions. This insight helps optimize messaging, content strategy, and sales processes to better guide prospects through their buying journey.
 
   **Important:** Before running this workflow, make sure to enable the LLM Evaluate tool in your knowledge base settings.
-
   
 workflow_steps: |
   Customer Journey Decision Simulator
