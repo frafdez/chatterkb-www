@@ -1144,3 +1144,9 @@ body[data-bs-theme="dark"] .btn-outline-theme {
 
 /* Card images */
 
+.content-image img {
+  @extend .rounded-3;
+  @extend .img-fluid;
+  @extend .w-100;
+  @extend .shadow-sm;
+}
