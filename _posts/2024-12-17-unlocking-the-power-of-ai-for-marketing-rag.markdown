@@ -2,7 +2,12 @@
 layout: post
 title:  "Unlocking the Power of AI for Marketing: A Guide to Retrieval-Augmented Generation (RAG)"
 date:   2024-12-17 09:01:58 +0100
-categories: marketing
+categories: 
+ - marketing
+tags:
+ - marketing
+ - rag
+ - best-practices
 image: /assets/images/posts/unlocking-the-power-of-ai-for-marketing-rag.jpeg 
 author: "Frank Fernandez"
 sitemap:

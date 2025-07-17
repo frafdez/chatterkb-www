@@ -2,7 +2,8 @@
 layout: post
 title:  "Knowledge-Based Systems: How They Work and Why They Matter in 2025"
 date:   2025-03-10 09:01:58 +0100
-categories: technology
+categories: 
+ - technology
 image: /assets/images/posts/knowledge-based-systems-how-they-work-and-why-they-matter.png
 author: "Frank Fernandez"
 sitemap:

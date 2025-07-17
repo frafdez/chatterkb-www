@@ -51,6 +51,13 @@ layout: marketing-template/default
             <br/>
             {% endif %}
             {{ content }}
+            {% if page.tags %}
+            <p class="post-tags">
+              {% for tag in page.tags %}
+                <span class="badge bg-primary opacity-50">{{ tag }}</span>{% unless forloop.last %} {% endunless %}
+              {% endfor %}
+            </p>
+          {% endif %}
           </article>
         </div>
       </div>

@@ -3,7 +3,11 @@ layout: post
 title: "The AI Implementation Reality Gap: Why 92% of Companies Are Stuck in Pilot Purgatory"
 date: 2025-06-10
 author: "Frank Fernandez"
-categories: Enterprise AI, Knowledge Management, Digital Transformation
+categories: 
+ - enterprise 
+ - ai 
+ - knowledge-management 
+ - digital-transformation
 excerpt: "Despite massive AI investments, only 1% of companies consider themselves mature in AI deployment. Here's why your AI pilot failed and how to fix it."
 image: /assets/images/posts/ai-implementation-gap.png
 sitemap:

@@ -2,8 +2,18 @@
 layout: post
 title: "The ChatGPT Court Order: Why Enterprise Data Ownership Matters More Than Ever"
 date: 2025-06-12
-categories: enterprise ai data-security compliance]
-tags: chatgpt data-retention enterprise-ai privacy compliance knowledge-management
+categories: 
+ - enterprise 
+ - ai 
+ - data-security 
+ - compliance
+tags: 
+ - chatgpt 
+ - data-retention 
+ - enterprise-ai 
+ - privacy 
+ - compliance 
+ - knowledge-management
 author: "Frank Fernandez"
 excerpt: "A recent court order requiring ChatGPT to preserve user data indefinitely highlights critical concerns for businesses using consumer AI platforms. Learn why enterprise data ownership matters more than ever."
 image: /assets/images/posts/chatgpt-data-retention.png

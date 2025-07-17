@@ -2,7 +2,12 @@
 layout: post
 title:  "How Large Language Models (LLMs) Can—and Can't—Transform Accounting for Finance Professionals"
 date:   2024-12-18 10:00:00 +0100
-categories: finance
+categories: 
+ - finance
+tags:
+ - finance
+ - llms
+ - accounting
 image: /assets/images/posts/transform-accounting.jpeg
 author: "Frank Fernandez"
 sitemap:

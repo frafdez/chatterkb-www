@@ -2,7 +2,8 @@
 layout: post
 title: "Navigating Code Node Challenges in n8n: A Deep Dive"
 date: 2025-06-06 10:00:00 +0200
-categories: technology
+categories: 
+ - technology
 image: /assets/images/posts/code-node-challenges-n8n.png
 author: "Frank Fernandez"
 sitemap:

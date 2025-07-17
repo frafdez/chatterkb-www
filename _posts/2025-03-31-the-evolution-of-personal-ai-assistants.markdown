@@ -2,7 +2,9 @@
 layout: post
 title:  "The Rise of Personal AI Assistants: How They're Changing Our Daily Lives"
 date:   2025-03-31 10:30:00 +0100
-categories: technology ai
+categories: 
+ - technology 
+ - ai
 image: /assets/images/posts/personal-ai-assistants-evolution.png
 author: "Frank Fernandez"
 sitemap:

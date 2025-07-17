@@ -2,7 +2,8 @@
 layout: post
 title:  "AI Tools for Lawyers: A Practical Guide"
 date:   2024-12-20 09:01:58 +0100
-categories: legal
+categories: 
+ - legal
 image: /assets/images/posts/ai-tools-for-lawyers.jpeg 
 author: "Frank Fernandez"
 sitemap:

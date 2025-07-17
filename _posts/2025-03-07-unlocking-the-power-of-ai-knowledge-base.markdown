@@ -2,7 +2,8 @@
 layout: post
 title:  "Unlocking the Power of an AI Knowledge Base: Revolutionizing Information Management"
 date:   2025-03-07 09:01:58 +0100
-categories: technology
+categories: 
+ - technology
 image: /assets/images/posts/unlocking-the-power-of-ai-knowledge-base.png 
 author: "Frank Fernandez"
 sitemap:

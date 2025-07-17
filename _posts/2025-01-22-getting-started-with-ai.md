@@ -2,7 +2,9 @@
 layout: post
 title: "Getting Started with AI: A Step-by-Step Guide for Organizations"
 date: 2025-01-22
-categories: ai guides
+categories: 
+ - ai 
+ - guides
 description: "A comprehensive guide to help organizations begin their AI journey, from initial steps to successful implementation."
 image: /assets/images/posts/getting-started-with-ai-organizations.jpg
 author: "Frank Fernandez"

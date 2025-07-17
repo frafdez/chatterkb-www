@@ -2,7 +2,8 @@
 layout: post
 title:  "How to Use AI to Generate Reports: A Practical Guide for Professionals"
 date:   2024-12-19 14:01:58 +0100
-categories: productivity
+categories: 
+ - productivity
 image: /assets/images/posts/ai-report-generation.jpeg
 author: "Frank Fernandez"
 sitemap:

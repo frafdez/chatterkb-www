@@ -2,7 +2,8 @@
 layout: post
 title: "Boost Productivity with Intelligent Knowledge Management Systems"
 date: 2025-05-18 10:32:54 +0200
-categories: technology
+categories: 
+ - technology
 image: /assets/images/posts/boost-productivity-intelligent-knowledge-management.png
 author: "Frank Fernandez"
 sitemap:

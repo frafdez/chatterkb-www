@@ -2,7 +2,9 @@
 layout: post
 title: "The Hidden Cost of Scattered Knowledge: $26,250 Per Employee"
 date: 2025-06-09 14:44:00 +0200
-categories: enterprise, knowledge-management
+categories: 
+ - enterprise 
+ - knowledge-management
 author: "Frank Fernandez"
 image: /assets/images/posts/hidden-cost-scattered-knowledge.png
 sitemap:

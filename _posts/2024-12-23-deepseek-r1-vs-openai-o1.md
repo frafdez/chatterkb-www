@@ -2,7 +2,9 @@
 layout: post
 title: "DeepSeek R1 vs OpenAI O1: Features, Benefits, and Trade-offs"
 date: 2024-12-23
-categories: ai comparison
+categories: 
+ - ai 
+ - comparison
 description: "A detailed comparison of DeepSeek R1 and OpenAI O1, exploring their features, benefits, and trade-offs for organizations considering AI adoption."
 image: /assets/images/posts/deepseek-vs-01.png
 author: "Frank Fernandez"
