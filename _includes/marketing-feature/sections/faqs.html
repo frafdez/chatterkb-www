@@ -1,29 +1,21 @@
 {% if page.faqs %}
 <script type="application/ld+json">
   {
-    {% for faq in page.faqs.items %}  
-    {% if forloop.first %}
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "{{ faq.question }}",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ faq.answer }}"
+    "mainEntity": [
+    {% for faq in page.faqs.items %}
+      {% unless forloop.first %},{% endunless %}
+      {
+        "@type": "Question",
+        "name": "{{ faq.question }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ faq.answer }}"
+        }
       }
-    }
-    {% else %}
-    , {
-      "@type": "Question",
-      "name": "{{ faq.question }}",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ faq.answer }}"
-      }
-    {% endif %}
     {% endfor %}
-    }]
+    ]
   }
 </script>
 <section id="faqs" class="py-5 py-md-7 mb-7">
