@@ -106,7 +106,7 @@ Below is a complete list of our internal tools. When building workflows, you can
     <tr>
       <th scope="row"><i class="bi bi-robot me-2"></i>LLM Evaluate</th>
       <td>A tool to evaluate the sandboxed results from a specific LLM given a prompt. Just specify the LLM model, the prompt, and how you want to evaluate the results.</td>
-      <td><span class="badge bg-secondary opacity-75"><i class="bi bi-key me-1"></i>llmo</span>
+      <td><span class="badge bg-secondary opacity-75"><i class="bi bi-key me-1"></i>llm_evaluate</span>
       </td>
     </tr>
     <tr>
