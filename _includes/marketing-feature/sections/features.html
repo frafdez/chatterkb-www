@@ -21,7 +21,7 @@
               {% if feature.image %}
                 <img src="{{ feature.image }}" alt="{{ feature.title }}" class="img-fluid w-100">
               {% elsif feature.code %}
-              <pre class="highlight MX-4" style="white-space: pre-wrap;"><code class="language-markdown">{{ feature.code }}</code></pre>
+              <pre class="highlight d-flex align-items-center" style="white-space: pre-wrap; min-height: 56px;"><code class="language-markdown">{{ feature.code }}</code></pre>
               {% else %}
                 <div class="bg-light w-100" style="display: flex; align-items: center; justify-content: center; min-height: 200px;">
                   <span class="text-secondary">Feature Image Placeholder</span>
