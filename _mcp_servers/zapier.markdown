@@ -2,7 +2,8 @@
 layout: marketing-feature
 sitemap:
   exclude: 'no'
-
+order: 1
+description: "Connect your knowledge base to thousands of external tools and services through Zapier Model Context Protocol integration."
 title: Zapier MCP Integration
 hero:
   title: Zapier MCP Integration
@@ -20,13 +21,32 @@ features:
   title: Model Context Protocol
   items:
     - side: left
-      title: Extended Tool Integration
-      description: Connect your knowledge base to thousands of external tools and services through Zapier Model Context Protocol integration.
+      title: Access Your Zapier Account
+      description: Set up your first Zapier MCP server and connect to apps like Gmail, HubSpot, and Asana
       image: /assets/images/marketing/internal-tools-feature-step-2.png
       bullets:
-        - Seamlessly integrate with over 5,000 apps and services
-        - Combine internal tools with Zapier's MCP offerings
-        - Create custom workflows that leverage your knowledge base
+        - Click on the button below to visit Zapier's site
+        - Create a server and associate the apps you want to include
+      button:
+        text: Visit Zapier MCP
+        url: https://mcp.zapier.com
+    - side: right
+      title: Locate Your Zapier MCP URL
+      description: Navigate to the connect tab of your MCP Server
+      image: /assets/images/marketing/zapier-mcp-server-step-2.webp
+      bullets:
+        - Ensure that you are using the **Streamable HTTP** transport
+        - Find **Connect with the server-specific URL**
+        - Copy the URL
+    - side: left
+      title: Add the MCP Server to Your Knowledge Base
+      description: Find the settings page of your knowledge base
+      image: /assets/images/marketing/zapier-mcp-server-step-3.webp
+      bullets:
+        - Navigate to the MCP tab
+        - Paste the **URL** into the URL field and give your server a name
+        - Click the Add button and you're all set!
+
 
 show_workflow_library: false
 

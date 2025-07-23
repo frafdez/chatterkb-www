@@ -69,6 +69,9 @@ collections:
   workflow_library:
     output: true
     permalink: /workflow-library/:name/
+  mcp_servers:
+    output: true
+    permalink: /mcp-servers/:name/
     
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -99,3 +99,6 @@ collections:
   workflow_library:
     output: true
     permalink: /workflow-library/:name/
+  mcp_servers:
+    output: true
+    permalink: /mcp-servers/:name/
