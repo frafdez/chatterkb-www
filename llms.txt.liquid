@@ -1,0 +1,33 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# {{ site.title }}
+
+> {{ site.description }}
+
+ChatterKB is an AI-powered tool that enables you to chat with your files and create actionable dashboards. It helps you analyze, understand, and derive insights from your documents.
+
+## Primary Resources
+
+- [Documentation]({{ '/docs' | absolute_url }}): Find comprehensive guides and tutorials on using ChatterKB.
+- [Features]({{ '/features' | absolute_url }}): Explore the key capabilities of ChatterKB.
+- [MCP Servers]({{ '/mcp-servers' | absolute_url }}): Learn about Model Context Protocol servers that integrate with ChatterKB.
+- [Workflow Library]({{ '/workflow-library' | absolute_url }}): Browse examples of automated workflows.
+
+## MCP Servers
+{% assign servers = site.mcp_servers | sort: 'order' %}
+{% for server in servers %}
+- [{{ server.title }}]({{ server.url | absolute_url }}): {{ server.description }}
+{% endfor %}
+
+## Workflow Library
+{% assign workflows = site.workflow_library | sort: 'order' %}
+{% for wf in workflows %}
+- [{{ wf.title }}]({{ wf.url | absolute_url }}): {{ wf.description }}
+{% endfor %}
+
+## Contact
+
+For questions or support, please contact [{{ site.email }}](mailto:{{ site.email }}).

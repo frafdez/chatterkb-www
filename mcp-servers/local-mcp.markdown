@@ -36,9 +36,10 @@ features:
       description: "It's as simple as adding them to Claude, Cursor, or any other desktop app"
       image: /assets/images/marketing/local-mcp-step-2.png
       bullets:
-        - The app will show you where the mcp-config.json file should be saved.
+        - The app will show you where the **mcp-config.json** file should be saved.
         - Edit the file and save it
-        - Restart the MCP Bridge and it will display a list of your servers and tools.
+        - |
+         **Restart the MCP Bridge** and it will display a list of your servers and tools.
     - side: left
       title: Add the URL to ChatterKB
       description: Copy the URL from the MCP Bridge and add it as a server
@@ -52,8 +53,11 @@ features:
       image: /assets/images/marketing/local-mcp-step-4.png
       bullets:
         - Once the button is displayed, you're ready to go
-        - To test it, just send a new message like "List your tools"
+        - |
+         To test it, just send a new message like **"List your tools"**
         - ChatterKB will respond with a list of internal tools and tools from your MCP Servers
+        - |
+         **Note:** *To ensure the bridge stays connected, please keep this browser tab open.*
 
 
 show_workflow_library: false
