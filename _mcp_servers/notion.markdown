@@ -2,7 +2,9 @@
 layout: marketing-feature
 sitemap:
   exclude: 'no'
-order: 1
+order: 20
+server_type: local
+
 description: "Connect your Notion pages using Model Context Protocol."
 title: Notion MCP Server
 hero:

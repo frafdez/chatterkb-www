@@ -2,7 +2,8 @@
 layout: marketing-feature
 sitemap:
   exclude: 'no'
-order: 2
+order: 30
+server_type: local
 description: "Connect your HubSpot data using Model Context Protocol."
 title: HubSpot MCP Server
 hero:

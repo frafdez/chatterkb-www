@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /mcp-servers.json
+sitemap: false
+---
+[
+{% for server in site.mcp_servers %}{% unless forloop.first %},{% endunless %}
+  {
+    "title": {{ server.title | jsonify }},
+    "description": {{ server.description | jsonify }},
+    "url": {{ server.url | absolute_url | jsonify }},
+    "order": {{ server.order | default: 1000 | jsonify }},
+    "server_type": {{ server.server_type | default: "local" | jsonify }}
+  }
+{% endfor %}
+]

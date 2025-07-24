@@ -2,7 +2,8 @@
 layout: marketing-feature
 sitemap:
   exclude: 'no'
-order: 1
+order: 50
+server_type: local
 
 title: MCP Server Reddit
 description: "Connect to Reddit using Model Context Protocol."

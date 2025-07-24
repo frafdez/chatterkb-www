@@ -2,7 +2,9 @@
 layout: marketing-feature
 sitemap:
   exclude: 'no'
-order: 1
+order: 10
+server_type: remote
+
 description: "Connect your knowledge base to thousands of external tools and services through Zapier Model Context Protocol integration."
 title: Zapier MCP Integration
 hero:
