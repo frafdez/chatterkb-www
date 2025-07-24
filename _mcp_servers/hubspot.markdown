@@ -25,11 +25,11 @@ features:
       description: To get started, you'll need to set up a private app in your HubSpot account.
       image: /assets/images/marketing/hubspot-mcp-server-step-1.webp # Placeholder image
       bullets:
-        - Learn more about HubSpot's MCP Server fron their [documentation](https://developers.hubspot.com/mcp)
-        - Visit your HubSpot developer account get your private access key
+        - Learn more about HubSpot's MCP Server from their [documentation](https://developers.hubspot.com/mcp)
+        - Click on the button and **watch the video** for instructions on how to setup the app
       button:
-        text: Get Your Personal Access Key
-        url: https://app.hubspot.com/portal-recommend/l?slug=personal-access-key
+        text: How To Setup HubSpot MCP
+        url: https://developers.hubspot.com/mcp
     - side: right
       title: Update Your Local MCP Bridge
       description: You'll need to add an entry into the mcp-config.json file.
