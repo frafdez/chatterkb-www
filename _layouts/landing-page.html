@@ -194,6 +194,12 @@ layout: marketing-template/default
           {{ page.hero_content }}
         {% endif %}
         
+        <div class="mt-4">
+          <a href="{{ page.cta_button_url | default: site.get_started_url | default: 'https://app.chatterkb.com/auth/signup' }}" class="btn btn-lg px-5 py-3 fw-bold fs-4" style="background-color: #0d6efd; color: white;">
+            GET STARTED NOW
+          </a>
+        </div>
+        
         {% if page.show_trust_badges %}
           <div class="trust-badges">
             <div class="trust-badge">
