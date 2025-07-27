@@ -8,7 +8,7 @@ title: AI Workflow Automation
 hero:
   title: AI Workflow Automation Made Simple
   description: Transform your team's knowledge into intelligent workflows without coding or complicated flowcharts. Just plain English.
-#   image: /assets/images/marketing/hero-workflow-feature.png
+  image: /assets/images/marketing/hero-workflow-feature.png
   video:
     type: html5          # or omit for iframe
     url: https://chatterkb.s3.us-east-1.amazonaws.com/ckb-workflow.mp4
