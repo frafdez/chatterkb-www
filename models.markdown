@@ -40,6 +40,8 @@ Not every task needs the most powerful AI. Some need speed. Others need volume. 
 | **Claude 3.5 Haiku**      | 4.20                 | Lightning-fast drafts, summaries, real-time interactions. |
 | **Amazon Nova Pro**       | 4.50                 | Balance of performance and cost for internal tools and mid-complexity workflows. |
 | **Meta Llama 3.3 70B**    | 6.30                 | Open-source transparency, creative writing, coding, budget-conscious power. |
+| **OpenAI gpt-oss 120b**     | 24.40               | Open-source transparency, creative writing, coding, focused on English. Similar to o4-mini.|
+| **OpenAI gpt-oss 20b**     | 51.30               | Open-source transparency, creative writing, coding, focused on English. Similar to o3-mini. |
 | **Amazon Nova Light**     | 61.10                 | Bulk Q&A, internal lookups, high-volume tasks where speed matters. |
 
 ##### Note: Chat counts are approximate and may vary based on usage patterns and prompt complexity.
