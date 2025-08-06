@@ -175,6 +175,18 @@ Below is a complete list of our internal tools. When building workflows, you can
       <td><span class="badge bg-secondary opacity-75"><i class="bi bi-key me-1"></i>kb_analyze_json_as_dict</span>
       </td>
     </tr>   
+    <tr>
+      <th scope="row"><i class="bi bi-pin-angle-fill me-2"></i>Pin a Chat to a Board</th>
+      <td>Pin a chat to a board to keep it easily accessible.</td>
+      <td><span class="badge bg-secondary opacity-75"><i class="bi bi-key me-1"></i>app_pin_chat</span>
+      </td>
+    </tr>   
+    <tr>
+      <th scope="row"><i class="bi bi-grid-3x3-gap me-2"></i>Create Board</th>
+      <td>Create a new board to organize chats.</td>
+      <td><span class="badge bg-secondary opacity-75"><i class="bi bi-key me-1"></i>app_create_board</span>
+      </td>
+    </tr>   
   </tbody>
 
 </table>

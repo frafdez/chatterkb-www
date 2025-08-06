@@ -25,10 +25,13 @@ Not every task needs the most powerful AI. Some need speed. Others need volume. 
 
 | **<i class="bi bi-cpu me-1"></i> Model**                  | **Chats per <i class="bi bi-coin ms-1"></i>** | **Best For**                                                                 |
 |---------------------------|----------------------|------------------------------------------------------------------------------|
+| **Claude Opus 4.1**      | 0.20                 | Premium Claude model with enhanced capabilities and reasoning power. |
+| **Claude Opus 4**        | 0.20                 | High-performance Claude model for complex tasks requiring advanced reasoning. |
 | **Perplexity Sonar Pro**\*  | 0.70                 | Fast factual answers powered by live web search; quick research, drafting, fact-checking. |
 | **Claude Sonnet 4**       | 1                 | Next-generation Claude with larger context window and strong compliance; enterprise workflows. |
 | **Claude 3.7 Sonnet**     | 1                 | Deep reasoning, long documents, strategic content, accuracy-critical tasks. |
 | **Claude 3.5 Sonnet**     | 1                 | General-purpose work with solid reasoning and creativity. |
+| **Grok 4**\*                | 1                 | Humorous yet powerful reasoning; trending topic insights, coding help, creative writing. |
 | **Grok 3**\*                | 1                 | Humorous yet powerful reasoning; trending topic insights, coding help, creative writing. |
 | **Google Gemini 2.5 Pro**\* | 1.20                 | Multimodal reasoning across text, code & images; research, summarization, content creation. |
 | **Perplexity Sonar**\*      | 1.40                 | Balanced everyday assistant with realtime web knowledge; emails, briefs, Q&A. |
