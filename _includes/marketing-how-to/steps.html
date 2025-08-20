@@ -1,0 +1,159 @@
+{% if page.how_to %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Handle tab navigation
+    document.querySelectorAll('.next-tab-button').forEach(function(button) {
+      button.addEventListener('click', function() {
+        var tabId = this.getAttribute('data-next-tab');
+        document.getElementById(tabId).click();
+      });
+    });
+    
+    // Handle accordion navigation - direct click handler in button
+  });
+</script>
+<section class="mt_features py-5 py-md-7">
+  {% if page.how_to.items.size > 0 %}
+    {% for step in page.how_to.items %}
+        <div class="container">
+            <div class="mb-5 pb-3">
+                <h3 class="fw-bold">{{step.title}}</h3>
+                <div class="markdown-content">{{ step.description | markdownify }}</div>
+            
+                {% assign step_id = step.title | downcase | replace: ' ', '-' %}
+                
+                {% if step.accordion %}
+                    <!-- Direct accordion implementation -->
+                    <div class="accordion mt-4" id="accordion-{{ step_id }}">
+                        {% for item in step.accordion %}
+                            <div class="accordion-item">
+                                <h4 class="accordion-header" id="heading-{{ step_id }}-{{ forloop.index }}">
+                                    <button class="accordion-button{% unless forloop.first %} collapsed{% endunless %}" 
+                                            type="button" 
+                                            data-bs-toggle="collapse" 
+                                            data-bs-target="#collapse-{{ step_id }}-{{ forloop.index }}" 
+                                            aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" 
+                                            aria-controls="collapse-{{ step_id }}-{{ forloop.index }}">
+                                        {{ item.title }}
+                                    </button>
+                                </h4>
+                                <div id="collapse-{{ step_id }}-{{ forloop.index }}" 
+                                     class="accordion-collapse collapse{% if forloop.first %} show{% endif %}" 
+                                     aria-labelledby="heading-{{ step_id }}-{{ forloop.index }}" 
+                                     data-bs-parent="#accordion-{{ step_id }}">
+                                    <div class="accordion-body p-3">
+                                        {% if item.tabs %}
+                                            <!-- Tabs inside accordion item -->
+                                            <nav>
+                                                <div class="nav nav-tabs" id="nav-{{ step_id }}-{{ forloop.index }}-tab" role="tablist">
+                                                    {% for tab in item.tabs %}
+                                                        <button class="nav-link{% if forloop.first %} active{% endif %}" 
+                                                                id="nav-{{ step_id }}-{{ forloop.parentloop.index }}-tab-{{ forloop.index }}" 
+                                                                data-bs-toggle="tab" 
+                                                                data-bs-target="#nav-{{ step_id }}-{{ forloop.parentloop.index }}-content-{{ forloop.index }}" 
+                                                                type="button" 
+                                                                role="tab" 
+                                                                aria-controls="nav-{{ step_id }}-{{ forloop.parentloop.index }}-content-{{ forloop.index }}" 
+                                                                aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+                                                            {{ tab.title }}
+                                                        </button>
+                                                    {% endfor %}
+                                                </div>
+                                            </nav>
+                                            
+                                            <div class="tab-content" id="nav-{{ step_id }}-{{ forloop.index }}-tabContent">
+                                                {% for tab in item.tabs %}
+                                                    <div class="tab-pane fade{% if forloop.first %} show active{% endif %}" 
+                                                         id="nav-{{ step_id }}-{{ forloop.parentloop.index }}-content-{{ forloop.index }}" 
+                                                         role="tabpanel" 
+                                                         aria-labelledby="nav-{{ step_id }}-{{ forloop.parentloop.index }}-tab-{{ forloop.index }}">
+                                                        <div class="p-4 border border-top-0 rounded-bottom">
+                                                            {% if tab.image %}
+                                                                <div class="text-center mb-3">
+                                                                    <img class="img-fluid" src="{{ tab.image }}" alt="{{ tab.title }}"/>
+                                                                </div>
+                                                            {% endif %}
+                                                            <div class="markdown-content">{{ tab.description | markdownify }}</div>
+                                                            
+                                                            {% if forloop.last == false %}
+                                                                <div class="d-flex justify-content-end mt-3">
+                                                                    <button class="btn btn-primary next-tab-button" 
+                                                                            data-next-tab="nav-{{ step_id }}-{{ forloop.parentloop.index }}-tab-{{ forloop.index | plus: 1 }}">
+                                                                        Next: {{ item.tabs[forloop.index].title }}
+                                                                    </button>
+                                                                </div>
+                                                            {% elsif forloop.last and forloop.parentloop.last == false %}
+                                                                {% assign next_accordion_index = forloop.parentloop.index | plus: 1 %}
+                                                                <div class="d-flex justify-content-end mt-3">
+                                                                    <button class="btn btn-success next-accordion-button" 
+                                                                            onclick="document.querySelector('[data-bs-target=\'#collapse-{{ step_id }}-{{ next_accordion_index }}\']').click()">
+                                                                        Up Next: {% for acc in step.accordion offset:forloop.parentloop.index limit:1 %}{{ acc.title }}{% endfor %}
+                                                                    </button>
+                                                                </div>
+                                                            {% endif %}
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% elsif step.tabs %}
+                    <!-- Direct tabs implementation -->
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-{{ step_id }}-tab" role="tablist">
+                            {% for tab in step.tabs %}
+                                <button class="nav-link{% if forloop.first %} active{% endif %}" 
+                                        id="nav-{{ step_id }}-tab-{{ forloop.index }}" 
+                                        data-bs-toggle="tab" 
+                                        data-bs-target="#nav-{{ step_id }}-content-{{ forloop.index }}" 
+                                        type="button" 
+                                        role="tab" 
+                                        aria-controls="nav-{{ step_id }}-content-{{ forloop.index }}" 
+                                        aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+                                    {{ tab.title }}
+                                </button>
+                            {% endfor %}
+                        </div>
+                    </nav>
+                    
+                    <div class="tab-content" id="nav-{{ step_id }}-tabContent">
+                        {% for tab in step.tabs %}
+                            <div class="tab-pane fade{% if forloop.first %} show active{% endif %}" 
+                                 id="nav-{{ step_id }}-content-{{ forloop.index }}" 
+                                 role="tabpanel" 
+                                 aria-labelledby="nav-{{ step_id }}-tab-{{ forloop.index }}">
+                                <div class="p-4 border border-top-0 rounded-bottom">
+                                    {% if tab.image %}
+                                        <div class="text-center mb-3">
+                                            <img class="img-fluid" src="{{ tab.image }}" alt="{{ tab.title }}"/>
+                                        </div>
+                                    {% endif %}
+                                    <div class="markdown-content">{{ tab.description | markdownify }}</div>
+                                    
+                                    {% unless forloop.last %}
+                                        <div class="d-flex justify-content-end mt-3">
+                                            <button class="btn btn-primary next-tab-button" 
+                                                    data-next-tab="nav-{{ step_id }}-tab-{{ forloop.index | plus: 1 }}">
+                                                Next: {{ step.tabs[forloop.index].title }}
+                                            </button>
+                                        </div>
+                                    {% endunless %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% elsif step.image %}
+                    <div class="text-center mt-4">
+                        <img class="img-fluid" src="{{ step.image }}" alt="{{ step.title }}"/>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+  {% endif %}
+</section>
+{% endif %}
