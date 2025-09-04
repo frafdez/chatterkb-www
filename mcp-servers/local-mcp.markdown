@@ -36,10 +36,9 @@ features:
       description: "It's as simple as adding them to Claude, Cursor, or any other desktop app"
       image: /assets/images/marketing/local-mcp-step-2.png
       bullets:
-        - The app will show you where the **mcp-config.json** file should be saved.
-        - Edit the file and save it
+        - The app will open a page where you can configure the MCP servers.
         - |
-         **Restart the MCP Bridge** and it will display a list of your servers and tools.
+         Click **Save and Apply** and it will automatically connect to the servers.
     - side: left
       title: Add the URL to ChatterKB
       description: Copy the URL from the MCP Bridge and add it as a server
