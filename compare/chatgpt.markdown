@@ -8,14 +8,15 @@ description: "Discover why forward-thinking teams choose ChatterKB's knowledge-b
 
 hero:
   title: "ChatterKB vs ChatGPT"
-  description: "Discover why forward-thinking teams choose ChatterKB's knowledge-building AI over ChatGPT for long-term business intelligence and workflow automation."
+  description: "Like ChatGPT — but built for teams and clients. Switch models (ChatGPT, Claude, Gemini, Perplexity, Grok), run plain‑English workflows, and share memory in a team knowledge base."
   image: /assets/images/marketing/chatgpt-compare-hero.png
   primary_button:
     text: Try ChatterKB Free
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
-    text: Book a Demo
-    url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10os0gxZrUbzNEIvQZUJqLWVeGM"
+    text: See ChatGPT Alternatives
+    url: "/chatgpt-alternatives/"
+    icon: bi bi-columns-gap
 
 show_workflow_library: false
 
@@ -23,6 +24,18 @@ competitor_name: ChatGPT
 
 differences:
   rows:
+    - label: "Models"
+      chatterkb: "ChatGPT, Claude, Gemini, Perplexity, Grok — switch per task"
+      competitor: "ChatGPT with limited external connections"
+    - label: "Workflows"
+      chatterkb: "Plain‑English workflows — no flowcharts"
+      competitor: "No native workflow automation"
+    - label: "Team Memory"
+      chatterkb: "Shared knowledge base across users and chats"
+      competitor: "Per‑user, per‑thread context"
+    - label: "Client Reporting & Branding"
+      chatterkb: "Generate reports and brand a client‑facing KB"
+      competitor: "Manual export/formatting; no brandable KB"
     - label: "Knowledge Building"
       chatterkb: "Builds intelligence over time"
       competitor: "Each conversation starts fresh"
@@ -213,4 +226,3 @@ icons:
   chatterkb: /assets/images/chatterkb-logo-ex.png
   competitor: /assets/images/competitors/chatgpt.png
 ---
-

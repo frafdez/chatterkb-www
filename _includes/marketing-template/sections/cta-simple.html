@@ -17,7 +17,13 @@
                   <a href="{{ page.cta.primary_button.url }}" class="btn mt_gradient_button btn-lg px-5 py-3 rounded-3">{{ page.cta.primary_button.text }}</a>
                   {% endif %}
                   {% if page.cta.secondary_button %}
-                  <a href="{{ page.cta.secondary_button.url }}" class="btn btn-outline-secondary btn-lg px-5 py-3 rounded-3"><i class="bi bi-calendar-event me-2"></i>{{ page.cta.secondary_button.text }}</a>
+                  {% assign sb = page.cta.secondary_button %}
+                  {% assign sb_classes = sb.class | default: 'btn btn-outline-secondary btn-lg px-5 py-3 rounded-3' %}
+                  {% assign sb_icon = sb.icon | default: 'bi bi-columns-gap' %}
+                  {% assign sb_icon_show = sb.icon_show %}
+                  <a href="{{ sb.url }}" class="{{ sb_classes }}">
+                    {% if sb_icon_show != false %}<i class="{{ sb_icon }} me-2"></i>{% endif %}{{ sb.text }}
+                  </a>
                   {% endif %}
                 </div>
               </div>
