@@ -22,6 +22,7 @@ Not every task needs the most powerful AI. Some need speed. Others need volume. 
 ---
 
 ## Credits Breakdown
+Credits are how we measure the cost of each chat or workflow step. This table shows a rough guide for the simplest possible chat with each model. Think of it as a relative scale: some models sip credits, others use more. **Actual usage can be higher** depending on the length of the conversation, the tools you’ve connected, and whether you’re running workflows.
 
 | **<i class="bi bi-cpu me-1"></i> Model**                  | **Chats per <i class="bi bi-coin ms-1"></i>** | **Best For**                                                                 |
 |---------------------------|----------------------|------------------------------------------------------------------------------|
@@ -48,7 +49,7 @@ Not every task needs the most powerful AI. Some need speed. Others need volume. 
 | **Amazon Nova Light**     | 61.10                 | Bulk Q&A, internal lookups, high-volume tasks where speed matters. |
 
 ##### Note: Chat counts are approximate and may vary based on usage patterns and prompt complexity.
-##### * _models only available on **custom** pricing plans_.
+##### * _models only available for **subscribed** pricing plans_.
 ---
 
 ## What's the Best Option for Me?
