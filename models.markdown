@@ -24,7 +24,7 @@ Not every task needs the most powerful AI. Some need speed. Others need volume. 
 ## Credits Breakdown
 Credits are how we measure the cost of each chat or workflow step. This table shows a rough guide for the simplest possible chat with each model. Think of it as a relative scale: some models sip credits, others use more. **Actual usage can be higher** depending on the length of the conversation, the tools you’ve connected, and whether you’re running workflows.
 
-| **<i class="bi bi-cpu me-1"></i> Model**                  | **Chats per <i class="bi bi-coin ms-1"></i>** | **Best For**                                                                 |
+| **<i class="bi bi-cpu me-1"></i> Model**                  | **Approx. <i class="bi bi-coin ms-1"></i>** | **Best For**                                                                 |
 |---------------------------|----------------------|------------------------------------------------------------------------------|
 | **Claude Opus 4.1**      | 0.20                 | Premium Claude model with enhanced capabilities and reasoning power. |
 | **Claude Opus 4**        | 0.20                 | High-performance Claude model for complex tasks requiring advanced reasoning. |
