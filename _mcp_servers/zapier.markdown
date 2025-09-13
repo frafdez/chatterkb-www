@@ -60,7 +60,7 @@ cta:
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: Book a Demo
-    url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10os0gxZrUbzNEIvQZUJqLWVeGM"
+    url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
 ---
 
 ChatterKB seamlessly integrates with Zapier’s Model Context Platform (MCP). This connection merges your internal tools with Zapier’s 5,000+ app ecosystem, letting you build sophisticated workflows without writing code. 

@@ -94,7 +94,7 @@ cta:
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: Book a Demo
-    url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10os0gxZrUbzNEIvQZUJqLWVeGM"
+    url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
 ---
 
 This MCP server is a community server available at [PyPi.org](https://pypi.org/project/mcp-server-reddit) called mcp-server-reddit and developed by Hawstein. You can review the code at [https://github.com/Hawstein/mcp-server-reddit](https://github.com/Hawstein/mcp-server-reddit)

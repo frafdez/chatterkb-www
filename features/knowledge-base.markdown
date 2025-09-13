@@ -88,7 +88,7 @@ cta:
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: Book a Demo
-    url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10os0gxZrUbzNEIvQZUJqLWVeGM"
+    url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
 
 content_title: Why Your Business Needs a Knowledge Base
 
