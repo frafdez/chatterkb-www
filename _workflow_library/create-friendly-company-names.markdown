@@ -2,7 +2,7 @@
 layout: marketing-page
 title: "Create Friendly Company Names"
 description: "Convert formal company names into memorable, conversational alternatives for better engagement and personalized communication"
-header_icon: bi-building
+header_icon: bi-bar-chart-steps
 order: 35
 workflow_introduction: |
   This workflow automatically transforms formal company names into concise, conversational alternatives that are more relatable in everyday business communications. By creating standardized "friendly" versions of company names, your team can maintain consistent branding references across all touchpoints while removing special characters and unnecessary legal designations. This approach personalizes client communications, improves readability in reports, and helps maintain a more conversational tone in customer-facing materials.
