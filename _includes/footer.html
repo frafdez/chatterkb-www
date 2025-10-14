@@ -4,98 +4,66 @@
 
    </div>
     <div class="container pt-7 pb-4">
+       {% assign footer_sections = site.data.footer.sections %}
+       {% if footer_sections %}
        <!-- Brand + Links -->
        <div class="row row-cols-1 row-cols-md-4 g-4 mb-4 align-items-start d-none d-md-flex">
-         <!-- Product -->
+         {% for section in footer_sections %}
          <div class="col">
-           <h6 class="text-uppercase fw-semibold small mb-2">Features</h6>
+           <h6 class="text-uppercase fw-semibold small mb-2">{{ section.title }}</h6>
+           {% if section.links %}
            <ul class="list-unstyled small mb-0">
-             <li class="mb-2"><a href="/features/workflows" class="text-reset text-decoration-none">AI Workflow Automation</a></li>
-             <li class="mb-2"><a href="/features/internal-tools" class="text-reset text-decoration-none">Internal Tools</a></li>
-             <li class="mb-2"><a href="/features/mcp" class="text-reset text-decoration-none">MCP</a></li>
-             <li class="mb-2"><a href="/features/chat-assistant-memory" class="text-reset text-decoration-none">Chat Assistant Memory</a></li>
-             <li class="mb-2"><a href="/features/knowledge-base" class="text-reset text-decoration-none">Knowledge Base</a></li>
+             {% for link in section.links %}
+               {% assign link_url = link.url | default: '#' %}
+               {% assign scheme_prefix = link_url | slice: 0, 4 %}
+               {% assign mailto_prefix = link_url | slice: 0, 7 %}
+               {% if scheme_prefix == 'http' or mailto_prefix == 'mailto:' %}
+                 {% assign href = link_url %}
+               {% else %}
+                 {% assign href = link_url | relative_url %}
+               {% endif %}
+             <li class="mb-2"><a href="{{ href }}" class="text-reset text-decoration-none">{{ link.label }}</a></li>
+             {% endfor %}
            </ul>
+           {% endif %}
          </div>
-
-         <!-- Comparisons -->
-         <div class="col">
-           <h6 class="text-uppercase fw-semibold small mb-2">Comparisons</h6>
-           <ul class="list-unstyled small mb-0">
-             <li class="mb-2"><a href="/compare/n8n" class="text-reset text-decoration-none">ChatterKB vs n8n</a></li>
-             <li class="mb-2"><a href="/compare/gumloop" class="text-reset text-decoration-none">ChatterKB vs Gumloop</a></li>
-             <li class="mb-2"><a href="/compare/make" class="text-reset text-decoration-none">ChatterKB vs Make</a></li>
-             <li class="mb-2"><a href="/compare/chatgpt" class="text-reset text-decoration-none">ChatterKB vs ChatGPT</a></li>
-             <li class="mb-2"><a href="/compare/custom-gpt" class="text-reset text-decoration-none">ChatterKB vs Custom GPT</a></li>
-           </ul>
-         </div>
-
-         <!-- Resources -->
-         <div class="col">
-           <h6 class="text-uppercase fw-semibold small mb-2">Resources</h6>
-           <ul class="list-unstyled small mb-0">
-             <li class="mb-2"><a href="/articles" class="text-reset text-decoration-none">Articles</a></li>
-             <li class="mb-2"><a href="/workflow-library" class="text-reset text-decoration-none">Workflow Library</a></li>
-             <li class="mb-2"><a href="/mcp-servers" class="text-reset text-decoration-none">MCP Servers</a></li>
-             <li class="mb-2"><a href="https://mcp-hosting.chatterkb.com/" class="text-reset text-decoration-none">MCP Hosting</a></li>
-             <li class="mb-2"><a href="/mcp-servers/local-mcp" class="text-reset text-decoration-none">Local MCP Bridge</a></li>
-           </ul>
-         </div>
-
-         <!-- Company -->
-         <div class="col">
-           <h6 class="text-uppercase fw-semibold small mb-2">Company</h6>
-           <ul class="list-unstyled small mb-0">
-             <li class="mb-2"><a href="/privacy" class="text-reset text-decoration-none">Privacy Policy</a></li>
-             <li class="mb-2"><a href="/terms" class="text-reset text-decoration-none">Terms of Service</a></li>
-             <li class="mb-2"><a href="mailto:hello@chatterkb.com" class="text-reset text-decoration-none">Contact</a></li>
-           </ul>
-         </div>
+         {% endfor %}
        </div>
+       {% endif %}
 
+       {% if footer_sections %}
        <!-- Mobile accordion links -->
        <div class="accordion d-md-none mb-4" id="footerAccordion">
-         {% assign sections = "Features,Comparisons,Resources,Company" | split: "," %}
-         {% for sec in sections %}
+         {% for section in footer_sections %}
          <div class="accordion-item border-0">
            <h2 class="accordion-header" id="heading-{{ forloop.index }}">
              <button class="accordion-button collapsed py-2 px-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}" aria-expanded="false" aria-controls="collapse-{{ forloop.index }}">
-               <span class="text-uppercase small fw-semibold">{{ sec }}</span>
+               <span class="text-uppercase small fw-semibold">{{ section.title }}</span>
              </button>
            </h2>
            <div id="collapse-{{ forloop.index }}" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
              <div class="accordion-body px-0">
+               {% if section.links %}
                <ul class="list-unstyled small mb-0 lh-lg">
-               {% case sec %}
-                 {% when 'Features' %}
-                   <li><a href="/features/workflows" class="text-reset text-decoration-none">AI Workflow Automation</a></li>
-                   <li><a href="/features/internal-tools" class="text-reset text-decoration-none">Internal Tools</a></li>
-                   <li><a href="/features/mcp" class="text-reset text-decoration-none">MCP</a></li>
-                   <li><a href="/features/chat-assistant-memory" class="text-reset text-decoration-none">Chat Assistant Memory</a></li>
-                   <li><a href="/features/knowledge-base" class="text-reset text-decoration-none">Knowledge Base</a></li>
-                 {% when 'Comparisons' %}
-                   <li><a href="/compare/n8n" class="text-reset text-decoration-none">ChatterKB vs n8n</a></li>
-                   <li><a href="/compare/gumloop" class="text-reset text-decoration-none">ChatterKB vs Gumloop</a></li>
-                   <li><a href="/compare/make" class="text-reset text-decoration-none">ChatterKB vs Make</a></li>
-                   <li><a href="/compare/chatgpt" class="text-reset text-decoration-none">ChatterKB vs ChatGPT</a></li>
-                   <li><a href="/compare/custom-gpt" class="text-reset text-decoration-none">ChatterKB vs Custom GPT</a></li>
-                 {% when 'Resources' %}
-                   <li><a href="/articles" class="text-reset text-decoration-none">Articles</a></li>
-                   <li><a href="/workflow-library" class="text-reset text-decoration-none">Workflow Library</a></li>
-                   <li><a href="/mcp-servers" class="text-reset text-decoration-none">MCP Servers</a></li>
-                   <li><a href="https://mcp-hosting.chatterkb.com/" class="text-reset text-decoration-none">MCP Hosting</a></li>
-                   <li><a href="/mcp-servers/local-mcp" class="text-reset text-decoration-none">Local MCP Bridge</a></li>
-                 {% when 'Company' %}
-                   <li><a href="/privacy" class="text-reset text-decoration-none">Privacy Policy</a></li>
-                   <li><a href="/terms" class="text-reset text-decoration-none">Terms of Service</a></li>
-                   <li><a href="mailto:hello@chatterkb.com" class="text-reset text-decoration-none">Contact</a></li>
-               {% endcase %}
+                 {% for link in section.links %}
+                   {% assign link_url = link.url | default: '#' %}
+                   {% assign scheme_prefix = link_url | slice: 0, 4 %}
+                   {% assign mailto_prefix = link_url | slice: 0, 7 %}
+                   {% if scheme_prefix == 'http' or mailto_prefix == 'mailto:' %}
+                     {% assign href = link_url %}
+                   {% else %}
+                     {% assign href = link_url | relative_url %}
+                   {% endif %}
+                 <li><a href="{{ href }}" class="text-reset text-decoration-none">{{ link.label }}</a></li>
+                 {% endfor %}
                </ul>
+               {% endif %}
              </div>
            </div>
          </div>
          {% endfor %}
        </div>
+       {% endif %}
 
        <!-- Footer bottom -->
        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center border-top pt-3 small">

@@ -83,6 +83,10 @@ $primary:   #3a71a7;
   background-clip: text;
   color: transparent;
 }
+
+.text-mt-primary {
+  color: var(--mt-primary-gradient-to) !important;
+}
   
 /* Secondary text */
 .mt_secondary_text {

@@ -1,0 +1,49 @@
+sections:
+  - title: Features
+    links:
+      - label: AI Workflow Automation
+        url: /features/workflows
+      - label: Internal Tools
+        url: /features/internal-tools
+      - label: MCP
+        url: /features/mcp
+      - label: Chat Assistant Memory
+        url: /features/chat-assistant-memory
+      - label: Knowledge Base
+        url: /features/knowledge-base
+      - label: ChatGPT Alternative for Teams
+        url: /chatgpt-alternatives
+
+  - title: Comparisons
+    links:
+      - label: ChatterKB vs n8n
+        url: /compare/n8n
+      - label: ChatterKB vs Gumloop
+        url: /compare/gumloop
+      - label: ChatterKB vs Make
+        url: /compare/make
+      - label: ChatterKB vs ChatGPT
+        url: /compare/chatgpt
+      - label: ChatterKB vs Custom GPT
+        url: /compare/custom-gpt
+        
+  - title: Resources
+    links:
+      - label: Articles
+        url: /articles
+      - label: Workflow Library
+        url: /workflow-library
+      - label: MCP Servers
+        url: /mcp-servers
+      - label: MCP Hosting
+        url: https://mcp-hosting.chatterkb.com/
+      - label: Local MCP Bridge
+        url: /mcp-servers/local-mcp
+  - title: Company
+    links:
+      - label: Privacy Policy
+        url: /privacy
+      - label: Terms of Service
+        url: /terms
+      - label: Contact
+        url: mailto:hello@chatterkb.com

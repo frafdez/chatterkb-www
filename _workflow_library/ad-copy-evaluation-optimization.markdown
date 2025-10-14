@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: "Ad Copy Evaluation and Optimization"
 description: "Transform underperforming ad copy using AI-driven audience feedback and professional copywriting."
 header_icon: bi-bar-chart-steps

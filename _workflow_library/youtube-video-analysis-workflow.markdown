@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: "YouTube Video Analysis Workflow"
 description: "Automate transcript extraction, summarization, and content repurposing for YouTube videos using ChatterKB."
 header_icon: bi-bar-chart-steps

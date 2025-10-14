@@ -1,0 +1,68 @@
+features:
+  - title: AI Workflow Automation
+    icon: bi-bar-chart-steps
+    links:
+      - label: How it Works
+        url: /features/workflows/
+      - label: Workflow Library
+        url: /workflow-library/
+  - title: AI Chat Assistant
+    icon: bi-chat-dots
+    links:
+      - label: Memory
+        url: /features/chat-assistant-memory/
+      - label: Document Analysis
+        url: /features/chat-assistant-document-analysis/
+  - title: Knowledge Base
+    icon: bi-journal-text
+    url: /features/knowledge-base/
+  - title: Internal Tools
+    icon: bi-braces
+    url: /features/internal-tools/
+  - title: MCP
+    icon: bi-pc-display
+    links:
+      - label: MCP Servers
+        url: /mcp-servers/
+      - label: MCP Hosting
+        url: https://mcp-hosting.chatterkb.com/
+        external: true
+      - label: Local MCP
+        url: /mcp-servers/local-mcp/
+  - title: Enterprise
+    icon: bi-building
+    links:
+      - label: RAG
+        url: /features/enterprise-rag/
+
+solutions:
+  - title: Marketing Agencies
+    icon: bi-megaphone
+    url: /solutions/agency/
+  - title: Manufacturing & Engineering
+    icon: bi-gear-wide-connected
+    url: /solutions/manufacturing/
+  - title: Healthcare & Pharma
+    icon: bi-heart-pulse
+    url: /solutions/healthcare/
+  - title: Legal
+    icon: bi-briefcase
+    url: /solutions/legal/
+  - title: Corporate Finance
+    icon: bi-currency-dollar
+    url: /solutions/corporate-finance/
+  - title: Credit Unions & Banks
+    icon: bi-bank
+    url: /solutions/credit-unions/
+  - title: Public Sector
+    icon: bi-building
+    url: /solutions/public-sector/
+  - title: Utilities
+    icon: bi-lightning
+    url: /solutions/utilities/
+  - title: Academia
+    icon: bi-mortarboard
+    url: /solutions/academia/
+  - title: NGOs
+    icon: bi-globe
+    url: /solutions/ngo/

@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: "Review LLMO Analysis"
 description: "Analyze and synthesize results from multi-model LLMO analysis to understand brand mention patterns and reasoning."
 header_icon: bi-bar-chart-steps

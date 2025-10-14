@@ -1,5 +1,5 @@
 ---
-layout: marketing-solutions
+layout: solutions
 permalink: /solutions/legal
 
 # SEO and metadata

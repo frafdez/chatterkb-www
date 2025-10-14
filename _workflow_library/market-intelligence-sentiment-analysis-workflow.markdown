@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: "Market Intelligence and Sentiment Analysis Workflow"
 description: "Research competitors, analyze sentiment, and surface actionable insights using ChatterKB."
 header_icon: bi-bar-chart-steps

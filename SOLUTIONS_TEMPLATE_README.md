@@ -42,7 +42,7 @@ Create a new markdown file with the `marketing-solutions` layout:
 
 ```yaml
 ---
-layout: marketing-solutions
+layout: solutions
 title: "Your Page Title"
 description: "SEO description"
 

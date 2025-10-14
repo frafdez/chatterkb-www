@@ -1,6 +1,6 @@
 ---
 title: Choose Your Model. Maximize Your Credits.
-layout: marketing-page
+layout: pages/base
 header_image: "/assets/images/marketing/models-image.webp"
 description: Compare AI models and see how many chats you get per credit.
 

@@ -1,5 +1,5 @@
 ---
-layout: marketing-feature
+layout: feature
 permalink: /chatgpt-alternatives/
 sitemap:
   exclude: 'no'

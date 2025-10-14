@@ -1,5 +1,5 @@
 ---
-layout: marketing-feature
+layout: feature
 date: 2025-07-15 10:32:54 +0200
 sitemap:
   exclude: 'no'

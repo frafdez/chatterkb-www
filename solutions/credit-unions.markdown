@@ -1,5 +1,5 @@
 ---
-layout: marketing-solutions
+layout: solutions
 permalink: /solutions/credit-unions
 
 # SEO and metadata

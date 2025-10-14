@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: "Calendar Event Research - Company and Contact"
 description: "Automatically research attendees and companies before meetings to prepare insights for more effective interactions"
 header_icon: bi-bar-chart-steps

@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: "Company Research and Outreach"
 description: "Automated company research to qualify leads and prepare targeted outreach"
 header_icon: bi-bar-chart-steps

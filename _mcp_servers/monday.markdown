@@ -1,5 +1,5 @@
 ---
-layout: marketing-feature
+layout: feature
 sitemap:
   exclude: 'no'
 order: 40

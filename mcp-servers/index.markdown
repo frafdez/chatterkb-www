@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: MCP Server Library
 description: Extend the capabilities of ChatterKB using Model Context Protocol to connect to external tools and services. Here are some of the servers we find useful.
 header_image: "/assets/images/marketing/mcp-hero.png"

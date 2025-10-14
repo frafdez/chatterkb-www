@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: "SEO Keyword Discovery Workflow"
 description: "Automate keyword research, clustering, and brief generation using ChatterKB."
 header_icon: bi-bar-chart-steps

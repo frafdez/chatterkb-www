@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: "New Client Onboarding – Guided Setup"
 description: "Streamline client onboarding with automated questionnaires, document collection, and project kickoff workflows."
 header_icon: bi-bar-chart-steps

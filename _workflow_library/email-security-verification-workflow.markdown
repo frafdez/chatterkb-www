@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: "Email Security Verification Workflow"
 description: "Automate email security record verification using ChatterKB."
 header_icon: bi-bar-chart-steps

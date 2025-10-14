@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: pages/standard
 title: Custom CSS
 image: /docs/images/image1.webp
 description: A comprehensive guide to ChatterKB's CSS classes and theming system

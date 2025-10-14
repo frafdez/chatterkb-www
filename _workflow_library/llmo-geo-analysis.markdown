@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: "LLMO/GEO Analysis"
 description: "Compare how different AI models rank and analyze topics across 16 leading language models simultaneously."
 header_icon: bi-bar-chart-steps

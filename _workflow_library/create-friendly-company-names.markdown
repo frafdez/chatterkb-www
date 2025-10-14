@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: "Create Friendly Company Names"
 description: "Convert formal company names into memorable, conversational alternatives for better engagement and personalized communication"
 header_icon: bi-bar-chart-steps

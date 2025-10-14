@@ -1,7 +1,7 @@
 ---
 title: Latest Articles
 permalink: /articles/
-layout: post-page
+layout: posts
 redirect_from:
   - /articles
 excerpt: Explore our collection of articles and insights

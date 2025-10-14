@@ -1,8 +1,10 @@
 <header class="marketing-header" role="banner">
   <nav class="navbar navbar-expand-lg py-3">
     <div class="container d-flex justify-content-between">
-      {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages -%}
+      {%- assign nav_data = site.data.navigation | default: {} -%}
+      {%- assign feature_sections = nav_data.features | default: nil -%}
+      {%- assign solution_links = nav_data.solutions | default: nil -%}
       <!-- Logo on the left -->
       <a class="navbar-brand d-flex align-items-center" href="{{ "/" | relative_url }}">
         <img src="{{ '/assets/images/chatterkb-logo-ex.png' | relative_url }}" alt="ChatterKB Logo" class="logo-image" width="32" height="32">
@@ -33,89 +35,67 @@
               {%- endif -%}
             {%- endfor -%}
           {%- endif -%}
+          {% if feature_sections %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Features
             </a>
             <ul class="dropdown-menu">
+              {% for section in feature_sections %}
+              {% assign icon_class = section.icon | default: 'bi-dot' %}
+              {% assign icon_color_class = section.icon_color_class | default: 'text-mt-primary' %}
+              {% assign section_href = section.url %}
+              {% if section_href %}
+                {% unless section.external %}
+                  {% assign section_href = section_href | relative_url %}
+                {% endunless %}
+              {% endif %}
               <li>
                 <h6 class="dropdown-header d-flex align-items-center gap-2 mb-0 fw-semibold fs-6">
-                  <i class="bi bi-bar-chart-steps" style="color:#3b82f6;"></i> AI Workflow Automation
+                  <i class="bi {{ icon_class }} {{ icon_color_class }}"></i>
+                  {% if section_href %}
+                    <a href="{{ section_href }}" class="text-decoration-none text-reset">{{ section.title }}</a>
+                  {% else %}
+                    {{ section.title }}
+                  {% endif %}
                 </h6>
               </li>
+              {% if section.links %}
+                {% for item in section.links %}
+                  {% assign item_href = item.url | default: '#' %}
+                  {% unless item.external %}
+                    {% assign item_href = item_href | relative_url %}
+                  {% endunless %}
               <li>
-                <a class="dropdown-item ps-5 small" href="/features/workflows/">How it Works</a>
+                <a class="dropdown-item ps-5 small" href="{{ item_href }}">{{ item.label }}</a>
               </li>
-              <li>
-                <a class="dropdown-item ps-5 small" href="/workflow-library/">Workflow Library</a>
-              </li>
+                {% endfor %}
+              {% endif %}
+              {% unless forloop.last %}
               <li><hr class="dropdown-divider"></li>
-              <li>
-                <h6 class="dropdown-header d-flex align-items-center gap-2 mb-0 fw-semibold fs-6">
-                  <i class="bi bi-chat-dots" style="color:#3b82f6;"></i> AI Chat Assistant
-                </h6>
-              </li>
-              <li>
-                <a class="dropdown-item ps-5 small" href="/features/chat-assistant-memory/">Memory</a>
-              </li>
-              <li>
-                <a class="dropdown-item ps-5 small" href="/features/chat-assistant-document-analysis/">Document Analysis</a>
-              </li>
-              <li><hr class="dropdown-divider"></li>
-              <li>
-                <h6 class="dropdown-header d-flex align-items-center gap-2 mb-0 fw-semibold fs-6">
-                  <i class="bi bi-journal-text" style="color:#3b82f6;"></i> <a href="/features/knowledge-base/" class="text-decoration-none text-reset">Knowledge Base</a>
-                </h6>
-              </li>
-              <li><hr class="dropdown-divider"></li>
-              <li>
-                <h6 class="dropdown-header d-flex align-items-center gap-2 mb-0 fw-semibold fs-6">
-                  <i class="bi bi-braces" style="color:#3b82f6;"></i> <a href="/features/internal-tools/" class="text-decoration-none text-reset">Internal Tools</a>
-                </h6>
-              </li>
-              <li><hr class="dropdown-divider"></li>
-              <li>
-                <h6 class="dropdown-header d-flex align-items-center gap-2 mb-0 fw-semibold fs-6">
-                  <i class="bi bi-pc-display" style="color:#3b82f6;"></i> MCP
-                </h6>
-              </li>
-              <li>
-                <a class="dropdown-item ps-5 small" href="/mcp-servers/">MCP Servers</a>
-              </li>
-              <li>
-                <a class="dropdown-item ps-5 small" href="https://mcp-hosting.chatterkb.com/">MCP Hosting</a>
-              </li>
-              <li>
-                <a class="dropdown-item ps-5 small" href="/mcp-servers/local-mcp/">Local MCP</a>
-              </li>
-              <li><hr class="dropdown-divider"></li>
-              <li>
-                <h6 class="dropdown-header d-flex align-items-center gap-2 mb-0 fw-semibold fs-6">
-                  <i class="bi bi-building" style="color:#3b82f6;"></i> Enterprise
-                </h6>
-              </li>
-              <li>
-                <a class="dropdown-item ps-5 small" href="/features/enterprise-rag/">RAG</a>
-              </li>
+              {% endunless %}
+              {% endfor %}
             </ul>
           </li>
+          {% endif %}
+          {% if solution_links %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Solutions
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item d-flex align-items-center gap-2" href="/solutions/agency"><i class="bi bi-megaphone fs-6" style="color:#3b82f6;"></i> Marketing Agencies</a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2" href="/solutions/manufacturing"><i class="bi bi-gear-wide-connected fs-6" style="color:#3b82f6;"></i> Manufacturing & Engineering</a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2" href="/solutions/healthcare"><i class="bi bi-heart-pulse fs-6" style="color:#3b82f6;"></i> Healthcare & Pharma</a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2" href="/solutions/legal"><i class="bi bi-briefcase fs-6" style="color:#3b82f6;"></i> Legal</a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2" href="/solutions/corporate-finance"><i class="bi bi-currency-dollar fs-6" style="color:#3b82f6;"></i> Corporate Finance</a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2" href="/solutions/credit-unions"><i class="bi bi-bank fs-6" style="color:#3b82f6;"></i> Credit Unions & Banks</a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2" href="/solutions/public-sector"><i class="bi bi-building fs-6" style="color:#3b82f6;"></i> Public Sector</a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2" href="/solutions/utilities"><i class="bi bi-lightning fs-6" style="color:#3b82f6;"></i> Utilities</a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2" href="/solutions/academia"><i class="bi bi-mortarboard fs-6" style="color:#3b82f6;"></i> Academia</a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2" href="/solutions/ngo"><i class="bi bi-globe fs-6" style="color:#3b82f6;"></i> NGOs</a></li>
+              {% for solution in solution_links %}
+                {% assign icon_class = solution.icon | default: 'bi-dot' %}
+                {% assign icon_color_class = solution.icon_color_class | default: 'text-mt-primary' %}
+                {% assign solution_href = solution.url | default: '#' %}
+                {% unless solution.external %}
+                  {% assign solution_href = solution_href | relative_url %}
+                {% endunless %}
+              <li><a class="dropdown-item d-flex align-items-center gap-2" href="{{ solution_href }}"><i class="bi {{ icon_class }} fs-6 {{ icon_color_class }}"></i> {{ solution.title }}</a></li>
+              {% endfor %}
             </ul>
           </li>
+          {% endif %}
           <li class="nav-item">
             <a class="nav-link px-3" href="{{ site.models_url | default: '/models' }}">Models</a>
           </li>
@@ -175,4 +155,4 @@
       observer.observe(header, { attributes: true });
     }
   });
-</script> 
+</script>

@@ -1,5 +1,5 @@
 ---
-layout: marketing-home
+layout: home
 
 # SEO and metadata
 title: "AI Knowledge Base and Workflow Automation for Business | ChatterKB"

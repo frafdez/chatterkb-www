@@ -1,5 +1,5 @@
 ---
-layout: marketing-page
+layout: pages/base
 title: "Customer Journey Decision Simulator"
 description: "Simulate how real people make decisions—before you launch your campaign"
 header_icon: bi-bar-chart-steps

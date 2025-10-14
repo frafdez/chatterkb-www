@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: pages/standard
 title: Terms of Service
 permalink: /terms/
 redirect_from:

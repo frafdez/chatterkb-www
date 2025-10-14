@@ -1,5 +1,5 @@
 ---
-layout: marketing-how-to
+layout: how-to
 sitemap:
   exclude: 'no'
 order: 50
