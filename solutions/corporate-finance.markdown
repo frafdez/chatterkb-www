@@ -1,6 +1,6 @@
 ---
 layout: solutions
-permalink: /solutions/corporate-finance
+permalink: /solutions/corporate-finance/
 
 # SEO and metadata
 title: "Knowledge Management for Corporate Finance | ChatterKB"

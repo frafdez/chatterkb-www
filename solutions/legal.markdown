@@ -1,6 +1,6 @@
 ---
 layout: solutions
-permalink: /solutions/legal
+permalink: /solutions/legal/
 
 # SEO and metadata
 title: "Knowledge Management for Legal Teams | ChatterKB"

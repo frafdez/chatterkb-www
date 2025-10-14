@@ -1,6 +1,6 @@
 ---
 layout: solutions
-permalink: /solutions/utilities
+permalink: /solutions/utilities/
 
 # SEO and metadata
 title: "Knowledge Management for Utilities | ChatterKB"

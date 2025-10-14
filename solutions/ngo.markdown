@@ -1,6 +1,6 @@
 ---
 layout: solutions
-permalink: /solutions/ngo
+permalink: /solutions/ngo/
 
 # SEO and metadata
 title: "Knowledge Management for NGOs | ChatterKB"

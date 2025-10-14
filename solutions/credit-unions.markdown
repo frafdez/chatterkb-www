@@ -1,6 +1,6 @@
 ---
 layout: solutions
-permalink: /solutions/credit-unions
+permalink: /solutions/credit-unions/
 
 # SEO and metadata
 title: "Member Knowledge Management for Credit Unions | ChatterKB"

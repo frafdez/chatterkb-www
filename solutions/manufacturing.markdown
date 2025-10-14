@@ -1,6 +1,6 @@
 ---
 layout: solutions
-permalink: /solutions/manufacturing
+permalink: /solutions/manufacturing/
 
 # SEO and metadata
 title: "Knowledge Management for Manufacturing & Engineering | ChatterKB"

@@ -1,6 +1,6 @@
 ---
 layout: solutions
-permalink: /solutions/agency
+permalink: /solutions/agency/
 
 # SEO and metadata
 title: "Knowledge Management for Marketing Agencies | ChatterKB"
