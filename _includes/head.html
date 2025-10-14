@@ -59,6 +59,10 @@
     <link rel="stylesheet" href="{{ '/assets/syntax.css' | relative_url }}">
   </noscript>
 
+  {% if include.extra_head %}
+    {{ include.extra_head }}
+  {% endif %}
+
   {%- feed_meta -%}
 
   <style id="fallback-h1-size">
