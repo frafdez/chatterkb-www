@@ -51,13 +51,9 @@
   <!-- Preconnect to Google Fonts to speed up font loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Asynchronously load site stylesheets to avoid render-blocking -->
-  <link rel="preload" as="style" href="{{ '/assets/main.css' | relative_url }}" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" as="style" href="{{ '/assets/syntax.css' | relative_url }}" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
+  <!-- Load site stylesheets -->
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/syntax.css' | relative_url }}">
-  </noscript>
+  <link rel="stylesheet" href="{{ '/assets/syntax.css' | relative_url }}">
 
   {% if include.extra_head %}
     {{ include.extra_head }}
