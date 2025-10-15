@@ -12,4 +12,14 @@
 
   // Google Ads Tracking
   gtag('config', '{{ site.google_ads }}');
+
+
+  // Custom event to help detect bot behavior
+  gtag('event', 'heartbeat_check', {
+    'page_path': window.location.pathname,
+    'user_agent': navigator.userAgent,
+    'device_type': navigator.userAgent.includes('Mobile') ? 'mobile' : 'desktop',
+    'touch_points': navigator.maxTouchPoints || 0
+  });
+
 </script>
