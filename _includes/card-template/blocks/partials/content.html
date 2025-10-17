@@ -1,0 +1,101 @@
+{%- comment -%}
+  Renders the textual portion of a card/section, including icon, eyebrow,
+  title, subtitle, body, and buttons.
+  Parameters:
+    content                     -> content object or string
+    content_body                -> optional precomputed body string
+    icon_class                  -> class for the icon wrapper
+    eyebrow_class               -> class applied to eyebrow container
+    eyebrow_variant             -> 'plain' (default) or 'badge'
+    title_tag                   -> heading tag (default h3)
+    title_class                 -> class for the title element
+    subtitle_class              -> class for the subtitle paragraph
+    body_class                  -> class for the body container
+    markdownify_body            -> defaults to true
+    buttons                     -> optional buttons array
+    buttons_container_class     -> classes for the buttons wrapper
+    buttons_justify_class       -> optional justify-content class
+    buttons_margin_class        -> optional margin class (default mt-3)
+{%- endcomment -%}
+
+{%- assign content_obj = include.content -%}
+{%- assign content_body = include.content_body -%}
+
+{%- if content_obj and content_body == nil and content_obj.body -%}
+  {%- assign content_body = content_obj.body -%}
+{%- endif -%}
+
+{%- assign markdownify_body = include.markdownify_body -%}
+{%- if markdownify_body == nil -%}
+  {%- assign markdownify_body = true -%}
+{%- endif -%}
+
+{%- assign icon_class = include.icon_class | default: 'text-primary fs-2 mb-1' -%}
+{%- assign eyebrow_class = include.eyebrow_class | default: 'text-uppercase text-muted fw-semibold mb-2' -%}
+{%- assign eyebrow_variant = include.eyebrow_variant | default: content_obj.eyebrow_variant | default: 'plain' -%}
+{%- assign title_tag = include.title_tag | default: content_obj.title_tag | default: 'h3' -%}
+{%- assign title_class = include.title_class | default: content_obj.title_class | default: 'card-title' -%}
+{%- assign subtitle_class = include.subtitle_class | default: content_obj.subtitle_class | default: 'text-body-secondary mb-2' -%}
+{%- assign body_class = include.body_class | default: content_obj.body_class | default: 'text-body-secondary' -%}
+
+{%- assign buttons = include.buttons -%}
+{%- assign buttons_container_class = include.buttons_container_class | default: 'd-flex gap-3 flex-wrap' -%}
+{%- assign buttons_justify_class = include.buttons_justify_class -%}
+{%- assign buttons_margin_class = include.buttons_margin_class | default: 'mt-3' -%}
+{%- if buttons_justify_class and buttons_justify_class != '' -%}
+  {%- assign buttons_container_class = buttons_container_class | append: ' ' | append: buttons_justify_class -%}
+{%- endif -%}
+{%- if buttons_margin_class and buttons_margin_class != '' -%}
+  {%- assign buttons_container_class = buttons_container_class | append: ' ' | append: buttons_margin_class -%}
+{%- endif -%}
+
+{%- if content_obj and content_obj.icon -%}
+  <div class="{{ icon_class }}"><i class="bi {{ content_obj.icon }}"></i></div>
+{%- endif -%}
+
+{%- if content_obj and content_obj.eyebrow -%}
+  <p class="{{ eyebrow_class }}">
+    {%- if eyebrow_variant == 'badge' -%}
+      <span class="badge text-bg-primary bg-opacity-50 rounded-pill">{{ content_obj.eyebrow }}</span>
+    {%- else -%}
+      {{ content_obj.eyebrow }}
+    {%- endif -%}
+  </p>
+{%- endif -%}
+
+{%- if content_obj and content_obj.title -%}
+  <{{ title_tag }} class="{{ title_class }}">{{ content_obj.title }}</{{ title_tag }}>
+{%- endif -%}
+
+{%- if content_obj and content_obj.subtitle -%}
+  <p class="{{ subtitle_class }}">{{ content_obj.subtitle }}</p>
+{%- endif -%}
+
+{%- if content_body and content_body != '' -%}
+  {%- if markdownify_body -%}
+    <div class="{{ body_class }}">{{ content_body | markdownify }}</div>
+  {%- else -%}
+    <div class="{{ body_class }}">{{ content_body }}</div>
+  {%- endif -%}
+{%- endif -%}
+
+{%- if buttons and buttons.size > 0 -%}
+  <div class="{{ buttons_container_class | strip }}">
+    {%- for button in buttons -%}
+      {%- assign btn_url = button.url | default: button.href | default: '#' -%}
+      {%- assign btn_class = button.class -%}
+      {%- if btn_class == nil or btn_class == '' -%}
+        {%- if button.style -%}
+          {%- assign btn_class = 'btn-' | append: button.style -%}
+        {%- else -%}
+          {%- assign btn_class = 'btn-primary' -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- assign btn_text = button.text | default: button.label | default: 'Learn more' -%}
+      <a class="btn {{ btn_class }}" href="{{ btn_url }}">
+        {%- if button.icon -%}<i class="bi {{ button.icon }} me-2"></i>{%- endif -%}
+        {{ btn_text }}
+      </a>
+    {%- endfor -%}
+  </div>
+{%- endif -%}

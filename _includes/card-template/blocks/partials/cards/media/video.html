@@ -1,0 +1,25 @@
+{%- comment -%}
+  Renders a video element with configurable classes and attributes.
+  Parameters:
+    video        -> video object with src, poster, class, attributes
+    base_class   -> base class string applied before suffixes
+    class_suffix -> optional class suffix (appended to base_class)
+    style        -> inline style attribute (default depends on context)
+    attributes   -> attribute string (default loop autoplay muted playsinline)
+{%- endcomment -%}
+
+{%- assign video_obj = include.video -%}
+{%- if video_obj and video_obj.src -%}
+  {%- assign base_class = include.base_class | default: 'w-100' -%}
+  {%- assign class_suffix = include.class_suffix | default: '' -%}
+  {%- assign final_class = base_class -%}
+  {%- if class_suffix != '' -%}
+    {%- assign final_class = final_class | append: class_suffix -%}
+  {%- endif -%}
+  {%- if video_obj.class -%}
+    {%- assign final_class = final_class | append: ' ' | append: video_obj.class -%}
+  {%- endif -%}
+  {%- assign style_attr = include.style | default: 'object-fit: cover; display: block;' -%}
+  {%- assign attributes = include.attributes | default: video_obj.attributes | default: 'loop autoplay muted playsinline' -%}
+  <video src="{{ video_obj.src }}" class="{{ final_class | strip }}"{% if video_obj.poster %} poster="{{ video_obj.poster }}"{% endif %} style="{{ style_attr }}" {{ attributes }}></video>
+{%- endif -%}

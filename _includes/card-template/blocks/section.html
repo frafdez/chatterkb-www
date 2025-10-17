@@ -1,0 +1,48 @@
+{%- comment -%}
+  Block: section
+  Wrapper that can render:
+    - optional heading stack (eyebrow/title/subtitle/body)
+    - optional content/media pair (shared schema)
+    - optional matrix (recursive card grid)
+  Wrapper classes use `block.class` (default py-5). Container fixed to container-xxl.
+{%- endcomment -%}
+
+{%- assign wrapper_class = block.class | default: 'py-5' -%}
+{%- assign section_buttons = block.buttons -%}
+{%- assign section_position = block.position -%}
+
+<section class="{{ wrapper_class }}">
+  <div class="container-xxl">
+    {%- if block.eyebrow or block.title or block.subtitle or block.body -%}
+      <div class="mb-5">
+        {%- if block.eyebrow -%}
+          <p class="text-uppercase text-muted fw-semibold mb-2">{{ block.eyebrow }}</p>
+        {%- endif -%}
+        {%- if block.title -%}
+          <h2 class="display-5 fw-bold mb-2">{{ block.title }}</h2>
+        {%- endif -%}
+        {%- if block.subtitle -%}
+          <p class="lead text-body-secondary mb-3">{{ block.subtitle }}</p>
+        {%- endif -%}
+        {%- if block.body -%}
+          <div class="text-body-secondary">{{ block.body | markdownify }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if block.matrix -%}
+      {%- assign matrix = block.matrix -%}
+      {%- assign row_data = matrix.row | default: matrix -%}
+      {%- include card-template/blocks/partials/_matrix-row.html row=row_data -%}
+    {%- endif -%}
+
+    {%- if block.content or block.media -%}
+      {%- include card-template/blocks/partials/_content-media.html
+        content=block.content
+        media=block.media
+        position=section_position
+        buttons=section_buttons
+      -%}
+    {%- endif -%}
+  </div>
+</section>

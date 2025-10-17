@@ -1,0 +1,101 @@
+{%- comment -%}
+  Decides which media type to render (video, image, code) and applies
+  layout-specific classes.
+  Parameters:
+    image            -> image object
+    video            -> video object
+    code             -> code string or object
+    media            -> original media object (for extras like code_class)
+    variant          -> start | end | top | bottom
+    has_content      -> boolean used for code rounding
+    video_attrs      -> attribute string for video
+    copy_label       -> copy button label
+    copied_label     -> copied button label
+{%- endcomment -%}
+
+{%- assign variant = include.variant | default: 'top' -%}
+{%- assign has_content = include.has_content | default: false -%}
+{%- assign image = include.image -%}
+{%- assign video = include.video -%}
+{%- assign code = include.code -%}
+{%- assign media = include.media -%}
+{%- assign video_attrs = include.video_attrs | default: 'loop autoplay muted playsinline' -%}
+{%- assign code_copy_label = include.copy_label | default: 'Copy' -%}
+{%- assign code_copied_label = include.copied_label | default: 'Copied!' -%}
+{%- assign code_extra_classes = '' -%}
+{%- if media and media.code_class -%}
+  {%- assign code_extra_classes = media.code_class -%}
+{%- endif -%}
+
+{%- case variant -%}
+  {%- when 'start' -%}
+    {%- assign video_base_class = 'w-100 h-100' -%}
+    {%- assign video_suffix = ' rounded-start' -%}
+    {%- assign video_style = 'object-fit: cover; display: block;' -%}
+    {%- assign image_base_class = 'img-fluid w-100 h-100' -%}
+    {%- assign image_suffix = ' rounded-start' -%}
+    {%- assign image_style = 'object-fit: cover;' -%}
+    {%- assign code_suffix = '' -%}
+    {%- if has_content -%}
+      {%- assign code_suffix = ' w-100 h-100 rounded-start' -%}
+    {%- endif -%}
+  {%- when 'end' -%}
+    {%- assign video_base_class = 'w-100 h-100' -%}
+    {%- assign video_suffix = ' rounded-end' -%}
+    {%- assign video_style = 'object-fit: cover; display: block;' -%}
+    {%- assign image_base_class = 'img-fluid w-100 h-100' -%}
+    {%- assign image_suffix = ' rounded-end' -%}
+    {%- assign image_style = 'object-fit: cover;' -%}
+    {%- assign code_suffix = '' -%}
+    {%- if has_content -%}
+      {%- assign code_suffix = ' w-100 h-100 rounded-end' -%}
+    {%- endif -%}
+  {%- when 'bottom' -%}
+    {%- assign video_base_class = 'w-100' -%}
+    {%- assign video_suffix = ' rounded-bottom' -%}
+    {%- assign video_style = 'display: block;' -%}
+    {%- assign image_base_class = 'img-fluid' -%}
+    {%- assign image_suffix = ' rounded-bottom' -%}
+    {%- assign image_style = 'width: 100%; height: auto;' -%}
+    {%- assign code_suffix = '' -%}
+    {%- if has_content -%}
+      {%- assign code_suffix = ' w-100 rounded-bottom' -%}
+    {%- endif -%}
+  {%- else -%}
+    {%- assign video_base_class = 'w-100' -%}
+    {%- assign video_suffix = ' rounded-top' -%}
+    {%- assign video_style = 'display: block;' -%}
+    {%- assign image_base_class = 'img-fluid' -%}
+    {%- assign image_suffix = ' rounded-top' -%}
+    {%- assign image_style = 'width: 100%; height: auto;' -%}
+    {%- assign code_suffix = '' -%}
+    {%- if has_content -%}
+      {%- assign code_suffix = ' w-100 rounded-top' -%}
+    {%- endif -%}
+{%- endcase -%}
+
+{%- if video and video.src -%}
+  {%- include card-template/blocks/partials/cards/media/video.html
+    video=video
+    base_class=video_base_class
+    class_suffix=video_suffix
+    style=video_style
+    attributes=video_attrs
+  -%}
+{%- elsif image and image.url -%}
+  {%- include card-template/blocks/partials/cards/media/image.html
+    image=image
+    base_class=image_base_class
+    class_suffix=image_suffix
+    style=image_style
+  -%}
+{%- elsif code -%}
+  {%- include card-template/blocks/partials/cards/media/code.html
+    code=code
+    media=media
+    class_suffix=code_suffix
+    extra_classes=code_extra_classes
+    copy_label=code_copy_label
+    copied_label=code_copied_label
+  -%}
+{%- endif -%}

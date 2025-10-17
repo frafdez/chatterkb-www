@@ -1,0 +1,104 @@
+{%- comment -%}
+  Block: faq
+  Accordion-style FAQ list with optional heading/subtitle/body/buttons.
+{%- endcomment -%}
+
+{%- assign wrapper_class = block.class | default: 'py-5' -%}
+{%- assign content = block.content -%}
+{%- assign faqs = nil -%}
+{%- if content and content.faqs -%}
+  {%- assign faqs = content.faqs -%}
+{%- endif -%}
+
+{%- assign align = block.align | default: content.align | default: 'start' -%}
+{%- if align == 'left' -%}
+  {%- assign align = 'start' -%}
+{%- elsif align == 'right' -%}
+  {%- assign align = 'end' -%}
+{%- endif -%}
+
+{%- assign text_align_class = 'text-' | append: align -%}
+
+{%- assign accordion_prefix = content.title | default: block.title | default: 'faq' -%}
+{%- assign accordion_prefix = accordion_prefix | slugify -%}
+
+<section class="{{ wrapper_class }}">
+  <div class="container-xxl">
+    {%- if content and (content.title or content.subtitle or content.body or content.buttons) -%}
+      <div class="{{ text_align_class }} mb-5">
+        {%- if content.title -%}
+          <h2 class="display-5 fw-bold mb-2">{{ content.title }}</h2>
+        {%- endif -%}
+        {%- if content.subtitle -%}
+          <p class="lead text-body-secondary mb-3">{{ content.subtitle }}</p>
+        {%- endif -%}
+        {%- if content.body -%}
+          <div class="text-body-secondary">{{ content.body | markdownify }}</div>
+        {%- endif -%}
+        {%- if block.buttons -%}
+          <div class="d-flex gap-3 flex-wrap mt-3 {{ text_align_class | replace: 'text-', 'justify-content-' }}">
+            {%- for button in block.buttons -%}
+              {%- assign btn_url = button.url | default: button.href | default: '#' -%}
+              {%- assign btn_class = button.class -%}
+              {%- if btn_class == nil or btn_class == '' -%}
+                {%- if button.style -%}
+                  {%- assign btn_class = 'btn-' | append: button.style -%}
+                {%- else -%}
+                  {%- assign btn_class = 'btn-primary' -%}
+                {%- endif -%}
+              {%- endif -%}
+              {%- assign btn_text = button.text | default: button.label | default: 'Learn more' -%}
+              <a class="btn {{ btn_class }}" href="{{ btn_url }}">
+                {%- if button.icon -%}<i class="bi {{ button.icon }} me-2"></i>{%- endif -%}
+                {{ btn_text }}
+              </a>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if faqs -%}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {%- for item in faqs -%}
+              {%- unless forloop.first -%},{%- endunless -%}
+              {
+                "@type": "Question",
+                "name": {{ item.question | jsonify }},
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": {{ item.answer | markdownify | strip_html | jsonify }}
+                }
+              }
+            {%- endfor -%}
+          ]
+        }
+      </script>
+
+      <div class="row g-4">
+        {%- for item in faqs -%}
+          <div class="col-md-6">
+            <div class="accordion" id="{{ accordion_prefix }}-{{ forloop.index }}">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="{{ accordion_prefix }}-heading-{{ forloop.index }}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{ accordion_prefix }}-collapse-{{ forloop.index }}" aria-expanded="false" aria-controls="{{ accordion_prefix }}-collapse-{{ forloop.index }}">
+                    {{ item.question }}
+                  </button>
+                </h2>
+                <div id="{{ accordion_prefix }}-collapse-{{ forloop.index }}" class="accordion-collapse collapse" aria-labelledby="{{ accordion_prefix }}-heading-{{ forloop.index }}">
+                  <div class="accordion-body text-body-secondary">
+                    {{ item.answer | markdownify }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>

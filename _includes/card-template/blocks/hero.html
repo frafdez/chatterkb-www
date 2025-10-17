@@ -1,0 +1,26 @@
+{%- comment -%}
+  Block: hero
+  Uses shared content/media schema.
+    - class: wrapper classes (defaults to py-6)
+    - content: { class, align, eyebrow, title, subtitle, body, buttons }
+    - media:   { class, position, image, video }
+    - buttons: optional array (falls back to content.buttons)
+{%- endcomment -%}
+
+{%- assign wrapper_class = block.class | default: 'py-6' -%}
+{%- assign hero_content = block.content -%}
+{%- assign hero_media = block.media -%}
+{%- assign hero_buttons = block.buttons -%}
+{%- assign hero_position = block.position -%}
+
+<section class="{{ wrapper_class }}">
+  <div class="container-xxl">
+    {%- include card-template/blocks/partials/_content-media.html
+      content=hero_content
+      media=hero_media
+      position=hero_position
+      heading='h1'
+      buttons=hero_buttons
+    -%}
+  </div>
+</section>

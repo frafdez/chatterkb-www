@@ -1,100 +1,142 @@
 ---
-layout: feature
-sitemap:
-  exclude: 'no'
+layout: page
+title: "Reddit MCP Server"
+description: "Connect to Reddit using the community-driven mcp-server-reddit project."
 order: 50
 server_type: local
 
-title: MCP Server Reddit
-description: "Connect to Reddit using Model Context Protocol."
+blocks:
+  - type: hero
+    class: py-6
+    content:
+      class: col-lg-6 text-lg-start
+      align: start
+      eyebrow: MCP Server
+      title: Reddit MCP Server
+      title_class: display-1 fw-bold mb-3
+      subtitle: Connect to Reddit using the community-developed `mcp-server-reddit`.
+      buttons:
+        - text: Try It Free
+          url: "https://app.chatterkb.com/auth/signup"
+          class: btn-primary btn-lg
+        - text: Book a Demo
+          url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
+          class: btn-outline-secondary btn-lg
+    media:
+      class: col-lg-6 text-center
+      position: end
+      image:
+        url: /assets/images/marketing/mcp-server-reddit-hero.png
+        alt: Reddit MCP Server hero
 
-hero:
-  title: mcp-server-reddit
-  description: Connect to Reddit using Model Context Protocol.
-  image: /assets/images/marketing/mcp-server-reddit-hero.png
-  primary_button:
-    text: Try It Free
-    url: "https://app.chatterkb.com/auth/signup"
-  secondary_button:
-    text: Book a Demo
-    url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
+  - type: section
+    class: py-6 bg-body-secondary bg-opacity-25
+    title: Connect Reddit in Four Steps
+    subtitle: Register a Reddit app, install the community server, add it to the bridge, and start exploring subreddits.
+    matrix:
+      row:
+        columns:
+          - class: col-lg-12
+            card:
+              class: border-0 shadow-sm h-100
+              media:
+                position: end
+                image:
+                  url: /assets/images/marketing/mcp-server-reddit-step-1.webp
+                  alt: Reddit developer app setup
+              content:
+                icon: bi-1-circle-fill
+                title: Register a Reddit Application
+                body: |
+                  - Visit Reddit’s developer portal and sign in.
+                  - Click **Create App** and choose the script option.
+                  - Copy the generated client **ID** and **secret** for later.
+                buttons:
+                  - text: Create a Reddit App
+                    url: https://www.reddit.com/prefs/apps
+                    class: btn-outline-primary
+          - class: col-lg-12
+            card:
+              class: border-0 shadow-sm h-100
+              media:
+                position: end
+                code: |
+                  pip install mcp-server-reddit
+                copy_label: Copy
+                copied_label: Copied!
+              content:
+                icon: bi-2-circle-fill
+                title: Install the Community Server
+                body: |
+                  - Ensure Python is installed in the environment that runs the Local MCP Bridge.
+                  - Install the community package from PyPI using the command shown.
+                  - Confirm the module imports successfully by running `python -m mcp_server_reddit --help`.
+          - class: col-lg-12
+            card:
+              class: border-0 shadow-sm h-100
+              media:
+                position: end
+                code: |
+                  {
+                    "mcpServers": {
+                      "mcp-server-reddit": {
+                        "description": "A Reddit MCP Server",
+                        "command": "/full/path/to/python",
+                        "args": ["-m", "mcp_server_reddit"],
+                        "envs": {
+                          "REDDIT_CLIENT_ID": "your_client_id",
+                          "REDDIT_CLIENT_SECRET": "your_client_secret"
+                        }
+                      }
+                    }
+                  }
+                copy_label: Copy
+                copied_label: Copied!
+              content:
+                icon: bi-3-circle-fill
+                title: Configure the Local MCP Bridge
+                body: |
+                  - Launch the [Local MCP Bridge](/mcp-servers/local-mcp) and open `mcp-config.json`.
+                  - Add the Reddit server entry exactly as shown.
+                  - Replace `/full/path/to/python` with the interpreter that has the package installed.
+                  - Substitute `your_client_id` and `your_client_secret` with the values from the Reddit app.
+          - class: col-lg-12
+            card:
+              class: border-0 shadow-sm h-100
+              media:
+                position: end
+                image:
+                  url: /assets/images/marketing/local-mcp-hero.png
+                  alt: Local MCP bridge console
+              content:
+                icon: bi-4-circle-fill
+                title: Restart and Verify
+                body: |
+                  - Restart the Local MCP Bridge and confirm Reddit appears in the console output.
+                  - Add the bridge inside ChatterKB to expose Reddit tools to your workspace.
+                  - Start searching subreddits, fetching posts, or triggering workflows that rely on Reddit data.
+                buttons:
+                  - text: Learn about Local MCP Bridge...
+                    url: /mcp-servers/local-mcp
+                    class: btn-outline-secondary
 
-features:
-  section_title: Local MCP Bridge
-  title: Connecting to Reddit
-  items:
-    - side: left
-      title: Register an App with Reddit
-      description: Visit Reddit's developer portal and register an app
-      image: /assets/images/marketing/mcp-server-reddit-step-1.webp
-      bullets:
-        - Click on the button to visit the apps page
-        - Create an app and copy the app's **id** and **secret**
-      button:
-        text: Create a Reddit App
-        url: https://www.reddit.com/prefs/apps
+  - type: section
+    class: py-5
+    body: |
+      The `mcp-server-reddit` project is an open-source community server created by Hawstein. Explore the code on [GitHub](https://github.com/Hawstein/mcp-server-reddit) or install the latest release from [PyPI](https://pypi.org/project/mcp-server-reddit) to contribute improvements.
 
-    - side: right
-      title: Install the server using Python
-      description: Ensure that you have Python installed and run this command
-      code: |
-        pip install mcp-server-reddit
-
-
-    - side: left
-      title: Update Your Local MCP Bridge
-      description: You'll need to add an entry into the mcp-config.json file
-      code: |
-        {
-          "mcpServers": {
-            "mcp-server-reddit": {
-              "description": "A Reddit MCP Server",
-              "command": "/Users/my-login/opt/anaconda3/envs/test-mcp-4/bin/python",
-              "args": [
-                "-m",
-                "mcp_server_reddit"
-              ],
-              "envs": {
-                "REDDIT_CLIENT_ID": "123***",
-                "REDDIT_CLIENT_SECRET": "123***"
-              }
-            }
-          }
-        }
-      bullets:
-        - Run the [MCP Bridge](/mcp-servers/local-mcp)
-        - Locate the config file
-        - |
-          Replace the values with the values provided by Reddit when creating the app
-          - **REDDIT_CLIENT_ID**
-          - **REDDIT_CLIENT_SECRET**
-        - |
-         **IMPORTANT**: *You may need to specify the full path to your Python file as shown in the example*
-      
-    - side: right
-      title: Restart the Local MCP Bridge
-      description: Once the MCP Bridge loads, you'll see Reddit and its tools listed in the window
-      image: "/assets/images/marketing/local-mcp-hero.png"
-      bullets:
-        - Remember to add your Local MCP Bridge to the list of MCP Servers in your knowledge base
-      button:
-        text: Learn about Local MCP Bridge...
-        url: /mcp-servers/local-mcp
-
-
-
-
-show_workflow_library: false
-
-cta:
-  title: Connect Using MCP Today
-  description: Unlock powerful automations through Reddit's MCP integration.
-  primary_button:
-    text: Try It Free
-    url: "https://app.chatterkb.com/auth/signup"
-  secondary_button:
-    text: Book a Demo
-    url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
+  - type: cta
+    class: py-6 bg-primary bg-opacity-10
+    content:
+      align: start
+      class: col-lg-6 text-lg-start
+      title: Connect Using MCP Today
+      body: Unlock powerful automations through Reddit’s MCP integration.
+      buttons:
+        - text: Try It Free
+          url: "https://app.chatterkb.com/auth/signup"
+          class: btn-primary btn-lg
+        - text: Book a Demo
+          url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
+          class: btn-outline-secondary btn-lg
 ---
-
-This MCP server is a community server available at [PyPi.org](https://pypi.org/project/mcp-server-reddit) called mcp-server-reddit and developed by Hawstein. You can review the code at [https://github.com/Hawstein/mcp-server-reddit](https://github.com/Hawstein/mcp-server-reddit)

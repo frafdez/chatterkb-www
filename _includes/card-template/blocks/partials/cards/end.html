@@ -1,0 +1,55 @@
+{%- comment -%}
+  Card layout with content first and media at the end (right).
+  Parameters mirror start.html.
+{%- endcomment -%}
+
+{%- assign media_obj = include.media -%}
+{%- assign content_obj = include.content -%}
+
+{%- assign media_col_class = 'col-12' -%}
+{%- if media_obj and media_obj.class -%}
+  {%- assign media_col_class = media_col_class | append: ' ' | append: media_obj.class -%}
+{%- else -%}
+  {%- assign media_col_class = media_col_class | append: ' col-md-6' -%}
+{%- endif -%}
+
+{%- assign content_col_class = 'col-12' -%}
+{%- if content_obj and content_obj.class -%}
+  {%- assign content_col_class = content_col_class | append: ' ' | append: content_obj.class -%}
+{%- else -%}
+  {%- assign content_col_class = content_col_class | append: ' col-md-6' -%}
+{%- endif -%}
+
+<div class="row g-0 align-items-stretch">
+  {%- if content_obj -%}
+  <div class="{{ content_col_class }}">
+    <div class="card-body {{ include.text_align_class }}">
+      {%- include card-template/blocks/partials/content.html
+        content=content_obj
+        content_body=include.content_body
+        buttons=include.buttons
+        icon_class='text-primary fs-2 mb-1'
+        eyebrow_variant='plain'
+        eyebrow_class='text-uppercase text-muted fw-semibold mb-2'
+        title_tag='h3'
+        title_class='card-title'
+        subtitle_class='text-body-secondary mb-2'
+        body_class='text-body-secondary'
+      -%}
+    </div>
+  </div>
+  {%- endif -%}
+  <div class="{{ media_col_class }}">
+    {%- include card-template/blocks/partials/cards/media/render.html
+      media=media_obj
+      image=include.media_image
+      video=include.media_video
+      code=include.media_code
+      variant='end'
+      has_content=include.has_content
+      video_attrs=include.video_attrs
+      copy_label=include.copy_label
+      copied_label=include.copied_label
+    -%}
+  </div>
+</div>

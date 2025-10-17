@@ -1,0 +1,35 @@
+{%- comment -%}
+  Block: cta
+  Reuses the shared content/media schema.
+    - class: wrapper classes (defaults to py-5 bg-body-tertiary)
+    - content/media/buttons like hero/matrix cards
+{%- endcomment -%}
+
+{%- assign wrapper_class = block.class | default: 'py-5 bg-body-tertiary' -%}
+{%- assign cta_content = block.content -%}
+{%- assign cta_media = block.media -%}
+{%- assign cta_buttons = block.buttons -%}
+{%- assign cta_position = block.position -%}
+{%- assign cta_align = block.align -%}
+{%- if cta_align == nil or cta_align == '' -%}
+  {%- if cta_content and cta_content.align -%}
+    {%- assign cta_align = cta_content.align -%}
+  {%- else -%}
+    {%- assign cta_align = 'center' -%}
+  {%- endif -%}
+{%- endif -%}
+
+<section class="{{ wrapper_class }}">
+  <div class="container-xxl">
+    <div class="mx-auto">
+      {%- include card-template/blocks/partials/_content-media.html
+        content=cta_content
+        media=cta_media
+        position=cta_position
+        heading='h2'
+        buttons=cta_buttons
+        align=cta_align
+      -%}
+    </div>
+  </div>
+</section>

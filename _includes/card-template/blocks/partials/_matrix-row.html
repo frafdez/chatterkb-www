@@ -1,0 +1,50 @@
+{%- comment -%}
+  Recursive renderer for card_matrix rows.
+  Expects `include.row` with a `columns` (or legacy `items`) array.
+  Each column may define:
+    - size: Bootstrap column classes (e.g., "col-md-6")
+    - class: extra utilities (default adds mb-4)
+    - row / columns / items: nested rows (recursion)
+    - card: leaf data rendered via _matrix-card
+{%- endcomment -%}
+
+{%- assign row = include.row -%}
+{%- if row == nil -%}
+  {%- assign row = '' | split: '' -%}
+{%- endif -%}
+
+{%- assign row_class = row.class -%}
+{%- if row_class and row_class contains 'g-' -%}
+  {%- assign row_class = row_class -%}
+{%- elsif row_class and row_class != '' -%}
+  {%- assign row_class = row_class | append: ' g-4' -%}
+{%- else -%}
+  {%- assign row_class = 'g-4' -%}
+{%- endif -%}
+
+{%- assign columns = row.columns | default: row.items -%}
+{%- if columns == nil -%}
+  {%- assign columns = '' | split: '' -%}
+{%- endif -%}
+
+<div class="row{% if row_class %} {{ row_class }}{% endif %}">
+  {%- for column in columns -%}
+    {%- assign col_classes = column.class -%}
+    {%- if col_classes == nil or col_classes == '' -%}
+      {%- assign col_classes = column.size | default: 'col-12' -%}
+    {%- endif -%}
+
+    <div class="{{ col_classes | strip }}">
+      {%- if column.row -%}
+        {%- include card-template/blocks/partials/_matrix-row.html row=column.row -%}
+      {%- elsif column.columns -%}
+        {%- include card-template/blocks/partials/_matrix-row.html row=column -%}
+      {%- elsif column.items -%}
+        {%- include card-template/blocks/partials/_matrix-row.html row=column -%}
+      {%- else -%}
+        {%- assign card_data = column.card | default: column -%}
+        {%- include card-template/blocks/partials/_matrix-card.html card=card_data -%}
+      {%- endif -%}
+    </div>
+  {%- endfor -%}
+</div>

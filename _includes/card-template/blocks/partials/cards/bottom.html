@@ -1,0 +1,35 @@
+{%- comment -%}
+  Card layout with content first and media on the bottom.
+{%- endcomment -%}
+
+{%- assign media_obj = include.media -%}
+{%- assign content_obj = include.content -%}
+
+{%- if content_obj -%}
+<div class="card-body {{ include.text_align_class }}">
+  {%- include card-template/blocks/partials/content.html
+    content=content_obj
+    content_body=include.content_body
+    buttons=include.buttons
+    icon_class='text-primary fs-2 mb-1'
+    eyebrow_variant='plain'
+    eyebrow_class='text-uppercase text-muted fw-semibold mb-2'
+    title_tag='h3'
+    title_class='card-title'
+    subtitle_class='text-body-secondary mb-2'
+    body_class='text-body-secondary'
+  -%}
+</div>
+{%- endif -%}
+
+{%- include card-template/blocks/partials/cards/media/render.html
+  media=media_obj
+  image=include.media_image
+  video=include.media_video
+  code=include.media_code
+  variant='bottom'
+  has_content=include.has_content
+  video_attrs=include.video_attrs
+  copy_label=include.copy_label
+  copied_label=include.copied_label
+-%}

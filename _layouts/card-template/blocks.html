@@ -1,0 +1,53 @@
+---
+layout: card-template/default
+---
+
+{%- comment -%}
+  Card Template: Blocks-driven page layout
+  - Expects `page.blocks` array of blocks with a `type` field
+  - Minimal Bootstrap-first markup; polish via CSS can come later
+{%- endcomment -%}
+
+{%- assign page_container = page.container | default: 'xxl' -%}
+
+{%- if page.blocks and page.blocks.size > 0 -%}
+  {%- for block in page.blocks -%}
+    {%- case block.type -%}
+      {%- when 'hero' -%}
+        {%- include card-template/blocks/hero.html block=block page_container=page_container -%}
+
+      {%- when 'cta' -%}
+        {%- include card-template/blocks/cta.html block=block page_container=page_container -%}
+
+      {%- when 'card_matrix' -%}
+        {%- include card-template/blocks/card-matrix.html block=block page_container=page_container -%}
+
+      {%- when 'card-matrix' -%}
+        {%- include card-template/blocks/card-matrix.html block=block page_container=page_container -%}
+
+      {%- when 'section' -%}
+        {%- include card-template/blocks/section.html block=block page_container=page_container -%}
+
+      {%- when 'workflow-library' -%}
+        {%- include card-template/blocks/workflow-library.html block=block page_container=page_container -%}
+
+      {%- when 'mcp-servers' -%}
+        {%- include card-template/blocks/mcp-servers.html block=block page_container=page_container -%}
+
+      {%- when 'faq' -%}
+        {%- include card-template/blocks/faq.html block=block page_container=page_container -%}
+
+      {%- else -%}
+        {%- comment -%} Unknown block type; ignore for now {%- endcomment -%}
+    {%- endcase -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- comment -%}
+    Fallback: render regular content if no blocks specified
+  {%- endcomment -%}
+  <section class="py-5">
+    <div class="container">
+      {{ content }}
+    </div>
+  </section>
+{%- endif -%}

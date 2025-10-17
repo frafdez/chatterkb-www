@@ -1,0 +1,157 @@
+{%- comment -%}
+  Renders a code snippet with copy-to-clipboard support.
+  Parameters:
+    code          -> code string (falls back to media.code or media.value)
+    media         -> optional media object (used for defaults)
+    class_suffix  -> optional string appended to the wrapper class
+    extra_classes -> optional additional classes applied to the wrapper
+    copy_label    -> copy button label (default "Copy")
+    copied_label  -> success label (default "Copied!")
+    id            -> optional explicit id for the code element
+{%- endcomment -%}
+
+{%- assign code_source = include.code -%}
+{%- if (code_source == nil or code_source == '') and include.media -%}
+  {%- if include.media.code -%}
+    {%- assign code_source = include.media.code -%}
+  {%- elsif include.media.value -%}
+    {%- assign code_source = include.media.value -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if code_source == nil or code_source == '' -%}
+  {%- assign code_source = include.value -%}
+{%- endif -%}
+{%- if code_source == nil or code_source == '' -%}
+  {%- assign code_source = '' -%}
+{%- endif -%}
+{%- if code_source == '' -%}
+  {%- assign _ = '' -%}
+{%- else -%}
+  {%- assign workflow_code_index = workflow_code_index | default: 0 | plus: 1 -%}
+  {%- assign code_id_base = include.id | default: 'workflow-code' -%}
+  {%- assign code_id = code_id_base | append: '-' | append: workflow_code_index -%}
+
+  {%- assign block_classes = 'template-code-block' -%}
+  {%- assign extra_classes = include.extra_classes | default: '' -%}
+  {%- if extra_classes != '' -%}
+    {%- assign block_classes = block_classes | append: ' ' | append: extra_classes -%}
+  {%- endif -%}
+  {%- assign class_suffix = include.class_suffix | default: '' -%}
+  {%- if class_suffix != '' -%}
+    {%- assign block_classes = block_classes | append: class_suffix -%}
+  {%- endif -%}
+
+  {%- assign copy_label = include.copy_label | default: 'Copy' -%}
+  {%- assign copied_label = include.copied_label | default: 'Copied!' -%}
+
+  <div class="{{ block_classes | strip }}">
+    <div class="template-code-wrapper">
+      <pre><code id="{{ code_id }}">{{ code_source | strip | escape }}</code></pre>
+      <button type="button" class="template-copy-button" data-copy-target="{{ code_id }}" data-copied-label="{{ copied_label | escape }}">
+        <i class="bi bi-clipboard me-1"></i>{{ copy_label }}
+      </button>
+    </div>
+  </div>
+
+  {%- if workflow_code_helpers_included != true -%}
+    {%- assign workflow_code_helpers_included = true -%}
+    <style>
+      .template-code-block {
+        position: relative;
+        background: #0d0f1a;
+        border: 1px solid rgba(13, 16, 26, 0.15);
+        border-radius: inherit;
+      }
+
+      .template-code-wrapper {
+        position: relative;
+        margin: 0;
+        border-radius: inherit;
+      }
+
+      .template-code-wrapper pre {
+        margin: 0;
+        padding: 1.5rem;
+        color: #f8f9fa;
+        background: transparent;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-break: break-word;
+        border-radius: inherit;
+      }
+
+      .template-code-wrapper code {
+        color: inherit;
+        background: none;
+        padding: 0;
+      }
+
+      .template-copy-button {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        border-radius: 999px;
+        padding: 0.35rem 0.95rem;
+        background: rgba(255, 255, 255, 0.12);
+        color: #f8f9fa;
+        border: 1px solid rgba(248, 249, 250, 0.2);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+
+      .template-copy-button:hover {
+        opacity: 0.88;
+        transform: translateY(-1px);
+      }
+
+      .template-copy-button.copied {
+        background: #28a745;
+        border-color: #28a745;
+        color: #fff;
+      }
+    </style>
+    <script>
+      (function() {
+        if (window.__templateCodeCopyInit) { return; }
+        window.__templateCodeCopyInit = true;
+
+        document.addEventListener('click', function(event) {
+          var button = event.target.closest('.template-copy-button');
+          if (!button) { return; }
+
+          var targetId = button.getAttribute('data-copy-target');
+          if (!targetId) { return; }
+
+          var codeElement = document.getElementById(targetId);
+          if (!codeElement) { return; }
+
+          var textToCopy = codeElement.textContent || codeElement.innerText || '';
+          if (!textToCopy) { return; }
+
+          if (!button.dataset.originalHtml) {
+            button.dataset.originalHtml = button.innerHTML;
+          }
+
+          navigator.clipboard.writeText(textToCopy).then(function() {
+            var copiedLabel = button.getAttribute('data-copied-label') || 'Copied!';
+            button.classList.add('copied');
+            button.innerHTML = '<i class="bi bi-check-lg me-1"></i>' + copiedLabel;
+            setTimeout(function() {
+              button.classList.remove('copied');
+              button.innerHTML = button.dataset.originalHtml;
+            }, 2000);
+          }).catch(function() {
+            console.error('Failed to copy text from template code block.');
+          });
+        });
+      })();
+    </script>
+  {%- endif -%}
+{%- endif -%}

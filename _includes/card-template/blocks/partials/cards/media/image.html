@@ -1,0 +1,23 @@
+{%- comment -%}
+  Renders an image element with configurable base classes and style.
+  Parameters:
+    image        -> image object with url, alt, class
+    base_class   -> base class string applied before suffixes
+    class_suffix -> optional class suffix (appended to base_class)
+    style        -> inline style attribute (default depends on context)
+{%- endcomment -%}
+
+{%- assign image_obj = include.image -%}
+{%- if image_obj and image_obj.url -%}
+  {%- assign base_class = include.base_class | default: 'img-fluid' -%}
+  {%- assign class_suffix = include.class_suffix | default: '' -%}
+  {%- assign final_class = base_class -%}
+  {%- if class_suffix != '' -%}
+    {%- assign final_class = final_class | append: class_suffix -%}
+  {%- endif -%}
+  {%- if image_obj.class -%}
+    {%- assign final_class = final_class | append: ' ' | append: image_obj.class -%}
+  {%- endif -%}
+  {%- assign style_attr = include.style | default: 'object-fit: cover; display: block;' -%}
+  <img src="{{ image_obj.url }}" alt="{{ image_obj.alt | default: '' }}" class="{{ final_class | strip }}" style="{{ style_attr }}">
+{%- endif -%}

@@ -1,0 +1,256 @@
+{%- comment -%}
+  Generic content/media renderer shared by hero, cta, section, and cards.
+  Parameters (passed via include):
+    content  -> object containing eyebrow/title/subtitle/body/buttons/class/align
+    media    -> object with optional { position, class, image, video, code }
+    position -> optional override (start/end/top/bottom)
+    heading  -> heading tag (default h2)
+    gap      -> row gutter (default 5)
+    align_items -> row align-items (default center)
+    align    -> text alignment (default start)
+    buttons  -> optional buttons array overriding content.buttons
+{%- endcomment -%}
+
+{%- assign content = include.content -%}
+{%- assign media = include.media -%}
+
+{%- assign position = include.position -%}
+{%- if position == nil or position == '' -%}
+  {%- if media and media.position -%}
+    {%- assign position = media.position -%}
+  {%- elsif content and content.position -%}
+    {%- assign position = content.position -%}
+  {%- else -%}
+    {%- assign position = 'top' -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign heading = include.heading | default: 'h2' -%}
+{%- assign row_gap = include.gap | default: 5 -%}
+{%- assign align_items = include.align_items | default: 'center' -%}
+
+{%- assign content_align = include.align -%}
+{%- if content_align == nil or content_align == '' -%}
+  {%- if content and content.align -%}
+    {%- assign content_align = content.align -%}
+  {%- else -%}
+    {%- assign content_align = 'start' -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if content_align == 'left' -%}
+  {%- assign content_align = 'start' -%}
+{%- elsif content_align == 'right' -%}
+  {%- assign content_align = 'end' -%}
+{%- endif -%}
+
+{%- assign text_align_class = 'text-' | append: content_align -%}
+{%- if content_align == 'center' -%}
+  {%- assign justify_class = 'justify-content-center' -%}
+{%- elsif content_align == 'end' or content_align == 'right' -%}
+  {%- assign justify_class = 'justify-content-end' -%}
+{%- else -%}
+  {%- assign justify_class = 'justify-content-start' -%}
+{%- endif -%}
+
+{%- assign content_body = '' -%}
+{%- if content and content.body -%}
+  {%- assign content_body = content.body -%}
+{%- endif -%}
+
+{%- assign content_class = '' -%}
+{%- if content and content.class -%}
+  {%- assign content_class = content.class -%}
+{%- endif -%}
+
+{%- assign content_classes = 'col-12' -%}
+{%- if position == 'start' or position == 'end' -%}
+  {%- if content_class and content_class != '' -%}
+    {%- assign content_classes = content_classes | append: ' ' | append: content_class -%}
+  {%- else -%}
+    {%- assign content_classes = content_classes | append: ' col-lg-6' -%}
+  {%- endif -%}
+{%- elsif content_class and content_class != '' -%}
+  {%- assign content_classes = content_classes | append: ' ' | append: content_class -%}
+{%- endif -%}
+
+{%- assign media_classes = 'col-12' -%}
+{%- if media and media.class -%}
+  {%- assign media_classes = media_classes | append: ' ' | append: media.class -%}
+{%- elsif position == 'start' or position == 'end' -%}
+  {%- assign media_classes = media_classes | append: ' col-lg-6' -%}
+{%- endif -%}
+
+{%- assign image = nil -%}
+{%- assign video = nil -%}
+{%- assign code = nil -%}
+{%- if media -%}
+  {%- if media.image -%}{%- assign image = media.image -%}{%- endif -%}
+  {%- if media.video -%}{%- assign video = media.video -%}{%- endif -%}
+  {%- if media.code -%}
+    {%- assign code = media.code -%}
+  {%- elsif media.type == 'code' and media.value -%}
+    {%- assign code = media.value -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign video_attrs = 'loop autoplay muted playsinline' -%}
+{%- if video and video.attributes -%}
+  {%- assign video_attrs = video.attributes -%}
+{%- endif -%}
+
+{%- assign code_copy_label = include.copy_label | default: media.copy_label | default: 'Copy' -%}
+{%- assign code_copied_label = include.copied_label | default: media.copied_label | default: 'Copied!' -%}
+
+{%- assign buttons = include.buttons -%}
+{%- if buttons == nil or buttons == '' -%}
+  {%- if content and content.buttons -%}
+    {%- assign buttons = content.buttons -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if buttons == '' -%}
+  {%- assign buttons = nil -%}
+{%- endif -%}
+
+{%- assign has_content = false -%}
+{%- if content -%}
+  {%- if content.icon or content.eyebrow or content.title or content.subtitle -%}
+    {%- assign has_content = true -%}
+  {%- endif -%}
+  {%- if content_body != '' -%}
+    {%- assign has_content = true -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if buttons and buttons.size > 0 -%}
+  {%- assign has_content = true -%}
+{%- endif -%}
+
+{%- assign title_class = content.title_class -%}
+{%- if title_class == nil or title_class == '' -%}
+  {%- if heading == 'h1' -%}
+    {%- assign title_class = 'display-2 fw-bold mb-3' -%}
+  {%- elsif heading == 'h2' -%}
+    {%- assign title_class = 'display-6 fw-bold mb-3' -%}
+  {%- else -%}
+    {%- assign title_class = 'fw-bold mb-2' -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign subtitle_class = content.subtitle_class | default: 'lead text-body-secondary mb-3' -%}
+
+{%- if position == 'start' or position == 'end' -%}
+  <div class="row align-items-{{ align_items }} g-{{ row_gap }}">
+    {%- if position == 'start' -%}
+      <div class="{{ media_classes }}">
+        {%- include card-template/blocks/partials/cards/media/render.html
+          media=media
+          image=image
+          video=video
+          code=code
+          variant='start'
+          has_content=has_content
+          video_attrs=video_attrs
+          copy_label=code_copy_label
+          copied_label=code_copied_label
+        -%}
+      </div>
+      <div class="{{ content_classes }}">
+        <div class="content-stack {{ text_align_class }}">
+          {%- include card-template/blocks/partials/content.html
+            content=content
+            content_body=content_body
+            buttons=buttons
+            icon_class='text-primary fs-2 mb-1'
+            eyebrow_variant='badge'
+            eyebrow_class='text-uppercase text-muted fw-semibold mb-2'
+            title_tag=heading
+            title_class=title_class
+            subtitle_class=subtitle_class
+            body_class='text-body-secondary'
+            buttons_justify_class=justify_class
+            buttons_margin_class='mt-3'
+          -%}
+        </div>
+      </div>
+    {%- else -%}
+      <div class="{{ content_classes }}">
+        <div class="content-stack {{ text_align_class }}">
+          {%- include card-template/blocks/partials/content.html
+            content=content
+            content_body=content_body
+            buttons=buttons
+            icon_class='text-primary fs-2 mb-1'
+            eyebrow_variant='badge'
+            eyebrow_class='text-uppercase text-muted fw-semibold mb-2'
+            title_tag=heading
+            title_class=title_class
+            subtitle_class=subtitle_class
+            body_class='text-body-secondary'
+            buttons_justify_class=justify_class
+            buttons_margin_class='mt-3'
+          -%}
+        </div>
+      </div>
+      <div class="{{ media_classes }}">
+        {%- include card-template/blocks/partials/cards/media/render.html
+          media=media
+          image=image
+          video=video
+          code=code
+          variant='end'
+          has_content=has_content
+          video_attrs=video_attrs
+          copy_label=code_copy_label
+          copied_label=code_copied_label
+        -%}
+      </div>
+    {%- endif -%}
+  </div>
+{%- else -%}
+  <div class="content-stack {{ text_align_class }}">
+    {%- if position == 'top' -%}
+      {%- include card-template/blocks/partials/cards/media/render.html
+        media=media
+        image=image
+        video=video
+        code=code
+        variant='top'
+        has_content=has_content
+        video_attrs=video_attrs
+        copy_label=code_copy_label
+        copied_label=code_copied_label
+      -%}
+    <br/>
+    {%- endif -%}
+
+    {%- include card-template/blocks/partials/content.html
+      content=content
+      content_body=content_body
+      buttons=buttons
+      icon_class='text-primary fs-2 mb-1'
+      eyebrow_variant='badge'
+      eyebrow_class='text-uppercase text-muted fw-semibold mb-2'
+      title_tag=heading
+      title_class=title_class
+      subtitle_class=subtitle_class
+      body_class='text-body-secondary'
+      buttons_justify_class=justify_class
+      buttons_margin_class='mt-3'
+    -%}
+
+    {%- if position == 'bottom' -%}
+      <br/>
+      {%- include card-template/blocks/partials/cards/media/render.html
+        media=media
+        image=image
+        video=video
+        code=code
+        variant='bottom'
+        has_content=has_content
+        video_attrs=video_attrs
+        copy_label=code_copy_label
+        copied_label=code_copied_label
+      -%}
+    {%- endif -%}
+  </div>
+{%- endif -%}

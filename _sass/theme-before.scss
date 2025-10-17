@@ -128,6 +128,24 @@
 .bg-instagram {
     background-color: #405de6;
 }
+.marketing-header {
+    position: relative;
+    z-index: 1020;
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.marketing-header.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--bs-body-bg, #fff);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    transform: translateZ(0);
+}
+.has-sticky-header {
+    transition: padding-top 0.2s ease-in-out;
+}
 .bg-primary-blend-gradient {
     background: var(--bg-gradient-blend, linear-gradient(0deg, #fff 0, hsla(0, 0%, 100%, 0) 100%), linear-gradient(245deg, rgba(108, 73, 250, 0.41) 0, rgba(211, 38, 142, 0.1) 100%));
 }

@@ -1,0 +1,19 @@
+{%- comment -%}
+  Block: card_matrix
+  Renders recursive columns/rows using shared matrix-row partial.
+  Wrapper classes via `block.class` (default py-5). Container fixed to container-xxl.
+{%- endcomment -%}
+
+{%- assign wrapper_class = block.class | default: 'py-5' -%}
+
+<section class="{{ wrapper_class }}">
+  <div class="container-xxl">
+    {%- if block.title -%}
+      <div class="mb-4">
+        <h2 class="h1 fw-bold mb-0">{{ block.title }}</h2>
+      </div>
+    {%- endif -%}
+    {%- assign matrix_row = block.row | default: block -%}
+    {%- include card-template/blocks/partials/_matrix-row.html row=matrix_row -%}
+  </div>
+</section>
