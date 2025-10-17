@@ -1,0 +1,50 @@
+{%- comment -%}
+  Block: workflow-library
+  Renders a grid of workflow collection entries with configurable
+  heading copy and styling via the block schema.
+{%- endcomment -%}
+
+{%- assign section_class = block.class | default: 'py-6' -%}
+{%- assign heading = block.heading | default: 'h2' -%}
+{%- assign workflows = site.workflow_library | sort: 'order' -%}
+
+<section class="{{ section_class }}">
+  <div class="container-xxl">
+    {%- if block.eyebrow or block.title or block.subtitle or block.body -%}
+      <div class="mb-5 text-{{ block.align | default: 'start' }}">
+        {%- if block.eyebrow -%}
+          <p class="text-uppercase text-muted fw-semibold mb-2">{{ block.eyebrow }}</p>
+        {%- endif -%}
+        {%- if block.title -%}
+          {%- assign title_class = block.title_class | default: 'display-6 fw-bold mb-2' -%}
+          <{{ heading }} class="{{ title_class }}">{{ block.title }}</{{ heading }}>
+        {%- endif -%}
+        {%- if block.subtitle -%}
+          <p class="lead text-body-secondary mb-3">{{ block.subtitle }}</p>
+        {%- endif -%}
+        {%- if block.body -%}
+          <div class="text-body-secondary">{{ block.body | markdownify }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="row g-4">
+      {%- for wf in workflows -%}
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body text-start d-flex flex-column">
+               <div class="text-primary fs-2 mb-3">
+                  <i class="bi bi-bar-chart-steps"></i>
+              </div>
+              <h3 class="card-title">{{ wf.title }}</h3>
+              <p class="text-body-secondary flex-grow-1">{{ wf.description }}</p>
+              <div class="pt-3 mt-auto">
+                <a class="btn btn-outline-primary w-100" href="{{ wf.url }}">View Workflow</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>

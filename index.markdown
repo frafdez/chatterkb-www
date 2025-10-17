@@ -5,6 +5,319 @@ layout: home
 title: "AI Knowledge Base and Workflow Automation for Business | ChatterKB"
 description: "ChatterKB's AI for business and AI for enterprise transform your organization's knowledge into automated workflows, reports, and solutions without the manual lift."
 
+
+blocks:
+  - type: hero
+    class: py-6
+    content:
+      class: col-lg-6 text-lg-start
+      align: left
+      title: Everything your team knows, instantly accessible.
+      subtitle: ChatterKB connects your documents, data, and conversations so answers and insights are just one chat away.
+      buttons:
+        - text: Try It Free
+          url: "https://app.chatterkb.com/auth/signup"
+          class: btn-primary btn-lg
+        - text: Book a Demo
+          url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
+          class: btn-outline-secondary btn-lg
+    media:
+      class: col-lg-6
+      position: end
+      image:
+        url: /assets/images/marketing/hero-image.webp
+
+  # - type: section
+  #   class: py-6 bg-primary-subtle bg-opacity-25
+  #   title: What's Slowing Your Business Down
+  #   matrix:
+  #     row:
+  #       columns:
+  #         - class: col-lg-7
+  #           card:
+  #             class: border-0 shadow-none
+  #             content:
+  #               class: col-lg-4 text-lg-start
+  #               icon:  bi-file-text
+  #               title: Brilliant Work, Buried and Forgotten
+  #               body: |
+  #                 Your team creates valuable insights every day - but they're scattered across multiple tools and nobody can find them when it matters. An AI knowledge base solves this by centralizing intelligence that grows with your business.
+
+  #         - class: col-lg-5
+  #           card:
+  #             class: border-0 shadow-none
+  #             content:
+  #               class: col-lg-4 text-lg-start
+  #               icon: bi-bar-chart
+  #               title: Reporting That Bleeds Profit
+  #               body: |
+  #                 Every hour spent rebuilding decks and updates is an hour stolen from strategy. You're paying smart people to copy and paste - and your bottom line feels it.
+
+  #         - class: col-lg-12
+  #           card:
+  #             class: border-0 shadow-none 
+  #             content:
+  #               class: col-lg-4 text-lg-start
+  #               icon: bi-people
+  #               title: Your Growth Is Breaking Your Team
+  #               body: |
+  #                 The more your business expands, the more your team drowns in repeatable tasks. Without workflow automation powered by AI for enterprise, quality drops, delivery slows, and top performers burn out.
+
+  - type: section
+    class: py-6 bg-body-secondary bg-opacity-25
+    title: From Knowledge to Action in One Move
+    subtitle: ChatterKB combines AI for business with workflow automation powered by everything your organization already knows.
+    matrix:
+      row:
+        columns:
+          - class: col-lg-4
+            card:
+              class: border-0 shadow
+              media:
+                class: col-lg-6
+                position: bottom
+                image:
+                  url: /assets/images/marketing/workflow-step1.webp
+              content:
+                class: col-lg-6 text-lg-start
+                icon: bi-1-circle-fill
+                title: Capture Knowledge
+                body: |
+                  Connect your tools and ChatterKB's AI knowledge base automatically collects insights from meetings, documents, and communications.
+          - class: col-lg-4
+            card:
+              class: border-0 shadow h-100
+              media:
+                class: col-lg-6
+                position: bottom
+                image:
+                  url: /assets/images/marketing/workflow-step2.webp
+              content:
+                class: col-lg-6 text-lg-start
+                icon: bi-2-circle-fill
+                title: Process & Organize
+                body: |
+                  Our enterprise AI structures information into actionable formats, categorizing insights and identifying patterns.
+          - class: col-lg-4
+            card:
+              class: border-0 shadow h-100
+              media:
+                class: col-lg-6
+                position: bottom
+                image:
+                  url: /assets/images/marketing/workflow-step3.webp
+              content:
+                class: col-lg-6 text-lg-start
+                icon: bi-3-circle-fill
+                title: Generate Results
+                body: |
+                  Transform business intelligence into automated workflows, reports, and campaigns with a single click.
+
+  - type: section
+    class: py-6 bg-body-secondary bg-opacity-75
+    title: Work Smarter, Not Harder
+    matrix:
+      row:
+        columns:
+          - class: col-lg-12
+            card:
+              class: border-0 shadow-none h-100
+              media:
+                class: col-lg-8
+                position: start
+                image:
+                  url: /assets/images/marketing/feature-pin.webp
+              content:
+                class: col-lg-4 text-lg-start
+                icon: bi-pin-angle-fill
+                title: Pin Insights, Instantly Create Reports
+                body: |
+                  Mark key moments during chats and turn them into business-ready reports with no formatting needed. AI for business that actually saves time.
+
+          - class: col-lg-6
+            card:
+              class: border-0 shadow-none h-100
+              content:
+                class: col-lg-4 text-lg-start
+                icon: bi-file-earmark-text
+                title: Find, don’t search
+                body: |
+                  Drop in a 50-page strategy PDF and get key messages, audience insights, and action items in seconds. AI knowledge base that eliminates guesswork.
+                buttons: 
+                  - text: Learn more...
+                    icon: bi-arrow-right-circle-fill
+                    url: /features/chat-assistant-document-analysis
+                    class: btn-outline-primary
+
+          - class: col-lg-6
+            card:
+              class: border-0 shadow-none h-100
+              content:
+                class: col-lg-5 text-lg-start
+                icon: bi-kanban
+                title: Automate what’s repetitive
+                body: |
+                  Turn your organization's best practices into workflow automation that guides your team step by step - without management overhead.
+                buttons: 
+                  - text: Learn more...
+                    icon: bi-arrow-right-circle-fill
+                    url: /features/workflows
+                    class: btn-outline-primary
+
+          - class: col-lg-12
+            card:
+              class: border-0 shadow-none h-100
+              media:
+                class: col-lg-8
+                position: end
+                image:
+                  url: /assets/images/marketing/feature-sop.webp
+              content:
+                class: col-lg-4 text-lg-start
+                icon: bi-people
+                title: Keep the Intelligence, Even When People Leave
+                body: |
+                  Capture your team's expertise in your AI knowledge base and make it usable forever. When someone leaves, their knowledge stays - and your systems keep improving.
+                buttons: 
+                  - text: Learn more...
+                    icon: bi-arrow-right-circle-fill
+                    url: /features/knowledge-base
+                    class: btn-outline-primary
+
+          - class: col-lg-12
+            card:
+              class: border-0 shadow-none h-100
+              media:
+                class: col-lg-6
+                position: start
+                video:
+                  src: https://chatterkb.s3.us-east-1.amazonaws.com/ckb-workflow.mp4
+                  attributes: autoplay loop muted playsinline controls
+              content:
+                class: col-lg-6 text-lg-start
+                icon: bi-chat
+                title: Think together.
+                body: |
+                  Bring your team into the conversation. Share context, refine answers, and capture new knowledge as you go.
+
+
+  - type: section
+    class: py-6 bg-body-secondary bg-opacity-25
+    title: AI Workflow Automation Made Simple  
+    matrix:
+      row:
+        columns:
+          - class: col-lg-6
+            card:
+              class: border-0 shadow h-100
+              media:
+                class: col-lg-10
+                position: top
+                video:
+                  src: https://chatterkb.s3.us-east-1.amazonaws.com/ckb-workflow.mp4
+                  attributes: autoplay loop muted playsinline controls
+              content:
+                class: col-lg-2 text-lg-start
+                title: Save your team 10+ hours per week
+                body: |
+                   Transform your team's knowledge into intelligent workflows without coding or complicated flowcharts. Just plain English.
+                buttons: 
+                  - text: Learn more...
+                    icon: bi-arrow-right-circle-fill
+                    url: /features/workflows
+                    class: btn-outline-primary
+          - class: col-lg-6
+            card:
+              class: border-0 shadow h-100
+              media:
+                class: col-lg-6
+                position: bottom
+                image:
+                  url: /assets/images/marketing/workflow-feature-step-1.png
+              content:
+                class: col-lg-6 text-lg-start
+                title: Write Your Workflow In Plain English
+                body: |
+                  - No coding or technical jargon required—just describe the outcome you need
+                  - Include specific goals, data sources, and desired outputs in natural language
+                  - ChatterKB interprets your instructions into actionable steps automatically
+  - type: section
+    class: py-6 bg-body-secondary bg-opacity-75
+    title: Enterprise Security Without the Headaches
+    subtitle: Deploy our AI for enterprise on your infrastructure with complete data sovereignty, regulatory compliance, and zero-trust security architecture.
+    matrix:
+      row:
+        columns:
+          - class: col-lg-5
+            card:
+              class: border-0 shadow-none h-100 bg-primary-subtle bg-opacity-10
+              content:
+                class: col-lg-4 text-lg-start
+                icon: bi-shield-lock
+                title: Client-Hosted Infrastructure
+                body: |
+                  - Deploy on your own AWS servers with complete data sovereignty
+                  - Integrated AWS Security Manager with database host authentication
+                  - Zero data leaves your infrastructure - ever
+
+          - class: col-lg-7
+            card:
+              class: border-0 shadow-none h-100 bg-primary-subtle bg-opacity-10
+              content:
+                class: col-lg-5 text-lg-start
+                icon: bi-building
+                title: Multi-Tenant Architecture
+                body: |
+                  - Tenant-isolated databases with separate schemas per knowledge base
+                  - Built-in migration tools for seamless transition to your infrastructure
+                  - Scalable security that grows with your organizational needs
+
+          - class: col-lg-7
+            card:
+              class: border-0 shadow-none h-100 bg-primary-subtle bg-opacity-10
+              content:
+                class: col-lg-5 text-lg-start
+                icon: bi-cpu
+                title: English-to-Automation Intelligence
+                body: |
+                  - Transform business requirements into executable workflows
+                  - Memory-centric execution that learns and adapts
+                  - Timeline-based progress tracking without technical complexity
+
+          - class: col-lg-5
+            card:
+              class: border-0 shadow-none h-100 bg-primary-subtle bg-opacity-10
+              content:
+                class: col-lg-4 text-lg-start
+                icon: bi-award
+                title: Built for Regulated Industries
+                body: |
+                  - Enterprise-grade compliance architecture from day one
+                  - Comprehensive audit trails and access controls
+                  - Expert support for mission-critical operations
+
+  - type: cta
+    class: py-5 bg-primary bg-opacity-10
+    media:
+      class: col-lg-5
+      position: end
+      image:
+        url: https://placehold.co/700x400
+
+    content:
+      class: col-lg-7 mx-auto
+      align: left
+      title: Experience Conversations That Remember
+      body: Start building intelligence that grows with every interaction.
+      buttons:
+        - text: Try It Free
+          url: "https://app.chatterkb.com/auth/signup"
+          class: btn-primary btn-lg
+        - text: Book a Demo
+          url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
+          class: btn-outline-secondary btn-lg
+---
+
 # Page content
 hero:
   title: "Your Business Intelligence. Automated."

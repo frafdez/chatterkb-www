@@ -1,0 +1,146 @@
+{%- comment -%}
+  Renders a single card within the card_matrix block using the shared
+  content/media schema.
+{%- endcomment -%}
+
+{%- assign card = include.card -%}
+{%- assign content = card.content -%}
+{%- assign media = card.media -%}
+
+{%- assign position = card.position -%}
+{%- if position == nil or position == '' -%}
+  {%- if media and media.position -%}
+    {%- assign position = media.position -%}
+  {%- elsif content and content.position -%}
+    {%- assign position = content.position -%}
+  {%- else -%}
+    {%- assign position = 'top' -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign card_classes = card.card_class | default: card.class -%}
+{%- if card_classes == nil or card_classes == '' -%}
+  {%- assign card_classes = 'shadow-lg border-0' -%}
+{%- endif -%}
+{%- if card.height == 'full' -%}
+  {%- assign card_classes = card_classes | append: ' h-100' -%}
+{%- endif -%}
+
+{%- assign content_align = 'start' -%}
+{%- if content and content.align -%}
+  {%- assign content_align = content.align -%}
+{%- endif -%}
+{%- assign text_align_class = 'text-' | append: content_align -%}
+
+{%- assign buttons = card.buttons -%}
+{%- if buttons == nil or buttons == '' -%}
+  {%- if content and content.buttons -%}
+    {%- assign buttons = content.buttons -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if buttons == '' -%}
+  {%- assign buttons = nil -%}
+{%- endif -%}
+
+{%- assign content_body = '' -%}
+{%- if content and content.body -%}
+  {%- assign content_body = content.body -%}
+{%- endif -%}
+
+{%- assign media_image = nil -%}
+{%- assign media_video = nil -%}
+{%- assign media_code = nil -%}
+{%- if media -%}
+  {%- if media.image -%}{%- assign media_image = media.image -%}{%- endif -%}
+  {%- if media.video -%}{%- assign media_video = media.video -%}{%- endif -%}
+  {%- if media.code -%}
+    {%- assign media_code = media.code -%}
+  {%- elsif media.type == 'code' and media.value -%}
+    {%- assign media_code = media.value -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign video_attrs = 'loop autoplay muted playsinline' -%}
+{%- if media_video and media_video.attributes -%}
+  {%- assign video_attrs = media_video.attributes -%}
+{%- endif -%}
+
+{%- assign code_copy_label = media.copy_label | default: 'Copy' -%}
+{%- assign code_copied_label = media.copied_label | default: 'Copied!' -%}
+
+{%- assign has_content = false -%}
+{%- if content -%}
+  {%- if content.icon or content.eyebrow or content.title or content.subtitle -%}
+    {%- assign has_content = true -%}
+  {%- endif -%}
+  {%- if content_body != '' -%}
+    {%- assign has_content = true -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if buttons and buttons.size > 0 -%}
+  {%- assign has_content = true -%}
+{%- endif -%}
+
+<div class="card overflow-hidden {{ card_classes }}">
+  {%- if position == 'start' -%}
+    {%- include card-template/blocks/partials/cards/start.html
+      media=media
+      media_image=media_image
+      media_video=media_video
+      media_code=media_code
+      content=content
+      content_body=content_body
+      buttons=buttons
+      text_align_class=text_align_class
+      has_content=has_content
+      video_attrs=video_attrs
+      copy_label=code_copy_label
+      copied_label=code_copied_label
+    -%}
+  {%- elsif position == 'end' -%}
+    {%- include card-template/blocks/partials/cards/end.html
+      media=media
+      media_image=media_image
+      media_video=media_video
+      media_code=media_code
+      content=content
+      content_body=content_body
+      buttons=buttons
+      text_align_class=text_align_class
+      has_content=has_content
+      video_attrs=video_attrs
+      copy_label=code_copy_label
+      copied_label=code_copied_label
+    -%}
+  {%- elsif position == 'bottom' -%}
+    {%- include card-template/blocks/partials/cards/bottom.html
+      media=media
+      media_image=media_image
+      media_video=media_video
+      media_code=media_code
+      content=content
+      content_body=content_body
+      buttons=buttons
+      text_align_class=text_align_class
+      has_content=has_content
+      video_attrs=video_attrs
+      copy_label=code_copy_label
+      copied_label=code_copied_label
+    -%}
+  {%- else -%}
+    {%- include card-template/blocks/partials/cards/top.html
+      media=media
+      media_image=media_image
+      media_video=media_video
+      media_code=media_code
+      content=content
+      content_body=content_body
+      buttons=buttons
+      text_align_class=text_align_class
+      has_content=has_content
+      video_attrs=video_attrs
+      copy_label=code_copy_label
+      copied_label=code_copied_label
+    -%}
+  {%- endif -%}
+</div>

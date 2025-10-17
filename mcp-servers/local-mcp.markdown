@@ -1,74 +1,126 @@
 ---
-layout: feature
+layout: card-template/blocks
 sitemap:
   exclude: 'no'
 
 title: Local MCP
-hero:
-  title: Local MCP
-  description: Run your MCP servers on your local machine with ChatterKB's Local MCP Bridge
-  image: "/assets/images/marketing/local-mcp-hero.png"
-  primary_button:
-    text: Try It Free
-    url: "https://app.chatterkb.com/auth/signup"
-  secondary_button:
-    text: Book a Demo
-    url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
+container: xxl
 
+blocks:
+  - type: hero
+    class: py-6
+    position: end
+    content:
+      class: col-lg-6 text-lg-start
+      title: Local MCP
+      subtitle: Run your MCP servers on your local machine with ChatterKB's Local MCP Bridge
+      buttons:
+        - text: Try It Free
+          url: "https://app.chatterkb.com/auth/signup"
+          class: btn-primary btn-lg
+        - text: Book a Demo
+          url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
+          class: btn-outline-secondary btn-lg
+          icon: bi-calendar
+    media:
+      class: col-lg-6
+      position: end
+      image:
+        url: "/assets/images/marketing/local-mcp-hero.png"
+        class: shadow-lg rounded-4
 
-features:
-  section_title: MCP Bridge
-  title: Local MCP Sent to Your Browser
-  items:
-    - side: left
-      title: Download the Bridge
-      description: Visit the settings page of your knowledge base for more information
-      image: /assets/images/marketing/local-mcp-step-1.png
-      bullets:
-        - Click on the "Download MCP Bridge"
-        - Unzip the files to any folder
-        - Just double-click on the Mac or Windows file to start it
-      button:
-        text: "Download MCP Bridge"
-        url: https://chatterkb.s3.us-east-1.amazonaws.com/ckb-mcp-bridge.zip        
-    - side: right
-      title: Add Your MCP Servers
-      description: "It's as simple as adding them to Claude, Cursor, or any other desktop app"
-      image: /assets/images/marketing/local-mcp-step-2.png
-      bullets:
-        - The app will open a page where you can configure the MCP servers.
-        - |
-         Click **Save and Apply** and it will automatically connect to the servers.
-    - side: left
-      title: Add the URL to ChatterKB
-      description: Copy the URL from the MCP Bridge and add it as a server
-      image: /assets/images/marketing/local-mcp-step-3.png
-      bullets:
-        - Just copy and paste it
-        - Click the Add button
-    - side: right
-      title: Start a New Chat
-      description: Once added, you'll see a button called "Local MCP"
-      image: /assets/images/marketing/local-mcp-step-4.png
-      bullets:
-        - Once the button is displayed, you're ready to go
-        - |
-         To test it, just send a new message like **"List your tools"**
-        - ChatterKB will respond with a list of internal tools and tools from your MCP Servers
-        - |
-         **Note:** *To ensure the bridge stays connected, please keep this browser tab open.*
+  - type: section
+    class: py-6 bg-body-secondary bg-opacity-50
+    title: Local MCP Sent to Your Browser
+    subtitle: Four quick steps to connect your desktop tools and start chatting.
+    matrix:
+      row:
+        columns:
+          - class: col-lg-12
+            card:
+              class: border-0 shadow
+              media:
+                class: col-lg-8
+                position: start
+                image:
+                  url: /assets/images/marketing/local-mcp-step-1.png
+              content:
+                class: col-lg-4 p-lg-2 text-lg-start
+                icon: bi-1-circle-fill
+                title: Download the Bridge
+                subtitle: Visit your knowledge base settings to grab the installer
+                body: |
+                  - Click **Download MCP Bridge**
+                  - Unzip the files to any folder
+                  - Double-click the Mac or Windows app to launch it
+                buttons:
+                  - text: Download MCP Bridge
+                    url: https://chatterkb.s3.us-east-1.amazonaws.com/ckb-mcp-bridge.zip
+                    class: btn-outline-primary
+                    icon: bi-download
+          - class: col-lg-12
+            card:
+              class: border-0 shadow
+              media:
+                class: col-lg-8
+                position: end
+                image:
+                  url: /assets/images/marketing/local-mcp-step-2.png
+              content:
+                class: col-lg-4 p-lg-2 text-lg-start
+                icon: bi-2-circle-fill
+                title: Add Your MCP Servers
+                subtitle: Works with Claude, Cursor, and other desktop clients
+                body: |
+                  - The bridge opens a config page for your MCP servers
+                  - Click **Save and Apply** to connect automatically
+          - class: col-lg-12
+            card:
+              class: border-0 shadow
+              media:
+                class: col-lg-8
+                position: start
+                image:
+                  url: /assets/images/marketing/local-mcp-step-3.png
+              content:
+                class: col-lg-4 p-lg-2 text-lg-start
+                icon: bi-3-circle-fill
+                title: Add the URL to ChatterKB
+                subtitle: Surface internal tools directly in every conversation
+                body: |
+                  - Copy the local MCP URL from the bridge
+                  - Paste it into ChatterKB and click **Add**
+          - class: col-lg-12
+            card:
+              class: border-0 shadow
+              media:
+                class: col-lg-7
+                position: end
+                image:
+                  url: /assets/images/marketing/local-mcp-step-4.png
+              content:
+                class: col-lg-5 p-lg-2 text-lg-start
+                icon: bi-4-circle-fill
+                title: Start a New Chat
+                subtitle: Local MCP appears as soon as the connection is live
+                body: |
+                  - Launch a new thread and choose **Local MCP**
+                  - Try “List your tools” to confirm everything is ready
+                  - Keep the bridge tab open so your connection stays active
 
-
-show_workflow_library: false
-
-cta:
-  title: Connect Your Local MCP Servers Today
-  description: Unlock powerful automations using MCP integrations.
-  primary_button:
-    text: Try It Free
-    url: "https://app.chatterkb.com/auth/signup"
-  secondary_button:
-    text: Book a Demo
-    url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
+  - type: cta
+    class: py-5 bg-primary bg-opacity-10
+    content:
+      class: col-lg-8 mx-auto
+      align: left
+      title: Connect Your Local MCP Servers Today
+      body: Unlock powerful automations using MCP integrations.
+      buttons:
+        - text: Try It Free
+          url: "https://app.chatterkb.com/auth/signup"
+          class: btn-primary btn-lg
+        - text: Book a Demo
+          url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
+          class: btn-outline-secondary btn-lg
+          icon: bi-calendar
 ---
-

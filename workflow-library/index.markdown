@@ -1,24 +1,30 @@
 ---
-layout: pages/base
+layout: page
 title: Workflow Library
 description: Real-world automated workflow templates you can clone and adapt.
-header_image: "/assets/images/marketing/workflow-diagram.png"
----
+blocks:
+  - type: section
+    class: py-6 
+    content:
+      class: col-lg-6 text-lg-start
+      align: start
+      title: Workflow Library
+      title_class: display-2 fw-bold mb-3
+      subtitle: Real-world automated workflow templates you can clone, adapt, and run instantly inside ChatterKB.
+      buttons:
+        - text: Try It Free
+          url: "https://app.chatterkb.com/auth/signup"
+          class: btn-primary btn-lg
+        - text: Learn About Workflows
+          url: "/features/workflows/"
+          class: btn-outline-secondary btn-lg
+    media:
+      class: col-lg-6 text-center
+      position: end
+      image:
+        url: /assets/images/marketing/workflow-diagram.png
+        alt: Workflow diagram
 
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-  {% assign workflows = site.workflow_library | sort: 'order' %}
-  {% for wf in workflows %}
-    <div class="col">
-      <a href="{{ wf.url }}" class="text-decoration-none">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold mb-2 d-flex align-items-center gap-2"><i class="bi bi-bar-chart-steps fs-6" style="color:#3b82f6;"></i> {{ wf.title }}</h5>
-            {% if wf.description %}
-              <p class="card-text small text-muted">{{ wf.description }}</p>
-            {% endif %}
-          </div>
-        </div>
-      </a>
-    </div>
-  {% endfor %}
-</div> 
+  - type: workflow-library
+    class: py-6 bg-body-secondary bg-opacity-50
+---

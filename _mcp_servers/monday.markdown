@@ -1,81 +1,119 @@
 ---
-layout: feature
-sitemap:
-  exclude: 'no'
+layout: page
+title: "monday.com MCP Server"
+description: "Connect your monday.com data using Model Context Protocol."
 order: 40
 server_type: local
 
-description: "Connect your monday.com data using Model Context Protocol."
-title: monday.com MCP Server
-hero:
-  title: monday.com MCP Server
-  description: Connect your monday.com data using Model Context Protocol.
-  image: /assets/images/marketing/monday-dot-com-mcp-server-hero.webp
-  primary_button:
-    text: Try It Free
-    url: "https://app.chatterkb.com/auth/signup"
-  secondary_button:
-    text: Book a Demo
-    url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
+blocks:
+  - type: hero
+    class: py-6
+    content:
+      class: col-lg-6 text-lg-start
+      align: start
+      eyebrow: MCP Server
+      title: monday.com MCP Server
+      title_class: display-2 fw-bold mb-3
+      subtitle: Connect your monday.com data using Model Context Protocol.
+      buttons:
+        - text: Try It Free
+          url: "https://app.chatterkb.com/auth/signup"
+          class: btn-primary btn-lg
+        - text: Book a Demo
+          url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
+          class: btn-outline-secondary btn-lg
+    media:
+      class: col-lg-6 text-center
+      position: end
+      image:
+        url: /assets/images/marketing/monday-dot-com-mcp-server-hero.webp
+        alt: monday.com MCP Server hero
 
-features:
-  section_title: Local MCP Bridge
-  title: Connecting to monday.com
-  items:
-    - side: left
-      title: Setting Up Your monday.com Integration
-      description: To get started, you'll need to install the monday mcp app from the monday.com Marketplace.
-      image: /assets/images/marketing/monday-dot-com-mcp-server-step-1.webp # Placeholder image
-      bullets:
-        - Learn more about monday.com's MCP Server from their [documentation](https://monday.com/w/mcp)
-        - Click on the button on the site (**Connect your AI tools**), which will take you to the **monday.com Marketplace**
-        - Install the app to your account
-        - Then, go to your monday.com **Settings** and find the **Connections** menu
-        - There you'll find a page called **Personal API token**
-        - Generate the token and copy it
-      button:
-        text: Install MCP App for monday.com
-        url: https://monday.com/w/mcp
-    - side: right
-      title: Update Your Local MCP Bridge
-      description: You'll need to add an entry into the mcp-config.json file.
-      code: |
-        {
-            "mcpServers": {
-                    "monday-api-mcp": {
-                    "command": "npx",
-                    "args": [
-                        "@mondaydotcomorg/monday-api-mcp",
-                        "-t",
-                        "your_monday_api_token"
-                    ]
-                }
-            }
-        }
-      bullets:
-        - Run the [MCP Bridge](/mcp-servers/local-mcp)
-        - Locate the config file
-        - Add the entry for monday.com (remember to replace *your_monday_api_token* with the **Personal API token** from the previous step)
-      
-    - side: left
-      title: Restart the Local MCP Bridge
-      description: Once the MCP Bridge loads, you'll see monday.com and its tools listed in the window.
-      image: "/assets/images/marketing/local-mcp-hero.png"
-      bullets:
-        - Remember to add your Local MCP Bridge to the list of MCP Servers in your knowledge base.
-      button:
-        text: Learn about Local MCP Bridge...
-        url: /mcp-servers/local-mcp
+  - type: section
+    class: py-6 bg-body-secondary bg-opacity-25
+    title: Connect monday.com in Three Steps
+    subtitle: Install the monday.com MCP integration, configure the bridge, and start automating.
+    matrix:
+      row:
+        columns:
+          - class: col-lg-12
+            card:
+              class: border-0 shadow-sm h-100
+              media:
+                position: end
+                image:
+                  url: /assets/images/marketing/monday-dot-com-mcp-server-step-1.webp
+                  alt: monday.com marketplace listing
+              content:
+                icon: bi-1-circle-fill
+                title: Install the monday.com MCP App
+                body: |
+                  - Review monday.com's [MCP Server documentation](https://monday.com/w/mcp).
+                  - Click **Connect your AI tools** to open the monday.com Marketplace.
+                  - Install the app to your account and finish the marketplace prompts.
+                  - In monday.com, open **Settings → Connections → Personal API token**.
+                  - Generate a token and copy it for later use.
+                buttons:
+                  - text: Install MCP App for monday.com
+                    url: https://monday.com/w/mcp
+                    class: btn-outline-primary
+          - class: col-lg-12
+            card:
+              class: border-0 shadow-sm h-100
+              media:
+                position: end
+                code: |
+                  {
+                    "mcpServers": {
+                      "monday-api-mcp": {
+                        "command": "npx",
+                        "args": ["@mondaydotcomorg/monday-api-mcp", "-t", "your_monday_api_token"]
+                      }
+                    }
+                  }
+                copy_label: Copy
+                copied_label: Copied!
+              content:
+                icon: bi-2-circle-fill
+                title: Configure the Local MCP Bridge
+                body: |
+                  - Launch the [Local MCP Bridge](/mcp-servers/local-mcp) after installation.
+                  - Open `mcp-config.json` in your editor.
+                  - Add the monday.com entry shown here.
+                  - Replace `your_monday_api_token` with the personal token from step one.
+                  - Save the file and restart the bridge.
+          - class: col-lg-12
+            card:
+              class: border-0 shadow-sm h-100
+              media:
+                position: end
+                image:
+                  url: /assets/images/marketing/local-mcp-hero.png
+                  alt: Local MCP bridge console
+              content:
+                icon: bi-3-circle-fill
+                title: Verify and Start Building
+                body: |
+                  - Confirm the Local MCP Bridge console lists the monday.com tools.
+                  - Add the bridge to your MCP servers inside ChatterKB.
+                  - Begin syncing boards, logging updates, or pushing automations via monday.com.
+                buttons:
+                  - text: Learn about Local MCP Bridge...
+                    url: /mcp-servers/local-mcp
+                    class: btn-outline-secondary
 
-show_workflow_library: false
-
-cta:
-  title: Connect Using MCP Today
-  description: Unlock powerful automations through monday.com's future MCP integration.
-  primary_button:
-    text: Try It Free
-    url: "https://app.chatterkb.com/auth/signup"
-  secondary_button:
-    text: Book a Demo
-    url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
+  - type: cta
+    class: py-6 bg-primary bg-opacity-10
+    content:
+      align: start
+      class: col-lg-6 text-lg-start
+      title: Connect Using MCP Today
+      body: Unlock powerful automations through monday.com's MCP integration.
+      buttons:
+        - text: Try It Free
+          url: "https://app.chatterkb.com/auth/signup"
+          class: btn-primary btn-lg
+        - text: Book a Demo
+          url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
+          class: btn-outline-secondary btn-lg
 ---
