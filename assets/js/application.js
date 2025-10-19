@@ -103,3 +103,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   });
+
+function nextSection(el) {
+  const next = el.closest('section')?.nextElementSibling;
+  if (next) {
+    const headerOffset = 76; // match your sticky header height
+    const elementPosition = next.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerOffset;
+    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+  }
+  return false;
+}

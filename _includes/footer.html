@@ -87,7 +87,12 @@
 {% endfor %}
 
 <script>
-   scrollCue.init({interval:-400,duration:600,percentage:.8}),scrollCue.update();
+  if (window.scrollCue && typeof window.scrollCue.init === 'function') {
+    scrollCue.init({ interval: -400, duration: 600, percentage: 0.8 });
+    if (typeof scrollCue.update === 'function') {
+      scrollCue.update();
+    }
+  }
 </script>
 
 {%- if jekyll.environment == 'production' and site.google_analytics -%}

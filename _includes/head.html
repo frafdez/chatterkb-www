@@ -12,11 +12,15 @@
       var url = window.location;
       var cleanUrl = url.protocol + '//' + url.host + url.pathname;
       var needsRedirect = false;
+      var isLocalHost = ['localhost', '127.0.0.1', '0.0.0.0'].indexOf(url.hostname) !== -1;
       
-      // Force HTTPS
-      if (url.protocol === 'http:') {
-        cleanUrl = 'https://' + url.host + url.pathname;
-        needsRedirect = true;
+      // Force HTTPS outside local development
+      if (!isLocalHost && url.protocol === 'http:') {
+        var httpsUrl = 'https://' + url.host + url.pathname + url.search + url.hash;
+        if (url.href !== httpsUrl) {
+          window.location.replace(httpsUrl);
+          return;
+        }
       }
       
       // Remove tracking parameters

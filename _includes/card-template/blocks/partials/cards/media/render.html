@@ -15,16 +15,25 @@
 
 {%- assign variant = include.variant | default: 'top' -%}
 {%- assign has_content = include.has_content | default: false -%}
+{%- assign media = include.media -%}
+{%- assign number = include.number -%}
 {%- assign image = include.image -%}
 {%- assign video = include.video -%}
 {%- assign code = include.code -%}
-{%- assign media = include.media -%}
 {%- assign video_attrs = include.video_attrs | default: 'loop autoplay muted playsinline' -%}
 {%- assign code_copy_label = include.copy_label | default: 'Copy' -%}
 {%- assign code_copied_label = include.copied_label | default: 'Copied!' -%}
 {%- assign code_extra_classes = '' -%}
 {%- if media and media.code_class -%}
   {%- assign code_extra_classes = media.code_class -%}
+{%- endif -%}
+
+{%- if number == nil or number == '' -%}
+  {%- if media and media.number -%}
+    {%- assign number = media.number -%}
+  {%- elsif media and media.type == 'number' and media.value -%}
+    {%- assign number = media.value -%}
+  {%- endif -%}
 {%- endif -%}
 
 {%- case variant -%}
@@ -74,7 +83,25 @@
     {%- endif -%}
 {%- endcase -%}
 
-{%- if video and video.src -%}
+
+{%- assign has_number = false -%}
+{%- if number -%}
+  {%- if number.value -%}
+    {%- assign has_number = true -%}
+  {%- elsif number != '' -%}
+    {%- assign has_number = true -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if has_number -%}
+  {%- assign number_base_class = video_base_class | append: ' d-flex align-items-center justify-content-center display-1' -%}
+  {%- include card-template/blocks/partials/cards/media/number.html
+    number=number
+    base_class=number_base_class
+    class_suffix=video_suffix
+    style=video_style
+  -%}
+{%- elsif video and video.src -%}
   {%- include card-template/blocks/partials/cards/media/video.html
     video=video
     base_class=video_base_class

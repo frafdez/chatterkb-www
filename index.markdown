@@ -12,20 +12,21 @@ blocks:
     content:
       class: col-lg-6 text-lg-start
       align: left
-      title: Everything your team knows, instantly accessible.
-      subtitle: ChatterKB connects your documents, data, and conversations so answers and insights are just one chat away.
+      title: Capture what you know. Automate what you do.
+      subtitle: ChatterKB turns your team’s knowledge into automated workflows, reports, and repeatable results.
       buttons:
         - text: Try It Free
           url: "https://app.chatterkb.com/auth/signup"
           class: btn-primary btn-lg
         - text: Book a Demo
+          icon: bi-calendar
           url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
           class: btn-outline-secondary btn-lg
     media:
       class: col-lg-6
       position: end
       image:
-        url: /assets/images/marketing/hero-image.webp
+        url: /assets/images/marketing/hero-logo-test.webp
 
   - type: section
     class: py-6 bg-body-secondary bg-opacity-25

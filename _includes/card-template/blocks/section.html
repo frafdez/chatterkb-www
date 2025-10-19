@@ -7,11 +7,15 @@
   Wrapper classes use `block.class` (default py-5). Container fixed to container-xxl.
 {%- endcomment -%}
 
-{%- assign wrapper_class = block.class | default: 'py-5' -%}
+{%- assign wrapper_class = block.class | default: 'py-6' -%}
 {%- assign section_buttons = block.buttons -%}
 {%- assign section_position = block.position -%}
 
+{%- if block.id -%}  
+<section id="{{block.id}}" class="{{ wrapper_class }}">
+{% else %}
 <section class="{{ wrapper_class }}">
+{% endif %}
   <div class="container-xxl">
     {%- if block.eyebrow or block.title or block.subtitle or block.body -%}
       <div class="mb-5">
@@ -22,7 +26,7 @@
           <h2 class="display-5 fw-bold mb-2">{{ block.title }}</h2>
         {%- endif -%}
         {%- if block.subtitle -%}
-          <p class="lead text-body-secondary mb-3">{{ block.subtitle }}</p>
+          <p class="lead text-body-secondary mb-3">{{ block.subtitle | markdownify }}</p>
         {%- endif -%}
         {%- if block.body -%}
           <div class="text-body-secondary">{{ block.body | markdownify }}</div>

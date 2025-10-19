@@ -1,0 +1,61 @@
+{%- comment -%}
+  Renders a numeric highlight block with optional custom classes and style.
+  Parameters:
+    number       -> string or object with value/class/style
+    base_class   -> base class string applied before suffixes
+    class_suffix -> optional class suffix (appended to base_class)
+    style        -> inline style attribute (default depends on context)
+{%- endcomment -%}
+
+{%- assign number_input = include.number -%}
+{%- assign number_value = '' -%}
+{%- assign number_class = '' -%}
+{%- assign number_style = '' -%}
+
+{%- if number_input -%}
+  {%- assign number_obj_value = number_input.value -%}
+  {%- assign number_obj_class = number_input.class -%}
+  {%- assign number_obj_style = number_input.style -%}
+
+  {%- if number_obj_value != nil or number_obj_class != nil or number_obj_style != nil -%}
+    {%- if number_obj_value != nil and number_obj_value != '' -%}
+      {%- assign number_value = number_obj_value -%}
+    {%- endif -%}
+    {%- if number_obj_class -%}
+      {%- assign number_class = number_obj_class -%}
+    {%- endif -%}
+    {%- if number_obj_style -%}
+      {%- assign number_style = number_obj_style -%}
+    {%- endif -%}
+  {%- elsif number_input != '' -%}
+    {%- assign number_value = number_input -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if number_value != nil and number_value != '' -%}
+  {%- assign base_class = include.base_class | default: 'd-flex align-items-center justify-content-center display-1' -%}
+  {%- assign class_suffix = include.class_suffix | default: '' -%}
+  {%- assign final_class = base_class -%}
+  {%- if class_suffix != '' -%}
+    {%- assign final_class = final_class | append: class_suffix -%}
+  {%- endif -%}
+  {%- if number_class != '' -%}
+    {%- assign final_class = final_class | append: ' ' | append: number_class -%}
+  {%- endif -%}
+
+  {%- assign style_attr = include.style -%}
+  {%- if (style_attr == nil or style_attr == '') and number_style != '' -%}
+    {%- assign style_attr = number_style -%}
+  {%- endif -%}
+  {%- if style_attr == nil or style_attr == '' -%}
+    {%- assign style_attr = 'line-height: 1;' -%}
+  {%- endif -%}
+
+  {%- assign style_attr = style_attr | strip -%}
+  {%- assign style_attribute = '' -%}
+  {%- if style_attr != '' -%}
+    {%- assign style_attribute = ' style="' | append: style_attr | append: '"' -%}
+  {%- endif -%}
+
+  <div class="{{ final_class | strip }}"{{ style_attribute }}>{{ number_value }}</div>
+{%- endif -%}

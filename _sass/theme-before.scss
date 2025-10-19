@@ -2232,3 +2232,6 @@
     z-index: -1;
   }
   
+section[id] {
+  scroll-margin-top: 76px; /* adjust based on your sticky header height */
+}
