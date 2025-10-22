@@ -68,7 +68,7 @@
 {%- endif -%}
 
 {%- if content_obj and content_obj.subtitle -%}
-  <p class="{{ subtitle_class }}">{{ content_obj.subtitle }}</p>
+  <div class="{{ subtitle_class }}">{{ content_obj.subtitle | markdownify }}</div>
 {%- endif -%}
 
 {%- if content_body and content_body != '' -%}

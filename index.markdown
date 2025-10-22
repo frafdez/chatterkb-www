@@ -12,8 +12,8 @@ blocks:
     content:
       class: col-lg-6 text-lg-start
       align: left
-      title: Capture what you know. Automate what you do.
-      subtitle: ChatterKB turns your team’s knowledge into automated workflows, reports, and repeatable results.
+      title: "Chat that thinks. Acts. Delivers."
+      subtitle: "ChatterKB turns your team’s knowledge into automated workflows, reports, and repeatable results."
       buttons:
         - text: Try It Free
           url: "https://app.chatterkb.com/auth/signup"
@@ -29,99 +29,196 @@ blocks:
         url: /assets/images/marketing/hero-logo-test.webp
 
   - type: section
-    class: py-6 bg-body-secondary bg-opacity-25
-    title: From Knowledge to Action in One Move
-    subtitle: ChatterKB combines AI for business with workflow automation powered by everything your organization already knows.
+    class: py-3 bg-white text-dark border-top border-bottom border-opacity-25
     matrix:
       row:
         columns:
-          - class: col-lg-4
+          - class: col-lg-12
             card:
-              class: border-0 shadow
-              media:
-                class: col-lg-6
-                position: bottom
-                image:
-                  url: /assets/images/marketing/workflow-step1.webp
+              class: border-0 shadow-none h-100 bg-transparent
               content:
                 class: col-lg-6 text-lg-start
-                icon: bi-1-circle-fill
-                title: Capture Knowledge
+                body_class: text-center
                 body: |
-                  Connect your tools and ChatterKB's AI knowledge base automatically collects insights from meetings, documents, and communications.
-          - class: col-lg-4
-            card:
-              class: border-0 shadow h-100
-              media:
-                class: col-lg-6
-                position: bottom
-                image:
-                  url: /assets/images/marketing/workflow-step2.webp
-              content:
-                class: col-lg-6 text-lg-start
-                icon: bi-2-circle-fill
-                title: Process & Organize
-                body: |
-                  Our enterprise AI structures information into actionable formats, categorizing insights and identifying patterns.
-          - class: col-lg-4
-            card:
-              class: border-0 shadow h-100
-              media:
-                class: col-lg-6
-                position: bottom
-                image:
-                  url: /assets/images/marketing/workflow-step3.webp
-              content:
-                class: col-lg-6 text-lg-start
-                icon: bi-3-circle-fill
-                title: Generate Results
-                body: |
-                  Transform business intelligence into automated workflows, reports, and campaigns with a single click.
+                  <div class="row image-strip text-center align-items-center opacity-50">
+                    <style>
+                      .image-strip img {
+                        height: 42px;
+                        width: 42px;
+
+                      }
+                    </style>
+                    <div class="col-12 fst-italic col-lg-2 text-dark py-2">Your AI, Your Choice</div>
+                    <div class="col-12 col-lg-10">
+                      <div class="row g-0"> 
+                        <div class="col-2"><img alt="OpenAI ChatGPT" src="/assets/images/models/chatgpt%20(openai).svg"/></div>
+                        <div class="col-2"><img alt="Anthropic Claude" src="/assets/images/models/claude.svg"/></div>
+                        <div class="col-2"><img alt="Google Gemini" src="/assets/images/models/google.svg"/></div>
+                        <div class="col-2"><img alt="xAI Grok" src="/assets/images/models/grok.svg"/></div>
+                        <div class="col-2"><img alt="Perplexity Sonar" src="/assets/images/models/perplexity.svg"/></div>
+                        <div class="col-2"><img alt="Meta Lama" src="/assets/images/models/meta.svg"/></div>
+                      </div>
+                    </div>
+                  </div>
 
   - type: section
-    class: py-6 bg-body-secondary bg-opacity-75
-    title: Work Smarter, Not Harder
-    subtitle: ChatterKB is like automating your best team member and productivity tools all rolled into one.
+    class: py-6 bg-body-secondary bg-opacity-25
+    title: Think • Do • Show
+    subtitle: From ideas to automation to live reports — all connected.
     matrix:
       row:
         columns:
-          - class: col-lg-6
+          - class: col-lg-4
             card:
-              class: border-0 shadow-none h-100
+              class: border-0 shadow h-100
               media:
                 class: col-lg-6
                 position: bottom
                 video:
+                  src: https://chatterkb.s3.us-east-1.amazonaws.com/ckb-chat-step1.mp4
+                  attributes: autoplay loop muted playsinline 
+              content:
+                class: col-lg-6 text-lg-start
+                # eyebrow: Think
+                eyebrow_variant: badge
+                icon: bi-chat-dots
+                title: Chat grounded in knowledge
+                body: |
+                  - Chat through your files, notes, and integrations  
+                  - Open, edit, and save updates right inside chat  
+                  - Grow your team’s knowledge base with every insight
+          - class: col-lg-4
+            card:
+              class: border-0 shadow h-100
+              media:
+                class: col-lg-6
+                position: bottom
+                video:
+                  src: https://chatterkb.s3.us-east-1.amazonaws.com/ckb-workflow-step2.mp4
+                  attributes: autoplay loop muted playsinline 
+              content:
+                class: col-lg-6 text-lg-start
+                # eyebrow: Do
+                eyebrow_variant: badge
+                icon: bi-play-fill
+                title: Automate in plain English
+                body: |
+                  - Describe what you want — workflows write themselves  
+                  - Run instantly or schedule recurring tasks  
+                  - Works with Slack, HubSpot, Notion, Google Workspace, and more
+                  
+          - class: col-lg-4
+            card:
+              class: border-0 shadow h-100
+              media:
+                class: col-lg-6
+                position: bottom
+                video:
+                  src: https://chatterkb.s3.us-east-1.amazonaws.com/ckb-board-step3.mp4
+                  attributes: autoplay loop muted playsinline                   
+              content:
+                class: col-lg-6 text-lg-start
+                # eyebrow: Show
+                eyebrow_variant: badge
+                icon: bi-speedometer
+                title: Boards that stay alive
+                body: |
+                  - Pin charts, reports, or summaries from chat to a board  
+                  - Press refresh to update with the latest data or files  
+                  - Share live boards with teammates or clients
+
+
+
+  - type: section
+    class: py-6 bg-body-secondary bg-opacity-75
+    title: Work Smarter, Not Harder
+    subtitle: ChatterKB combines your team’s best ideas, data, and tools into one smart workspace that automates itself.
+    matrix:
+      row:
+        columns:
+          - class: col-lg-12
+            card:
+              class: border-0 shadow-none h-100
+              media:
+                class: col-lg-6
+                position: end
+                video:
                   src: https://chatterkb.s3.us-east-1.amazonaws.com/ckb-insights.mp4
                   attributes: autoplay loop muted playsinline 
               content:
-                class: col-lg-4 text-lg-start
-                icon: bi-file-earmark-text
-                title: Find, don’t search
+                class: col-lg-6 text-lg-start
+                icon: bi-book
+                title: Create or open a Knowledge Base
                 body: |
-                  Drop in a strategy PDF or spreadsheet and get key messages, audience insights, and action items in seconds. AI knowledge base that eliminates guesswork.
+                  Organize files, notes, and connected tools.
+                  Each file generates quick, pre-built insights you can browse.
                 buttons: 
                   - text: Learn more...
                     icon: bi-arrow-right-circle-fill
                     url: /features/chat-assistant-document-analysis
                     class: btn-outline-primary
 
-          - class: col-lg-6
+          - class: col-lg-7
+            card:
+              class: border-0 shadow-none h-100
+              media:
+                class: col-lg-6
+                position: start
+                image:
+                  url: /assets/images/marketing/ckb-chat.webp
+              content:
+                class: col-lg-6 text-lg-start
+                icon: bi-chat
+                title: Chat
+                body: |
+                  Ask questions in plain English.
+                  The system pulls from your knowledge and integrations to answer.
+                buttons: 
+                  - text: Learn more...
+                    icon: bi-arrow-right-circle-fill
+                    url: /features/chat-assistant-document-analysis
+                    class: btn-outline-primary
+
+          - class: col-lg-5
+            card:
+              class: border-0 shadow-none h-100
+              media:
+                class: col-lg-8
+                position: top
+                image:
+                  url: /assets/images/marketing/ckb-save.webp
+              content:
+                class: col-lg-4 text-lg-start
+                icon: bi-save
+                title: Save to Knowledge Base
+                body: |
+                  When something matters, click “Save.”
+                  It becomes part of your growing, editable markdown knowledge.
+                  Like a Notion page you can refine and expand.
+
+                buttons: 
+                  - text: Learn more...
+                    icon: bi-arrow-right-circle-fill
+                    url: /features/knowledge-base
+                    class: btn-outline-primary
+
+          - class: col-lg-12
             card:
               class: border-0 shadow-none h-100
               
               media:
-                class: col-lg-6
-                position: bottom
+                class: col-lg-7
+                position: end
                 video:
                   src: https://chatterkb.s3.us-east-1.amazonaws.com/ckb-instant-workflow.mp4
                   attributes: autoplay loop muted playsinline
               content:
                 class: col-lg-5 text-lg-start
                 icon: bi-kanban
-                title: Automate what’s repetitive
+                title: Workflows
                 body: |
-                  Turn your organization's best practices and repetitive tasks into workflow automations that guides your team and save hours - without management overhead.
+                  Describe a recurring task; ChatterKB generates the steps.
+                  Hit Play to run it instantly, or schedule it to run automatically.
                 buttons: 
                   - text: Learn more...
                     icon: bi-arrow-right-circle-fill
@@ -132,23 +229,17 @@ blocks:
             card:
               class: border-0 shadow-none h-100
               media:
-                class: col-lg-8
-                position: end
+                class: col-lg-7
+                position: start
                 image:
-                  url: /assets/images/marketing/ckb-save.webp
+                  url: /assets/images/marketing/ckb-board.webp
               content:
-                class: col-lg-4 text-lg-start
-                icon: bi-people
-                title: Capture knowledge as you work
+                class: col-lg-5 text-lg-start
+                icon: bi-pin-angle-fill
+                title: Boards
                 body: |
-                  Turn any conversation or result into a saved insight inside your knowledge base.
-
-                buttons: 
-                  - text: Learn more...
-                    icon: bi-arrow-right-circle-fill
-                    url: /features/knowledge-base
-                    class: btn-outline-primary
-
+                  Pin key outputs — reports, summaries, charts — to a board.
+                  Refresh any time; everything updates based on the latest knowledge.
           - class: col-lg-12
             card:
               class: border-0 shadow-none h-100
@@ -160,30 +251,63 @@ blocks:
                   attributes: autoplay loop muted playsinline
               content:
                 class: col-lg-6 text-lg-start
-                icon: bi-chat
+                icon: bi-people
                 title: Think together.
                 body: |
                   Bring your team into the conversation. Share context, refine answers, and capture new knowledge as you go.
 
+
+
+  - type: section
+    class: py-3 bg-white text-dark border-top border-bottom border-opacity-25
+    matrix:
+      row:
+        columns:
           - class: col-lg-12
             card:
-              class: border-0 shadow-none h-100
-              media:
-                class: col-lg-6
-                position: start
-                image:
-                  url: /assets/images/marketing/ckb-board.webp
+              class: border-0 shadow-none h-100 bg-transparent
               content:
                 class: col-lg-6 text-lg-start
-                icon: bi-pin-angle-fill
-                title: Pin Insights, Instantly Create Reports
+                body_class: text-center
                 body: |
-                  Mark key moments during chats and turn them into business-ready reports with no formatting needed. AI for business that actually saves time.
+                  <div class="row image-strip text-center align-items-center">
+                    <style>
+                      .image-strip img {
+                        height: 42px;
+                        width: 42px;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+                      }
+                    </style>
+                    <div class="col-12 col-lg-10">
+                      <div class="row g-0"> 
+                        <div class="col-2"><img alt="Airtable" src="/assets/images/integrations/airtable.svg"/></div>
+                        <div class="col-2"><img alt="Basecamp" src="/assets/images/integrations/basecamp.svg"/></div>
+                        <div class="col-2"><img alt="ClickUp" src="/assets/images/integrations/clickup.svg"/></div>
+                        <div class="col-2"><img alt="Google Drive" src="/assets/images/integrations/google_drive.svg"/></div>
+                        <div class="col-2"><img alt="HeyReach" src="/assets/images/integrations/heyreach.svg"/></div>
+                        <div class="col-2"><img alt="HubSpot" src="/assets/images/integrations/hubspot.svg"/></div>
+                        <div class="col-2"><img alt="Instantly" src="/assets/images/integrations/instantly.svg"/></div>
+                        <div class="col-2"><img alt="Google Workspace" src="/assets/images/integrations/google.svg"/></div>
+                        <div class="col-2"><img alt="Miro" src="/assets/images/integrations/miro.svg"/></div>
+                        <div class="col-2"><img alt="Monday.com" src="/assets/images/integrations/monday.svg"/></div>
+                        <div class="col-2"><img alt="Monday.com" src="/assets/images/integrations/notion.svg"/></div>
+                        <div class="col-2"><img alt="reddit" src="/assets/images/integrations/reddit.svg"/></div>
+                        <div class="col-2"><img alt="Gmail" src="/assets/images/integrations/gmail.svg"/></div>
+                        <div class="col-2"><img alt="Slack" src="/assets/images/integrations/slack.svg"/></div>
+                        <div class="col-2"><img alt="Smartlead" src="/assets/images/integrations/smartlead.svg"/></div>
+                        <div class="col-2"><img alt="Stripe" src="/assets/images/integrations/stripe.svg"/></div>
+                        <div class="col-2"><img alt="Zapier" src="/assets/images/integrations/zapier.svg"/></div>
+                        <div class="col-2"><img alt="MCP (Model Context Protocol)" src="/assets/images/integrations/mcp.svg"/></div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-2 text-dark fw-bold py-2">Connect It All</div>
+                  </div>
 
   - type: section
     class: py-6 bg-body-secondary bg-opacity-25
     title: Enterprise Security Without the Headaches
-    subtitle: Deploy our AI for enterprise on your infrastructure with complete data sovereignty, regulatory compliance, and zero-trust security architecture.
+    subtitle: "Deploy securely on your own AWS environment — complete control, compliance, and zero-trust architecture built in."
     matrix:
       row:
         columns:
@@ -237,7 +361,7 @@ blocks:
 
   - type: section
     class: py-6 
-    title: Turn Your Business Into a Thought Leader
+    title: "Turn Knowledge Into Thought Leadership"
     subtitle: Create branded, public knowledge bases that showcase your expertise while attracting premium clients. Position your organization as the go-to authority in your space with enterprise AI solutions.
     matrix:
       row:
@@ -300,13 +424,13 @@ blocks:
       class: col-lg-5
       position: end
       image:
-        url: /assets/images/marketing/product-screenshot.png
+        url: /assets/images/marketing/hero-logo-test.webp
 
     content:
       class: col-lg-7 mx-auto
       align: left
-      title: Let's Build Your Business Intelligence Engine
-      body: See how ChatterKB's AI knowledge base and workflow automation can elevate your team and transform your operations.
+      title: "Let’s Build Your Business Intelligence Engine"
+      body: "See how ChatterKB transforms your team’s knowledge into automated workflows, live reports, and lasting insights."
       buttons:
         - text: Try It Free
           url: "https://app.chatterkb.com/auth/signup"

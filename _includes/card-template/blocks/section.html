@@ -26,7 +26,7 @@
           <h2 class="display-5 fw-bold mb-2">{{ block.title }}</h2>
         {%- endif -%}
         {%- if block.subtitle -%}
-          <p class="lead text-body-secondary mb-3">{{ block.subtitle | markdownify }}</p>
+          <div class="lead text-body-secondary mb-3">{{ block.subtitle | markdownify }}</div>
         {%- endif -%}
         {%- if block.body -%}
           <div class="text-body-secondary">{{ block.body | markdownify }}</div>
