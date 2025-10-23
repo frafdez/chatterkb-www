@@ -16,7 +16,7 @@ hero:
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: Book a Demo
-    url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
+    url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
 
 how_to:
   items:
@@ -319,7 +319,7 @@ how_to:
     url: "https://app.chatterkb.com/auth/signup"
   secondary_button:
     text: Book a Demo
-    url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
+    url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
 --- 
 
 <section id="features" class="mt_features py-5 py-md-7">

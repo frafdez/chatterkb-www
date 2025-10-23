@@ -17,7 +17,7 @@ blocks:
           url: "https://app.chatterkb.com/auth/signup"
           class: btn-primary btn-lg
         - text: Book a Demo
-          url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
+          url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
           class: btn-outline-secondary btn-lg
     media:
       class: col-lg-6

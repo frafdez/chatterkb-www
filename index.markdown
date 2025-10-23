@@ -20,7 +20,7 @@ blocks:
           class: btn-primary btn-lg
         - text: Book a Demo
           icon: bi-calendar
-          url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0oYQ10osj27ugUfwOrSoV893uJ-kWPhIKNBhII5bTlwc3j6HdkEunH29TciGeOttFjfxqEn92O"
+          url: "https://calendar.app.google/oKoqxPxBANh9d9cH9"
           class: btn-outline-secondary btn-lg
     media:
       class: col-lg-6
@@ -62,7 +62,7 @@ blocks:
                   </div>
 
   - type: section
-    class: py-6 bg-body-secondary bg-opacity-25
+    class: py-6 bg-body-tertiary
     title: Think • Do • Show
     subtitle: From ideas to automation to live reports — all connected.
     matrix:
@@ -70,7 +70,7 @@ blocks:
         columns:
           - class: col-lg-4
             card:
-              class: border-0 shadow h-100
+              class: border-0 shadow-none h-100 
               media:
                 class: col-lg-6
                 position: bottom
@@ -89,7 +89,7 @@ blocks:
                   - Grow your team’s knowledge base with every insight
           - class: col-lg-4
             card:
-              class: border-0 shadow h-100
+              class: border-0 shadow-none h-100
               media:
                 class: col-lg-6
                 position: bottom
@@ -109,7 +109,7 @@ blocks:
                   
           - class: col-lg-4
             card:
-              class: border-0 shadow h-100
+              class: border-0 shadow-none h-100
               media:
                 class: col-lg-6
                 position: bottom
