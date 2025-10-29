@@ -5,13 +5,76 @@ sitemap: false
 ---
 [
 {% for wf in site.workflow_library %}{% unless forloop.first %},{% endunless %}
+  {%- assign introduction = wf.workflow_introduction -%}
+  {%- assign content = wf.workflow_steps -%}
+  {%- unless introduction -%}
+    {%- if wf.blocks -%}
+      {%- for block in wf.blocks -%}
+        {%- if introduction -%}
+          {%- break -%}
+        {%- endif -%}
+        {%- if block.body -%}
+          {%- assign introduction = block.body -%}
+        {%- elsif block.content and block.content.body -%}
+          {%- assign introduction = block.content.body -%}
+        {%- elsif block.card and block.card.body -%}
+          {%- assign introduction = block.card.body -%}
+        {%- elsif block.card and block.card.content and block.card.content.body -%}
+          {%- assign introduction = block.card.content.body -%}
+        {%- elsif block.matrix and block.matrix.row and block.matrix.row.columns -%}
+          {%- for column in block.matrix.row.columns -%}
+            {%- if introduction -%}
+              {%- break -%}
+            {%- endif -%}
+            {%- if column.body -%}
+              {%- assign introduction = column.body -%}
+            {%- elsif column.content and column.content.body -%}
+              {%- assign introduction = column.content.body -%}
+            {%- elsif column.card and column.card.body -%}
+              {%- assign introduction = column.card.body -%}
+            {%- elsif column.card and column.card.content and column.card.content.body -%}
+              {%- assign introduction = column.card.content.body -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endunless -%}
+
+  {%- unless content -%}
+    {%- if wf.blocks -%}
+      {%- for block in wf.blocks -%}
+        {%- if content -%}
+          {%- break -%}
+        {%- endif -%}
+        {%- if block.media and block.media.code -%}
+          {%- assign content = block.media.code -%}
+        {%- elsif block.card and block.card.media and block.card.media.code -%}
+          {%- assign content = block.card.media.code -%}
+        {%- elsif block.matrix and block.matrix.row and block.matrix.row.columns -%}
+          {%- for column in block.matrix.row.columns -%}
+            {%- if content -%}
+              {%- break -%}
+            {%- endif -%}
+            {%- if column.media and column.media.code -%}
+              {%- assign content = column.media.code -%}
+            {%- elsif column.card and column.card.media and column.card.media.code -%}
+              {%- assign content = column.card.media.code -%}
+            {%- elsif column.card and column.card.content and column.card.content.media and column.card.content.media.code -%}
+              {%- assign content = column.card.content.media.code -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endunless -%}
   {
     "title": {{ wf.title | jsonify }},
     "description": {{ wf.description | jsonify }},
-    "content": {{ wf.workflow_steps | jsonify }},
-    "introduction": {{ wf.workflow_introduction | jsonify }},
+    "content": {{ content | jsonify }},
+    "introduction": {{ introduction | jsonify }},
     "url": {{ wf.url | absolute_url | jsonify }},
     "order": {{ wf.order | default: 1000 | jsonify }}
   }
 {% endfor %}
-] 
+]
