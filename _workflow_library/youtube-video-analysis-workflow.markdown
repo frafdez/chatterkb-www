@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "YouTube Video Analysis Workflow"
+title: "Summarize YouTube Videos from Transcript"
 description: "Automate transcript extraction, summarization, and content repurposing for YouTube videos using ChatterKB."
 order: 30
 blocks:
@@ -10,7 +10,7 @@ blocks:
       class: col-lg-6 text-lg-start
       align: start
       eyebrow: Workflow
-      title: YouTube Video Analysis Workflow
+      title: Summarize YouTube Videos from Transcript
       title_class: display-2 fw-bold mb-3
       subtitle: Automate transcript extraction, summarization, and content repurposing for YouTube videos using ChatterKB.
       buttons:
@@ -36,13 +36,13 @@ blocks:
       body: |
         If you want to extract meaningful insights from any YouTube video (and quickly repurpose them for your audience), here’s a step-by-step workflow you can run directly in ChatterKB.
 
-        **Important:** Before running this workflow, make sure to enable the **YouTube Transcript** tool in your knowledge base settings.
+        **Important:** Before running this workflow, make sure to enable the **YouTube Transcript** tool in your knowledge base settings **Note:** You may need a URL proxy. You can provide one in the KB's advanced settings tab.
     media:
       position: bottom
       class: col-lg-7
       title: Workflow Steps
       code: |
-        YouTube Video Analysis Workflow
+        Summarize YouTube Videos from Transcript
 
         Overview:
         This workflow guides users through comprehensive analysis of YouTube videos by extracting and processing the transcript. Follow each step **exactly** as described. Map Steps to the Step Numbers and Titles provided below.

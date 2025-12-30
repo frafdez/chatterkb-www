@@ -45,5 +45,11 @@ sections:
         url: /privacy
       - label: Terms of Service
         url: /terms
+      - label: Trust & GDPR
+        url: /trust
+      - label: Data Processing Agreement (DPA)
+        url: /dpa
+      - label: Subprocessors
+        url: /subprocessors
       - label: Contact
         url: mailto:hello@chatterkb.com
