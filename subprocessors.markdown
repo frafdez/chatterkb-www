@@ -1,11 +1,13 @@
+---
 layout: pages/standard
 title: Subprocessors
 permalink: /subprocessors/
+redirect_from:
+  - /subprocessors.html
+  - /subprocessors
 ---
 
-# Subprocessors
-
-_Last updated: 2025-01-15_
+_Last updated:  2025-12-30_
 
 This page lists the third-party subprocessors used by ChatterKB to provide and support the service, in accordance with the EU General Data Protection Regulation (GDPR).
 

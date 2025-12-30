@@ -4,9 +4,7 @@ title: Data Processing Agreement (DPA)
 permalink: /dpa/
 ---
 
-# Data Processing Agreement (DPA)
-
-_Last updated: 2025-01-15_
+_Last updated:  2025-12-30_
 
 This Data Processing Agreement (“**Agreement**”) forms part of the agreement between **ChatterKB** (“**Processor**”) and the customer entity identified in the applicable order, subscription, or terms of service (“**Controller**”).
 

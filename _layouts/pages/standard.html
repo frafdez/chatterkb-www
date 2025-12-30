@@ -7,6 +7,15 @@ layout: card-template/default
     <h1 class="post-title">{{ page.title | escape }}</h1>
   </header>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("table").forEach(function(table) {
+        table.classList.add("table");
+        table.classList.add("table-striped");
+      });
+    });
+  </script>
+
   <div class="post-content">
     {{ content }}
   </div>

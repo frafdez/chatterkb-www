@@ -9,9 +9,7 @@ redirect_from:
   - /trust
 ---
 
-# Trust, Security & GDPR
-
-_Last updated: 2025-01-15_
+_Last updated:  2025-12-30_
 
 This page explains how ChatterKB handles data, protects customer information, and complies with the EU General Data Protection Regulation (GDPR).
 
