@@ -47,7 +47,7 @@ blocks:
                     table td:nth-child(3) { width: 70%; } 
                   </style>
                   | **Model**                  | **Credits** | **Best For**                                                                 |
-                  |---------------------------|----------------------|------------------------------------------------------------------------------|
+                  |---------------------------|----------------------| ------------------------------------------------------------------------------|
                   | **Claude Opus 4.6**        | 2.30                 | Top-tier Claude reasoning for complex strategy, nuanced writing, and high-stakes analysis. |
                   | **Perplexity Sonar Pro** | 1.70                 | Fast, citation-friendly answers with live web search for research and fact-checking. |
                   | **Claude Sonnet 4.5**      | 1.40                 | Advanced Claude balance of intelligence and speed for demanding day-to-day work. |
