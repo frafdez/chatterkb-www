@@ -32,7 +32,7 @@ blocks:
     class: py-6 bg-body-secondary bg-opacity-75
     title: Credits Breakdown
     body: |
-      Not every task needs the most powerful AI. Some need speed. Others need volume. That’s why we offer a range of models — so you choose the right brain for the job and get the most from every credit.
+      Not every task needs the most powerful AI. Some need speed. Others need volume. That’s why we offer a range of models — so you choose the right brain for the job and get the most from every credit. This table represents the **average credits** used **per chat message** for each model.
     matrix:
       row:
         columns:
@@ -48,34 +48,37 @@ blocks:
                   </style>
                   | **Model**                  | **Credits** | **Best For**                                                                 |
                   |---------------------------|----------------------|------------------------------------------------------------------------------|
-                  | **Claude Opus 4.1**      | 0.20                 | Premium Claude model with enhanced capabilities and reasoning power. |
-                  | **Claude Opus 4**        | 0.20                 | High-performance Claude model for complex tasks requiring advanced reasoning. |
-                  | **Perplexity Sonar Pro**\*  | 0.70                 | Fast factual answers powered by live web search; quick research, drafting, fact-checking. |
-                  | **Claude Sonnet 4**       | 1                 | Next-generation Claude with larger context window and strong compliance; enterprise workflows. |
-                  | **Claude 3.7 Sonnet**     | 1                 | Deep reasoning, long documents, strategic content, accuracy-critical tasks. |
-                  | **Claude 3.5 Sonnet**     | 1                 | General-purpose work with solid reasoning and creativity. |
-                  | **Grok 4**\*                | 1                 | Humorous yet powerful reasoning; trending topic insights, coding help, creative writing. |
-                  | **Grok 3**\*                | 1                 | Humorous yet powerful reasoning; trending topic insights, coding help, creative writing. |
-                  | **Google Gemini 2.5 Pro**\* | 1.20                 | Multimodal reasoning across text, code & images; research, summarization, content creation. |
-                  | **Perplexity Sonar**\*      | 1.40                 | Balanced everyday assistant with realtime web knowledge; emails, briefs, Q&A. |
-                  | **OpenAI GPT-4.1**\*        | 1.70                 | High reasoning precision, structured content generation, complex coding tasks. |
-                  | **OpenAI GPT-4o**\*         | 1.70                 | Ultra-fast GPT-4 with voice & vision capability; interactive assistance & broad tasks. |
-                  | **DeepSeek-R1**\*           | 2.70                 | Open-source model optimized for technical tasks, code explanation, structured research. |
-                  | **Grok 3 Mini**\*           | 3.30                 | Low-latency Grok for general chat, idea exploration, rapid insights. |
-                  | **OpenAI o4-mini**\*        | 3.30                 | Cost-efficient GPT-4-class model for quick drafts, brainstorming, prototyping. |
-                  | **Claude 3.5 Haiku**      | 4.20                 | Lightning-fast drafts, summaries, real-time interactions. |
-                  | **Amazon Nova Pro**       | 4.50                 | Balance of performance and cost for internal tools and mid-complexity workflows. |
-                  | **Meta Llama 3.3 70B**    | 6.30                 | Open-source transparency, creative writing, coding, budget-conscious power. |
-                  | **OpenAI gpt-oss 120b**     | 24.40               | Open-source transparency, creative writing, coding, focused on English. Similar to o4-mini.|
-                  | **OpenAI gpt-oss 20b**     | 51.30               | Open-source transparency, creative writing, coding, focused on English. Similar to o3-mini. |
-                  | **Amazon Nova Light**     | 61.10                 | Bulk Q&A, internal lookups, high-volume tasks where speed matters. |
+                  | **Claude Opus 4.6**        | 2.30                 | Top-tier Claude reasoning for complex strategy, nuanced writing, and high-stakes analysis. |
+                  | **Perplexity Sonar Pro** | 1.70                 | Fast, citation-friendly answers with live web search for research and fact-checking. |
+                  | **Claude Sonnet 4.5**      | 1.40                 | Advanced Claude balance of intelligence and speed for demanding day-to-day work. |
+                  | **Claude 3.7 Sonnet**      | 1.20                 | Deep reasoning for long documents, planning, and accuracy-critical tasks. |
+                  | **Claude 3.5 Sonnet**      | 1.20                 | Reliable general-purpose model for writing, synthesis, and analysis. |
+                  | **Grok 3**               | 1.20                 | Strong reasoning and coding support with web-aware responses and quick exploration. |
+                  | **Claude Sonnet 4**        | 1.20                 | High-capability Claude for structured workflows, summaries, and enterprise use cases. |
+                  | **Perplexity Sonar**     | 0.80                 | Lightweight web-connected assistant for briefs, quick Q&A, and everyday drafting. |
+                  | **OpenAI GPT-4.1**       | 0.80                 | Precise instruction following for complex writing, analysis, and coding tasks. |
+                  | **OpenAI GPT-4o**        | 0.80                 | Fast multimodal GPT for chat, vision-enabled tasks, and broad assistant workflows. |
+                  | **Google Gemini 3.1 Pro Preview** | 0.80       | Preview Gemini model for advanced multimodal reasoning and higher-complexity workflows. |
+                  | **Google Gemini 2.5 Pro**| 0.60                 | Multimodal reasoning across text, code, and images for research and content creation. |
+                  | **DeepSeek-R1**          | 0.50                 | Reasoning-focused open model for technical problem-solving, math, and code explanation. |
+                  | **OpenAI o4-mini**       | 0.40                 | Cost-efficient OpenAI reasoning model for drafts, prototyping, and lightweight coding. |
+                  | **Claude 4.5 Haiku**       | 0.40                 | Ultra-fast Claude for short responses, quick edits, and real-time interactions. |
+                  | **Claude 3.5 Haiku**       | 0.30                 | Speed-first Claude option for summaries, rewrites, and high-throughput tasks. |
+                  | **Amazon Nova Pro**        | 0.30                 | Balanced performance and cost for internal tools and medium-complexity workflows. |
+                  | **Google Gemini 3 Flash Preview** | 0.20       | Fast preview Gemini model for lightweight prompts, quick drafts, and rapid responses. |
+                  | **DeepSeek 3.2v**        | 0.20                 | Efficient general model for everyday chat, drafting, and practical coding assistance. |
+                  | **Meta Llama 3.3 70B**     | 0.20                 | Open model with strong value for creative writing, coding, and experimentation. |
+                  | **Grok 3 Mini**          | 0.10                 | Low-latency Grok for fast replies, ideation, and lightweight assistant tasks. |
+                  | **OpenAI gpt-oss 120b**\*  | 0.00                 | Large open-weights OpenAI model for flexible experimentation and custom workflows. |
+                  | **OpenAI gpt-oss 20b**\*   | 0.00                 | Small open-weights OpenAI model optimized for speed and low-cost iteration. |
+                  | **Amazon Nova Light**\*    | 0.00                 | Best for high-volume Q&A, lookups, and bulk automation where speed matters most. |
           - class: col-lg-12
             card:
               class: border-0 shadow-none h-100
               content:
                 body: |
                   ##### Note: Chat counts are approximate and may vary based on usage patterns and prompt complexity.
-                  ##### * _models only available for **subscribed** pricing plans_.
+                  ##### * _these models have a non-zero value, but are below **$0.01** per typical chat message_.
   - type: section
     class: py-6 
     title: What's the Best Option for Me?
